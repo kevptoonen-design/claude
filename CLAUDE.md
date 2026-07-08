@@ -27,4 +27,4 @@ Firm, educational, no-bullshit. This is the user's own brand voice — apply it 
 - "Endurance" in posts = **aerobic capacity** (HR zones, volume, distance) for running/cycling — not muscular-endurance rep schemes in the gym.
 
 ## Research routine
-Weekly digest on exercise science relevant to programming/content — strength, hypertrophy, aerobic/endurance training. Track current literature and researchers such as Schoenfeld, Helms, Zourdos, Seiler, and González-Badillo.
+Weekly digest on exercise science relevant to programming/content — strength, hypertrophy, aerobic/endurance training. Track current literature and researchers such as Schoenfeld, Helms, Zourdos, Seiler, González-Badillo, Dr. Andy Galpin, Vladimir M. Zatsiorsky, and Dr. Andrew Huberman.

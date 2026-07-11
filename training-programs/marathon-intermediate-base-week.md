@@ -58,11 +58,17 @@ This is a first draft — built to be argued with.
 ## Session content (exercises stay constant — only the dials above change)
 
 ### Strength A — Lower-Body Max Strength (Tue)
-1. Back Squat or Trap Bar Deadlift — sets/%/reps per week table above, 3 min rest
-2. Single-Leg RDL — 3×6/leg, 90 s rest, load scales with weekly RIR target
-3. Bulgarian Split Squat — 3×5/leg, 2 min rest, load scales with weekly RIR target
-4. Straight-Leg Calf Raise — 4×8, slow eccentric, heavy relative to the week's RIR target
-5. Copenhagen Plank — 3×30 s/side, constant across the block (injury-prevention accessory, not a loading variable)
+Rest: 3 min on the main lift, 90 s–2 min on accessories, throughout the block.
+
+| Exercise | Week 1 | Week 2 | Week 3 (Peak) | Week 4 (Deload) |
+|---|---|---|---|---|
+| Back Squat or Trap Bar Deadlift | 4×5 @ 75% 1RM | 4×4 @ 80% 1RM | 4×3 @ 85% 1RM | 3×3 @ 65% 1RM |
+| Single-Leg RDL | 3×6/leg @ RIR 3 | 3×6/leg @ RIR 2 | 3×5/leg @ RIR 1–2 | 2×6/leg @ RIR 4 |
+| Bulgarian Split Squat | 3×5/leg @ RIR 3 | 3×5/leg @ RIR 2 | 3×4/leg @ RIR 1–2 | 2×5/leg @ RIR 4 |
+| Straight-Leg Calf Raise | 4×8 @ RIR 3 | 4×8 @ RIR 2 | 4×6 @ RIR 1–2 (heavier) | 3×8 @ RIR 4, light |
+| Copenhagen Plank | 3×30 s/side | 3×30 s/side | 3×30 s/side | 2×20 s/side |
+
+*Accessory reps taper down and RIR tightens toward Week 3 as load increases — same wave-loading logic as the main lift. Copenhagen Plank is injury-prevention, not a loading variable, so it barely moves until the deload.*
 
 ### Threshold / VO2max Run (Wed)
 - 15 min warm-up, Zone 2
@@ -73,24 +79,31 @@ This is a first draft — built to be argued with.
 **Run:** Zone 2 (60–70% max HR), conversational, duration per week table above.
 
 **Strength B:**
-1. Pull-up or Lat Pulldown — 3×6–8
-2. DB Bench Press or Push-up — 3×8
-3. Single-Arm DB Row — 3×8/side
-4. Pallof Press — 3×10/side
-5. Dead Bug — 3×10
 
-Load/effort scales with the week's RPE target; exercise selection stays fixed.
+| Exercise | Week 1 | Week 2 | Week 3 (Peak) | Week 4 (Deload) |
+|---|---|---|---|---|
+| Pull-up or Lat Pulldown | 3×6–8 @ RPE 6–7 | 3×6–8 @ RPE 7 | 3×6–8 @ RPE 7–8 | 2×6–8 @ RPE 5 |
+| DB Bench Press or Push-up | 3×8 @ RPE 6–7 | 3×8 @ RPE 7 | 3×8 @ RPE 7–8 | 2×8 @ RPE 5 |
+| Single-Arm DB Row | 3×8/side @ RPE 6–7 | 3×8/side @ RPE 7 | 3×8/side @ RPE 7–8 | 2×8/side @ RPE 5 |
+| Pallof Press | 3×10/side, moderate tension | 3×10/side, moderate tension | 3×10/side, moderate-heavy tension | 2×10/side, light |
+| Dead Bug | 3×10 | 3×10 | 3×10 | 2×10, bodyweight, quality focus |
+
+*Rep ranges stay fixed — this block moves via RPE, not rep manipulation. Sets drop and RPE eases off hard in the deload.*
 
 ### Dedicated Plyometric Session (Fri)
 Fresh legs only, no hard run within 24h either side.
 
-Warm-up: 10 min dynamic + 2×10 pogo hops + 2×10 ankle skips
+Warm-up (every week): 10 min dynamic + 2×10 pogo hops + 2×10 ankle skips. Full recovery between all sets below — this is a quality session, not a conditioning one.
 
-1. Pogo Jumps — present every week, sets scale with weekly volume %
-2. Countermovement Jumps — present every week, sets scale with weekly volume %
-3. Bounding — present every week, reps scale with weekly volume %
-4. Single-Leg Hop for Distance — present every week, sets scale with weekly volume %
-5. Low Box Depth Jumps (~20–30 cm) — **Week 3 only**, added once the athlete has three weeks of squat/hinge loading under them; dropped entirely in the Week 4 deload
+| Exercise | Week 1 (70%) | Week 2 (85%) | Week 3 (100%, Peak) | Week 4 (50%, Deload) |
+|---|---|---|---|---|
+| Pogo Jumps | 2×10 | 3×10 | 3×10 | 2×8, submaximal |
+| Countermovement Jumps | 3×4 | 3×5 | 3×5, max height | 2×4, ~80% effort |
+| Bounding | 3×10 m | 4×10 m | 4×15 m | 2×10 m |
+| Single-Leg Hop for Distance | 2×5/leg | 3×4/leg | 3×5/leg | — (dropped) |
+| Low Box Depth Jumps (~20–30 cm) | — (not yet) | 2×3 (introduced, low box) | 3×5 | — (dropped) |
+
+*Depth jumps don't appear until Week 2 (light) and Week 3 (full) — three-plus weeks of squat/hinge loading under the athlete first. Both depth jumps and the single-leg hop (the two highest-stress entries) are the first things cut in the deload; pogo and CMJ stay in at reduced, submaximal volume purely for neural priming.*
 
 ### Easy Run (Sat)
 Zone 2, duration per week table above. Shakeout, primes legs for Sunday.

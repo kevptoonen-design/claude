@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Recomposition Nutrition Guide</title>
+<style>
+  @page { size: A4; margin: 0; }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    color: #1a1e1c;
+    background: #ffffff;
+    font-size: 13.5px;
+    line-height: 1.55;
+  }
+
+  .page {
+    padding: 40px 48px;
+  }
+
+  .mono {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Cover */
+  .cover {
+    background: #1a1e1c;
+    color: #ffffff;
+    padding: 64px 48px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    page-break-after: always;
+  }
+
+  .cover .eyebrow {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #ff8a5c;
+    font-weight: 700;
+    margin: 0 0 20px;
+  }
+
+  .cover h1 {
+    font-size: 44px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin: 0 0 20px;
+    max-width: 11ch;
+  }
+
+  .cover .sub {
+    font-size: 16px;
+    color: #cfd6d2;
+    max-width: 42ch;
+    margin: 0;
+  }
+
+  .cover .stat-row {
+    display: flex;
+    gap: 32px;
+    margin-top: 48px;
+  }
+
+  .cover .stat {
+    border-left: 2px solid #e05a2b;
+    padding-left: 14px;
+  }
+
+  .cover .stat .num {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  .cover .stat .label {
+    font-size: 11.5px;
+    color: #9aa39d;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-top: 2px;
+  }
+
+  .cover footer {
+    color: #7a827d;
+    font-size: 12.5px;
+  }
+
+  .cover footer .brand {
+    color: #6fb6c1;
+    font-weight: 700;
+  }
+
+  /* Section styling */
+  section { page-break-inside: avoid; margin-bottom: 30px; }
+
+  .sec-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .sec-label .n {
+    background: #e05a2b;
+    color: #ffffff;
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;
+    font-weight: 700;
+    font-size: 12.5px;
+    width: 22px;
+    height: 22px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+  }
+
+  .sec-label h2 {
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+
+  p { margin: 0 0 10px; }
+  .muted { color: #4b524e; }
+
+  /* Macro cards */
+  .macro-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 14px 0 16px;
+  }
+
+  .macro-card {
+    background: #f6f8f7;
+    border-top: 3px solid #2f6f7a;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+
+  .macro-card.cal { border-top-color: #e05a2b; }
+
+  .macro-card .label {
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #7a827d;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .macro-card .val {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1e1c;
+  }
+
+  /* Meal timeline */
+  .meal {
+    display: grid;
+    grid-template-columns: 76px 1fr;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #e8ebe9;
+  }
+
+  .meal:last-child { border-bottom: none; }
+
+  .meal .time {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #2f6f7a;
+  }
+
+  .meal .what strong { display: block; font-size: 13.5px; margin-bottom: 2px; }
+  .meal .what span { color: #4b524e; font-size: 12.5px; }
+
+  /* Callout */
+  .callout {
+    background: #dfeaec;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-top: 6px;
+  }
+
+  .callout.warn { background: #fbe9df; color: #8a3a12; }
+  .callout .k { font-weight: 800; font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; display: block; margin-bottom: 4px; }
+
+  ul.check { list-style: none; margin: 8px 0; padding: 0; }
+  ul.check li { padding-left: 22px; position: relative; margin-bottom: 7px; font-size: 13px; }
+  ul.check li::before { content: "\2713"; position: absolute; left: 0; color: #2f6f7a; font-weight: 800; }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  /* Program cards */
+  .program-card {
+    background: #f6f8f7;
+    border: 1px solid #d3d9d4;
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  .program-card .tag {
+    display: inline-block;
+    font-size: 10.5px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #e05a2b;
+    background: #fbe4da;
+    padding: 3px 9px;
+    border-radius: 999px;
+    margin-bottom: 10px;
+  }
+
+  .program-card h3 { font-size: 17px; font-weight: 800; margin: 0 0 8px; }
+  .program-card p { font-size: 13px; color: #4b524e; }
+
+  .program-card .link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #2f6f7a;
+    word-break: break-all;
+  }
+
+  footer.doc-foot {
+    margin-top: 36px;
+    padding-top: 16px;
+    border-top: 1px solid #d3d9d4;
+    display: flex;
+    justify-content: space-between;
+    font-size: 11.5px;
+    color: #7a827d;
+  }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div>
+    <p class="eyebrow">@strengthelite &mdash; Personal Nutrition Guide</p>
+    <h1>Build muscle. Lean up. One plan, not two.</h1>
+    <p class="sub">A recomposition plan built around the schedule, budget, and routine you already have &mdash; recalibrated, not rebuilt from scratch.</p>
+    <div class="stat-row">
+      <div class="stat"><div class="num">88kg</div><div class="label">Current weight</div></div>
+      <div class="stat"><div class="num">5x/wk</div><div class="label">Training</div></div>
+      <div class="stat"><div class="num">3,100</div><div class="label">Starting kcal/day</div></div>
+    </div>
+  </div>
+  <footer>Prepared by <span class="brand">@strengthelite</span> &mdash; facts, not fads.</footer>
+</div>
+
+<div class="page">
+
+  <section>
+    <div class="sec-label"><span class="n">1</span><h2>The goal &amp; the approach</h2></div>
+    <p class="muted">You've been eating in an active bulk at ~3,800 kcal/day. The goal now is different: build muscle <em>and</em> bring body fat down &mdash; a recomposition, not a bulk. With your training already in place (5x/week, 8&ndash;12 rep hypertrophy work), that surplus needs to come down into a modest deficit, not stay in a surplus. Protein goes up, not down, to protect the muscle you're building while calories drop.</p>
+  </section>
+
+  <section>
+    <div class="sec-label"><span class="n">2</span><h2>Starting numbers</h2></div>
+    <p class="muted">These are a starting point, not a fixed rule &mdash; section 6 covers exactly how and when to adjust them.</p>
+    <div class="macro-row">
+      <div class="macro-card cal"><div class="label">Calories</div><div class="val">3,100</div></div>
+      <div class="macro-card"><div class="label">Protein</div><div class="val">190g</div></div>
+      <div class="macro-card"><div class="label">Fat</div><div class="val">90g</div></div>
+      <div class="macro-card"><div class="label">Carbs</div><div class="val">380g</div></div>
+    </div>
+    <p class="muted">Protein is the priority number on this page &mdash; at ~2.15g/kg, it's what preserves and builds muscle while you're in a deficit. Carbs stay high enough to fuel five real training sessions a week; this isn't a low-carb approach.</p>
+  </section>
+
+  <section>
+    <div class="sec-label"><span class="n">3</span><h2>Your day, recalibrated</h2></div>
+    <p class="muted">Your existing timing already works around your job and gym &mdash; nothing here moves, only portions and composition change.</p>
+    <div class="meal"><div class="time">6:15am</div><div class="what"><strong>Smoothie</strong><span>Protein powder, oats, banana, milk &mdash; protein in early before a long stretch at work.</span></div></div>
+    <div class="meal"><div class="time">9:00am</div><div class="what"><strong>Wrap + Greek yogurt</strong><span>Lean protein wrap, whole grain wrap, yogurt for extra protein.</span></div></div>
+    <div class="meal"><div class="time">~11:30am</div><div class="what"><strong>Rice, chicken, eggs, broccolini</strong><span>Already a well-built meal &mdash; keep it, just dial the rice portion to hit the day's carb target.</span></div></div>
+    <div class="meal"><div class="time">2:00pm</div><div class="what"><strong>Wrap + bar</strong><span>Well-timed pre-training fuel right before the gym &mdash; don't move this one.</span></div></div>
+    <div class="meal"><div class="time">6:30&ndash;7pm</div><div class="what"><strong>Chicken breast, potato, veg, fruit</strong><span>Main post-training recovery meal, 2.5&ndash;3 hours after training.</span></div></div>
+  </section>
+
+  <section>
+    <div class="sec-label"><span class="n">4</span><h2>Budget staples ($100&ndash;130/week)</h2></div>
+    <p class="muted">Nothing exotic required &mdash; this target is very achievable on your budget with the right staples:</p>
+    <div class="grid-2">
+      <ul class="check">
+        <li>Chicken breast/thighs, bought in bulk</li>
+        <li>Eggs</li>
+        <li>Home-brand Greek yogurt</li>
+        <li>Oats</li>
+      </ul>
+      <ul class="check">
+        <li>Rice &amp; potatoes</li>
+        <li>Frozen veg + fresh broccolini</li>
+        <li>Seasonal fruit</li>
+        <li>Protein powder + canned tuna as backup</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-label"><span class="n">5</span><h2>The weekend takeout fix</h2></div>
+    <div class="callout warn">
+      <span class="k">Don't eliminate it &mdash; plan it</span>
+      Cutting Friday night takeout out completely is how adherence dies. Instead, hit protein through the day as normal and let takeout fill the remaining carbs/fat for that day. Lean toward grilled over fried, sauces on the side. One planned flexible meal a week is sustainable &mdash; total elimination usually isn't.
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-label"><span class="n">6</span><h2>What's already working &mdash; don't touch these</h2></div>
+    <ul class="check">
+      <li><strong>Sleep (~8+ hours, 9&ndash;9:30pm to 5:30am):</strong> genuinely excellent, and doing real work for recovery and body composition &mdash; a bigger lever than most of the diet itself.</li>
+      <li><strong>Alcohol (next to none):</strong> removes a major variable that derails most recomps.</li>
+      <li><strong>Sunday meal prep habit:</strong> the infrastructure is already there &mdash; this plan just changes what goes in it.</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="sec-label"><span class="n">7</span><h2>Timeline &amp; how to adjust</h2></div>
+    <p class="muted">Recomposition is slower than a pure bulk or pure cut &mdash; it's asking the body to do two things at once. Set expectations at <strong>12&ndash;16+ weeks</strong>, not a fast transformation.</p>
+    <div class="callout">
+      <span class="k">Monitoring</span>
+      Weigh in 3x/week (same conditions), track the weekly average. Waist measurement every 2 weeks. Photos every 2&ndash;4 weeks.
+    </div>
+    <p class="muted" style="margin-top:10px;">Reassess every 2&ndash;3 weeks: if weight/waist aren't trending down and lifts are holding steady, drop 150&ndash;200 kcal. If losing faster than ~0.5&ndash;1% bodyweight/week or strength starts dropping, add calories back &mdash; that's muscle loss, not fat loss.</p>
+  </section>
+
+  <section>
+    <div class="sec-label"><span class="n">8</span><h2>Your program</h2></div>
+    <p class="muted">Nutrition sets the ceiling &mdash; the training program is what actually builds the muscle and shapes the recomposition. Two options, pick the one that fits where you want to focus first:</p>
+    <div class="grid-2">
+      <div class="program-card">
+        <span class="tag">Recommended</span>
+        <h3>Strong &amp; Lean</h3>
+        <p>Built specifically for strength and shape together &mdash; the direct match for "build muscle and lean up" as one combined goal, rather than choosing between the two.</p>
+        <a class="link" href="https://share.newie.app/offerings/0FD08F08-9E1D-47A9-9031-CD595BF2287D">share.newie.app/offerings/0FD08F08&hellip;</a>
+      </div>
+      <div class="program-card">
+        <span class="tag">Alternative</span>
+        <h3>Mass 2.0</h3>
+        <p>If you'd rather prioritize size first and address leanness in a second phase, this is the dedicated hypertrophy block to build off.</p>
+        <a class="link" href="https://share.newie.app/offerings/1C6A39F9-5200-4618-BD3C-1B7595C687A0">share.newie.app/offerings/1C6A39F9&hellip;</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="doc-foot">
+    <span class="mono">@strengthelite</span>
+    <span>Facts, not fads. Fuel the training you're doing &mdash; then let the numbers do their job.</span>
+  </footer>
+
+</div>
+</body>
+</html>

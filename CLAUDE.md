@@ -36,3 +36,20 @@ Weekly digest on exercise science relevant to programming/content — strength, 
 - **Two audience tracks per topic:** Athlete (technical — %1RM, HR zones, named principles) and General population (plain-language, practical takeaway). Same finding, same firm/no-bullshit tone, different depth.
 - **Format:** existing 5-page carousel structure (hook → formula/principle → worked example → why it works → sign-off).
 - **Pipeline:** Monday research digest → pick 3–4 digest findings/pillars for the week → draft both tracks per topic → user reviews/edits → load approved copy into a Canva carousel (copy the template, never edit the master).
+
+## Programs (for matching content/clients to an offer)
+- **Athletic Program** — field/combat sports, power, speed, strength, real athleticism
+- **Mass 2.0** — hypertrophy/size
+- **Strength Program** — pure strength
+- **Capacity Program** — aerobic/endurance (running, cycling, HYROX)
+- **Strong & Lean** — strength + size combined (the recomposition / "build muscle and lean up" pick)
+- **Built in 3** — time-poor pick (1–2 days/week), also pairs well with capacity/running goals
+- **Premium Coaching** — fully custom, the pick for recurring injuries or highly individual needs
+- **Female Specific Program** — strength + shape, female-specific alternative to Strong & Lean
+- Links for all 8 are in the training-diagnostic tool (`training-diagnostic.html`, sent to the user) and used as the client nutrition guide's closing program recommendation.
+
+## Client nutrition guide template
+- Location: `templates/nutrition-guide/template.html` + `templates/nutrition-guide/render-pdf.js` in this repo.
+- Reusable structure for any 1:1 client nutrition guide (not public content): dark cover page (goal headline + 3 key stats) → numbered sections — goal & approach, starting calories/macros, client's day recalibrated to their existing schedule (don't rebuild their routine, recalibrate portions/composition), budget staples, weekend/flexible-meal fix, "what's already working" (reinforce good habits like sleep/low alcohol), monitoring & timeline, closing program recommendation (1–2 matching programs from the list above, primary + alternative).
+- To generate a new one: copy `template.html`, replace the client-specific content per section, then `cd templates/nutrition-guide && npm install playwright-core && node render-pdf.js template.html Output-Name.pdf` (playwright-core reuses the machine's pre-installed Chromium at `/opt/pw-browsers/chromium-1194/chrome-linux/chrome` — no browser download needed).
+- Approach for the numbers: since full stats (age/height/exact TDEE) are rarely given, start from their current intake (e.g. back off an active bulk into a modest deficit for recomposition), set protein high (~2–2.2g/kg, higher end in a deficit), and frame the plan as a starting point to monitor and adjust — never present an estimate as exact.

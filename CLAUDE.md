@@ -64,6 +64,11 @@ The weekly digest is not enough on its own — it only runs Mondays, so it can't
 - **Female Specific Program** — strength + shape, female-specific alternative to Strong & Lean
 - Links for all 8 are in the training-diagnostic tool (`training-diagnostic.html`, sent to the user) and used as the client nutrition guide's closing program recommendation.
 
+## Program blocks (session-by-session, for loading into Train Heroic)
+- Location: `programs/<program-name>/` in this repo, one CSV per 4-week block (columns: Week, Day, Session, Order, Exercise, Sets, Reps, Intensity, Rest, Notes).
+- `programs/athletic-program/block-1-weeks-1-4.csv` — Athletic Program, intermediate-advanced, Block 1. 4 gym days (Mon/Wed/Fri/Sat — Lower/Upper Strength + Power, squat/hinge/press/pull patterns each trained 2x/week via heavy+moderate undulation) + 2 capacity days (Tue aerobic zone 2, Thu anaerobic intervals) done on non-gym equipment (bike/rower/ski erg/treadmill), Sun rest.
+- Progression logic: one lever per week, same principle as the progressive-overload content — Week 1 baseline, Week 2 volume (+1 set), Week 3 load/intensity (peak, RIR 1-2 + optional top set), Week 4 deload (~40-50% volume cut, RIR eases to 4-5, movement frequency held so nothing goes rusty). Main lifts never trained to failure (RIR 2-3 minimum) per ACSM 2026. Power/speed volume stays flat all block — progressed on quality (height/distance/velocity), not load, since these degrade with fatigue faster than they improve with volume.
+
 ## Client nutrition guide template
 - Location: `templates/nutrition-guide/template.html` + `templates/nutrition-guide/render-pdf.js` in this repo.
 - Reusable structure for any 1:1 client nutrition guide (not public content): dark cover page (goal headline + 3 key stats) → numbered sections — goal & approach, starting calories/macros, client's day recalibrated to their existing schedule (don't rebuild their routine, recalibrate portions/composition), budget staples, weekend/flexible-meal fix, "what's already working" (reinforce good habits like sleep/low alcohol), monitoring & timeline, closing program recommendation (1–2 matching programs from the list above, primary + alternative).

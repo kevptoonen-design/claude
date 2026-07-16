@@ -31,6 +31,17 @@ Firm, educational, no-bullshit. This is the user's own brand voice — apply it 
 ## Research routine
 Weekly digest on exercise science relevant to programming/content — strength, hypertrophy, aerobic/endurance training, plus sleep, sports nutrition/supplementation, and sports psychology. Track current literature and researchers such as Schoenfeld, Helms, Zourdos, Seiler, González-Badillo, Dr. Andy Galpin, Vladimir M. Zatsiorsky, and Dr. Andrew Huberman, along with credible current literature in sleep science, sports nutrition/supplementation, and sport psychology.
 
+### Authoritative bodies to monitor (non-negotiable, checked every digest)
+Named researchers publish individual studies; these bodies publish **consensus/position stands** that supersede or reframe individual papers and carry more authority for public claims. A missed position-stand update is the highest-severity type of research miss — check for new or revised statements every week, not just new papers:
+- **ACSM** (American College of Sports Medicine) — position stands (resistance training, exercise prescription, etc.)
+- **NSCA** (National Strength and Conditioning Association) — position statements, consensus papers
+- **ISSN** (International Society of Sports Nutrition) — position stands (protein, creatine, caffeine, supplement timing)
+- **IOC** (International Olympic Committee) — consensus statements (RED-S, load management, youth athlete development)
+- **AIS** (Australian Institute of Sport) / **BASES** (British Association of Sport and Exercise Sciences) — supplement classification frameworks, practice guidelines
+
+**Reference log (verified, citable):**
+- **2026 ACSM Position Stand on Resistance Training** — DOI 10.1249/MSS.0000000000003897. First update in 17 years; synthesized 137 systematic reviews, ~30,000 participants. Key findings: training to momentary muscular failure does not outperform stopping ~2–3 reps short (RIR 2–3) for strength, hypertrophy, or power outcomes; hypertrophy is enhanced by higher volume (≥10 sets/muscle/week) and by eccentric overload; equipment type, exercise complexity, set structure, time under tension, blood flow restriction, and periodization model did not consistently affect outcomes. Use this as the current authoritative source over older single-study takes when writing strength/hypertrophy content — cite it directly when the claim is about failure training or volume.
+
 ## Social media content plan
 - **Pillars (rotate 3–4 per week, cover all over time):** Strength, Hypertrophy, Aerobic capacity, Injury prevention & recovery, Programming principles, Sleep, Nutrition, Supplements, Sports psychology.
 - **Two audience tracks per topic:** Athlete (technical — %1RM, HR zones, named principles) and General population (plain-language, practical takeaway). Same finding, same firm/no-bullshit tone, different depth.

@@ -42,6 +42,11 @@ Named researchers publish individual studies; these bodies publish **consensus/p
 **Reference log (verified, citable):**
 - **2026 ACSM Position Stand on Resistance Training** — DOI 10.1249/MSS.0000000000003897. First update in 17 years; synthesized 137 systematic reviews, ~30,000 participants. Key findings: training to momentary muscular failure does not outperform stopping ~2–3 reps short (RIR 2–3) for strength, hypertrophy, or power outcomes; hypertrophy is enhanced by higher volume (≥10 sets/muscle/week) and by eccentric overload; equipment type, exercise complexity, set structure, time under tension, blood flow restriction, and periodization model did not consistently affect outcomes. Use this as the current authoritative source over older single-study takes when writing strength/hypertrophy content — cite it directly when the claim is about failure training or volume.
 
+### Real-time verification standard (between digests)
+The weekly digest is not enough on its own — it only runs Mondays, so it can't cover something published mid-week. Two things must always happen regardless of digest timing:
+1. Before publishing any new piece of content that makes a factual/scientific claim, do a live check for current authoritative-body guidance on that specific topic — don't rely solely on whatever the last digest surfaced.
+2. Whenever a claim, citation, or correction comes from a third party (a commenter, a client, a DM), verify it via live search before responding — never concede or dismiss a claim on the strength of it merely being asserted. This applies symmetrically: don't assume the third party is right, and don't assume they're wrong.
+
 ## Social media content plan
 - **Pillars (rotate 3–4 per week, cover all over time):** Strength, Hypertrophy, Aerobic capacity, Injury prevention & recovery, Programming principles, Sleep, Nutrition, Supplements, Sports psychology.
 - **Two audience tracks per topic:** Athlete (technical — %1RM, HR zones, named principles) and General population (plain-language, practical takeaway). Same finding, same firm/no-bullshit tone, different depth.

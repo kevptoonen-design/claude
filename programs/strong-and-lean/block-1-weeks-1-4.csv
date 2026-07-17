@@ -1,0 +1,121 @@
+Week,Day,Session,Order,Exercise,Sets,Reps,Intensity,Rest,Outcome
+1,Mon,Lower A,1,Back Squat,4,5,75-78% (RIR 2-3),2-3 min,Strength
+1,Mon,Lower A,2,Romanian Deadlift,3,10-12,65-70% (RIR 1-2),90s,Hamstring hypertrophy
+1,Mon,Lower A,3,Leg Press or Walking Lunge,3,10-12,65-70% (RIR 1-2),90s,Quad hypertrophy
+1,Mon,Lower A,4,Leg Extension,3,12-15,60-65% (RIR 1-2),60s,Quad hypertrophy
+1,Mon,Lower A,5,Calf Raise,3,12-15,60-65% (RIR 1-2),45s,Calf hypertrophy
+1,Mon,Lower A,6,Hanging Leg Raise,3,10,Bodyweight,45s,Core strength
+1,Tue,Upper A,1,Bench Press,4,5,75-78% (RIR 2-3),2-3 min,Strength
+1,Tue,Upper A,2,Barbell or Chest-Supported Row,4,8-10,70-75% (RIR 1-2),90s,Back hypertrophy
+1,Tue,Upper A,3,Incline DB Press,3,10-12,65-70% (RIR 1-2),90s,Chest hypertrophy
+1,Tue,Upper A,4,Lat Pulldown,3,10-12,65-70% (RIR 1-2),90s,Back hypertrophy
+1,Tue,Upper A,5,Lateral Raise,3,12-15,60-65% (RIR 1-2),45s,Shoulder hypertrophy
+1,Tue,Upper A,6,Bicep Curl,3,12-15,60-65% (RIR 1-2),45s,Arm hypertrophy
+1,Tue,Upper A,7,Triceps Pushdown,3,12-15,60-65% (RIR 1-2),45s,Arm hypertrophy
+1,Wed,Capacity - Optional,1,Zone 2 Continuous (any modality),1,20-30 min,60-70% HRmax,-,Recovery
+1,Thu,Lower B,1,Deadlift (conventional or trap bar),4,5,75-78% (RIR 2-3),2-3 min,Strength
+1,Thu,Lower B,2,Front Squat or Goblet Squat,3,10-12,65-70% (RIR 1-2),90s,Quad hypertrophy
+1,Thu,Lower B,3,Bulgarian Split Squat,3,10/leg,65-70% (RIR 1-2),90s,Glute/quad hypertrophy
+1,Thu,Lower B,4,Hip Thrust,3,10-12,65-70% (RIR 1-2),90s,Glute hypertrophy
+1,Thu,Lower B,5,Leg Curl,3,12-15,60-65% (RIR 1-2),60s,Hamstring hypertrophy
+1,Thu,Lower B,6,Calf Raise,3,12-15,60-65% (RIR 1-2),45s,Calf hypertrophy
+1,Thu,Lower B,7,Pallof Press,3,10/side,Bodyweight/band,45s,Core stability
+1,Fri,Upper B,1,Overhead Press,4,5,75-78% (RIR 2-3),2-3 min,Strength
+1,Fri,Upper B,2,Weighted Pull-up or Lat Pulldown (heavy),4,8-10,70-75% (RIR 1-2),90s,Back hypertrophy
+1,Fri,Upper B,3,Dips or Close-Grip Bench,3,10-12,65-70% (RIR 1-2),90s,Chest/triceps hypertrophy
+1,Fri,Upper B,4,Cable Row or Face Pull,3,12-15,60-65% (RIR 1-2),60s,Upper back/rear delt hypertrophy
+1,Fri,Upper B,5,DB Lateral Raise,3,12-15,60-65% (RIR 1-2),45s,Shoulder hypertrophy
+1,Fri,Upper B,6,Hammer Curl,3,12-15,60-65% (RIR 1-2),45s,Arm hypertrophy
+1,Fri,Upper B,7,Overhead Triceps Extension,3,12-15,60-65% (RIR 1-2),45s,Arm hypertrophy
+1,Sat,Capacity - Optional,1,Zone 2 Continuous (any modality),1,20-30 min,60-70% HRmax,-,Recovery
+2,Mon,Lower A,1,Back Squat,5,5,75-78% (RIR 2-3),2-3 min,Strength - +1 set (volume lever)
+2,Mon,Lower A,2,Romanian Deadlift,4,10-12,65-70% (RIR 1-2),90s,Hamstring hypertrophy - +1 set
+2,Mon,Lower A,3,Leg Press or Walking Lunge,4,10-12,65-70% (RIR 1-2),90s,Quad hypertrophy - +1 set
+2,Mon,Lower A,4,Leg Extension,4,12-15,60-65% (RIR 1-2),60s,Quad hypertrophy - +1 set
+2,Mon,Lower A,5,Calf Raise,4,12-15,60-65% (RIR 1-2),45s,Calf hypertrophy - +1 set
+2,Mon,Lower A,6,Hanging Leg Raise,3,10,Bodyweight,45s,Core strength - hold
+2,Tue,Upper A,1,Bench Press,5,5,75-78% (RIR 2-3),2-3 min,Strength - +1 set (volume lever)
+2,Tue,Upper A,2,Barbell or Chest-Supported Row,5,8-10,70-75% (RIR 1-2),90s,Back hypertrophy - +1 set
+2,Tue,Upper A,3,Incline DB Press,4,10-12,65-70% (RIR 1-2),90s,Chest hypertrophy - +1 set
+2,Tue,Upper A,4,Lat Pulldown,4,10-12,65-70% (RIR 1-2),90s,Back hypertrophy - +1 set
+2,Tue,Upper A,5,Lateral Raise,4,12-15,60-65% (RIR 1-2),45s,Shoulder hypertrophy - +1 set
+2,Tue,Upper A,6,Bicep Curl,4,12-15,60-65% (RIR 1-2),45s,Arm hypertrophy - +1 set
+2,Tue,Upper A,7,Triceps Pushdown,4,12-15,60-65% (RIR 1-2),45s,Arm hypertrophy - +1 set
+2,Wed,Capacity - Optional,1,Zone 2 Continuous (any modality),1,20-30 min,60-70% HRmax,-,Recovery - hold
+2,Thu,Lower B,1,Deadlift,5,5,75-78% (RIR 2-3),2-3 min,Strength - +1 set (volume lever)
+2,Thu,Lower B,2,Front Squat or Goblet Squat,4,10-12,65-70% (RIR 1-2),90s,Quad hypertrophy - +1 set
+2,Thu,Lower B,3,Bulgarian Split Squat,4,10/leg,65-70% (RIR 1-2),90s,Glute/quad hypertrophy - +1 set
+2,Thu,Lower B,4,Hip Thrust,4,10-12,65-70% (RIR 1-2),90s,Glute hypertrophy - +1 set
+2,Thu,Lower B,5,Leg Curl,4,12-15,60-65% (RIR 1-2),60s,Hamstring hypertrophy - +1 set
+2,Thu,Lower B,6,Calf Raise,4,12-15,60-65% (RIR 1-2),45s,Calf hypertrophy - +1 set
+2,Thu,Lower B,7,Pallof Press,3,10/side,Bodyweight/band,45s,Core stability - hold
+2,Fri,Upper B,1,Overhead Press,5,5,75-78% (RIR 2-3),2-3 min,Strength - +1 set (volume lever)
+2,Fri,Upper B,2,Weighted Pull-up or Lat Pulldown (heavy),5,8-10,70-75% (RIR 1-2),90s,Back hypertrophy - +1 set
+2,Fri,Upper B,3,Dips or Close-Grip Bench,4,10-12,65-70% (RIR 1-2),90s,Chest/triceps hypertrophy - +1 set
+2,Fri,Upper B,4,Cable Row or Face Pull,4,12-15,60-65% (RIR 1-2),60s,Upper back/rear delt hypertrophy - +1 set
+2,Fri,Upper B,5,DB Lateral Raise,4,12-15,60-65% (RIR 1-2),45s,Shoulder hypertrophy - +1 set
+2,Fri,Upper B,6,Hammer Curl,4,12-15,60-65% (RIR 1-2),45s,Arm hypertrophy - +1 set
+2,Fri,Upper B,7,Overhead Triceps Extension,4,12-15,60-65% (RIR 1-2),45s,Arm hypertrophy - +1 set
+2,Sat,Capacity - Optional,1,Zone 2 Continuous (any modality),1,20-30 min,60-70% HRmax,-,Recovery - hold
+3,Mon,Lower A,1,Back Squat,4,4,82-85% (RIR 1-2),2-3 min,Strength - peak week
+3,Mon,Lower A,1b,Back Squat - Top Set,1,2,87-90% (RIR 1),-,Strength - optional top double
+3,Mon,Lower A,2,Romanian Deadlift,4,10-12,70-75% (RIR 1),90s,Hamstring hypertrophy - hold sets +5%
+3,Mon,Lower A,3,Leg Press or Walking Lunge,4,10-12,70-75% (RIR 1),90s,Quad hypertrophy - hold sets +5%
+3,Mon,Lower A,4,Leg Extension,4,12-15,65-70% (RIR 1),60s,Quad hypertrophy - hold sets +5%
+3,Mon,Lower A,5,Calf Raise,4,12-15,65-70% (RIR 1),45s,Calf hypertrophy - hold sets +5%
+3,Mon,Lower A,6,Hanging Leg Raise,3,10,Bodyweight,45s,Core strength - hold
+3,Tue,Upper A,1,Bench Press,4,4,82-85% (RIR 1-2),2-3 min,Strength - peak week
+3,Tue,Upper A,1b,Bench Press - Top Set,1,2,87-90% (RIR 1),-,Strength - optional top double
+3,Tue,Upper A,2,Barbell or Chest-Supported Row,5,8-10,75-80% (RIR 1),90s,Back hypertrophy - hold sets +5%
+3,Tue,Upper A,3,Incline DB Press,4,10-12,70-75% (RIR 1),90s,Chest hypertrophy - hold sets +5%
+3,Tue,Upper A,4,Lat Pulldown,4,10-12,70-75% (RIR 1),90s,Back hypertrophy - hold sets +5%
+3,Tue,Upper A,5,Lateral Raise,4,12-15,65-70% (RIR 1),45s,Shoulder hypertrophy - hold sets +5%
+3,Tue,Upper A,6,Bicep Curl,4,12-15,65-70% (RIR 1),45s,Arm hypertrophy - hold sets +5%
+3,Tue,Upper A,7,Triceps Pushdown,4,12-15,65-70% (RIR 1),45s,Arm hypertrophy - hold sets +5%
+3,Wed,Capacity - Optional,1,Zone 2 Continuous (any modality),1,20-30 min,60-70% HRmax,-,Recovery - hold
+3,Thu,Lower B,1,Deadlift,4,4,82-85% (RIR 1-2),2-3 min,Strength - peak week
+3,Thu,Lower B,1b,Deadlift - Top Set,1,2,87-90% (RIR 1),-,Strength - optional top double
+3,Thu,Lower B,2,Front Squat or Goblet Squat,4,10-12,70-75% (RIR 1),90s,Quad hypertrophy - hold sets +5%
+3,Thu,Lower B,3,Bulgarian Split Squat,4,10/leg,70-75% (RIR 1),90s,Glute/quad hypertrophy - hold sets +5%
+3,Thu,Lower B,4,Hip Thrust,4,10-12,70-75% (RIR 1),90s,Glute hypertrophy - hold sets +5%
+3,Thu,Lower B,5,Leg Curl,4,12-15,65-70% (RIR 1),60s,Hamstring hypertrophy - hold sets +5%
+3,Thu,Lower B,6,Calf Raise,4,12-15,65-70% (RIR 1),45s,Calf hypertrophy - hold sets +5%
+3,Thu,Lower B,7,Pallof Press,3,10/side,Bodyweight/band,45s,Core stability - hold
+3,Fri,Upper B,1,Overhead Press,4,4,82-85% (RIR 1-2),2-3 min,Strength - peak week
+3,Fri,Upper B,1b,Overhead Press - Top Set,1,2,87-90% (RIR 1),-,Strength - optional top double
+3,Fri,Upper B,2,Weighted Pull-up or Lat Pulldown (heavy),5,8-10,75-80% (RIR 1),90s,Back hypertrophy - hold sets +5%
+3,Fri,Upper B,3,Dips or Close-Grip Bench,4,10-12,70-75% (RIR 1),90s,Chest/triceps hypertrophy - hold sets +5%
+3,Fri,Upper B,4,Cable Row or Face Pull,4,12-15,65-70% (RIR 1),60s,Upper back/rear delt hypertrophy - hold sets +5%
+3,Fri,Upper B,5,DB Lateral Raise,4,12-15,65-70% (RIR 1),45s,Shoulder hypertrophy - hold sets +5%
+3,Fri,Upper B,6,Hammer Curl,4,12-15,65-70% (RIR 1),45s,Arm hypertrophy - hold sets +5%
+3,Fri,Upper B,7,Overhead Triceps Extension,4,12-15,65-70% (RIR 1),45s,Arm hypertrophy - hold sets +5%
+3,Sat,Capacity - Optional,1,Zone 2 Continuous (any modality),1,20-30 min,60-70% HRmax,-,Recovery - hold
+4,Mon,Lower A (Deload),1,Back Squat,3,5,60-65% (RIR 4-5),2-3 min,Strength - deload
+4,Mon,Lower A (Deload),2,Romanian Deadlift,2,10-12,55-60% (RIR 4),90s,Hamstring hypertrophy - deload
+4,Mon,Lower A (Deload),3,Leg Press or Walking Lunge,2,10-12,55-60% (RIR 4),90s,Quad hypertrophy - deload
+4,Mon,Lower A (Deload),4,Leg Extension,2,12-15,50-55% (RIR 4),60s,Quad hypertrophy - deload
+4,Mon,Lower A (Deload),5,Calf Raise,2,12-15,50-55% (RIR 4),45s,Calf hypertrophy - deload
+4,Mon,Lower A (Deload),6,Hanging Leg Raise,2,10,Bodyweight,45s,Core strength - deload
+4,Tue,Upper A (Deload),1,Bench Press,3,5,60-65% (RIR 4-5),2-3 min,Strength - deload
+4,Tue,Upper A (Deload),2,Barbell or Chest-Supported Row,3,8-10,60-65% (RIR 4),90s,Back hypertrophy - deload
+4,Tue,Upper A (Deload),3,Incline DB Press,2,10-12,55-60% (RIR 4),90s,Chest hypertrophy - deload
+4,Tue,Upper A (Deload),4,Lat Pulldown,2,10-12,55-60% (RIR 4),90s,Back hypertrophy - deload
+4,Tue,Upper A (Deload),5,Lateral Raise,2,12-15,50-55% (RIR 4),45s,Shoulder hypertrophy - deload
+4,Tue,Upper A (Deload),6,Bicep Curl,2,12-15,50-55% (RIR 4),45s,Arm hypertrophy - deload
+4,Tue,Upper A (Deload),7,Triceps Pushdown,2,12-15,50-55% (RIR 4),45s,Arm hypertrophy - deload
+4,Wed,Capacity - Optional (Deload),1,Zone 2 Continuous (any modality),1,15-20 min,60-70% HRmax,-,Recovery - deload
+4,Thu,Lower B (Deload),1,Deadlift,3,5,60-65% (RIR 4-5),2-3 min,Strength - deload
+4,Thu,Lower B (Deload),2,Front Squat or Goblet Squat,2,10-12,55-60% (RIR 4),90s,Quad hypertrophy - deload
+4,Thu,Lower B (Deload),3,Bulgarian Split Squat,2,10/leg,55-60% (RIR 4),90s,Glute/quad hypertrophy - deload
+4,Thu,Lower B (Deload),4,Hip Thrust,2,10-12,55-60% (RIR 4),90s,Glute hypertrophy - deload
+4,Thu,Lower B (Deload),5,Leg Curl,2,12-15,50-55% (RIR 4),60s,Hamstring hypertrophy - deload
+4,Thu,Lower B (Deload),6,Calf Raise,2,12-15,50-55% (RIR 4),45s,Calf hypertrophy - deload
+4,Thu,Lower B (Deload),7,Pallof Press,2,10/side,Bodyweight/band,45s,Core stability - deload
+4,Fri,Upper B (Deload),1,Overhead Press,3,5,60-65% (RIR 4-5),2-3 min,Strength - deload
+4,Fri,Upper B (Deload),2,Weighted Pull-up or Lat Pulldown (heavy),3,8-10,60-65% (RIR 4),90s,Back hypertrophy - deload
+4,Fri,Upper B (Deload),3,Dips or Close-Grip Bench,2,10-12,55-60% (RIR 4),90s,Chest/triceps hypertrophy - deload
+4,Fri,Upper B (Deload),4,Cable Row or Face Pull,2,12-15,50-55% (RIR 4),60s,Upper back/rear delt hypertrophy - deload
+4,Fri,Upper B (Deload),5,DB Lateral Raise,2,12-15,50-55% (RIR 4),45s,Shoulder hypertrophy - deload
+4,Fri,Upper B (Deload),6,Hammer Curl,2,12-15,50-55% (RIR 4),45s,Arm hypertrophy - deload
+4,Fri,Upper B (Deload),7,Overhead Triceps Extension,2,12-15,50-55% (RIR 4),45s,Arm hypertrophy - deload
+4,Sat,Capacity - Optional (Deload),1,Zone 2 Continuous (any modality),1,15-20 min,60-70% HRmax,-,Recovery - deload

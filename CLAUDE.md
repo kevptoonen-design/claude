@@ -64,6 +64,10 @@ The weekly digest is not enough on its own — it only runs Mondays, so it can't
 - **Female Specific Program** — strength + shape, female-specific alternative to Strong & Lean
 - Links for all 8 are in the training-diagnostic tool (`training-diagnostic.html`, sent to the user) and used as the client nutrition guide's closing program recommendation.
 
+## Race-specific builds (event-driven, outside the 8 standard programs)
+- **Bridge to Brisbane 2026** (5K/10K, race day Sun 13 Sept) — 8-week polarized build (Seiler), started Mon 20 July. 3 running days/week (Easy, Hard, Long) + 2 running-specific strength days (Mon/Fri: glute/hip stability, calf/tendon resilience, plyometric economy work — never enough to leave legs sore for the hard day or long run) + rest. One cutback week (Week 5) to manage load spikes, taper in Week 8. Docs: "Bridge to Brisbane - 5K Build (8 Weeks)" and "...10K Build (8 Weeks)" in Google Drive.
+- **Pace Calculator** — published artifact, computes Easy/Threshold/Interval/Race pace from one goal or recent time via the Daniels &amp; Gilbert VDOT equations (Daniels' Running Formula) — the standard method for deriving training paces from a single result, not guesswork. Use this pattern (VDOT-based, not arbitrary % of goal pace) for any future running-pace tool.
+
 ## Program blocks (session-by-session, for loading into Train Heroic)
 - Location: `programs/<program-name>/` in this repo, one CSV per 4-week block (columns: Week, Day, Session, Order, Exercise, Sets, Reps, Intensity, Rest, Notes).
 - `programs/athletic-program/block-1-weeks-1-4.csv` — Athletic Program, intermediate-advanced, Block 1. 4 gym days (Mon/Wed/Fri/Sat — Lower/Upper Strength + Power, squat/hinge/press/pull patterns each trained 2x/week via heavy+moderate undulation) + 2 capacity days (Tue aerobic zone 2, Thu anaerobic intervals) done on non-gym equipment (bike/rower/ski erg/treadmill), Sun rest.

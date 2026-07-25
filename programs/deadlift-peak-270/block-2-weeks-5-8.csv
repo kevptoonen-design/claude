@@ -1,0 +1,89 @@
+Week,Day,Session,Order,Exercise,Sets,Reps,Intensity,Rest,Focus
+5,Mon,Deadlift Strength,1,Conventional Deadlift,3,4,77.5% (170kg),3-4 min,Main lift — primary strength driver
+5,Mon,Deadlift Strength,2,Pause Deadlift (pause at knee),3,3,62.5% (138kg),3 min,Sticking-point overload — mid-shin/knee transition
+5,Mon,Deadlift Strength,3,Barbell Row,3,6,RIR 2,90s,Lat/upper back — bar path control
+5,Mon,Deadlift Strength,4,Weighted Plank,3,40s,-,60s,Core/bracing
+5,Tue,Squat / Quad Emphasis,1,Front Squat,3,6,RIR 2,2-3 min,Quad strength — direct fix for knee-transition weak point
+5,Tue,Squat / Quad Emphasis,2,Bulgarian Split Squat,3,8/leg,RIR 2,90s,Unilateral quad/glute
+5,Tue,Squat / Quad Emphasis,3,Bench Press,3,6,RIR 2,2-3 min,Upper body push strength
+5,Tue,Squat / Quad Emphasis,4,Face Pull,3,15,RIR 2,60s,Rear delt/upper back health
+5,Wed,Rest,-,Rest,-,-,-,-,Full rest
+5,Thu,Deadlift Technical + Pull,1,Deficit Deadlift,3,4,65% (143kg),3 min,Off-floor drive overload — feeds knee-transition strength
+5,Thu,Deadlift Technical + Pull,2,Pull-up / Lat Pulldown,3,6,RIR 2,90s,Lat strength — bar path control
+5,Thu,Deadlift Technical + Pull,3,Overhead Press,3,6,RIR 2,2 min,Upper body push strength
+5,Thu,Deadlift Technical + Pull,4,Suitcase Carry,3,25m/side,-,60s,"Core anti-lateral-flexion, grip"
+5,Fri,Posterior Chain / Hip-Glute,1,Romanian Deadlift,3,6,RIR 2,2-3 min,Posterior chain — hip hinge strength
+5,Fri,Posterior Chain / Hip-Glute,2,Good Morning,3,6,RIR 2,2 min,Posterior chain — supports lockout
+5,Fri,Posterior Chain / Hip-Glute,3,Hip Thrust,3,8,RIR 2,90s,Glute strength — lockout drive
+5,Fri,Posterior Chain / Hip-Glute,4,Banded Lateral Walk,3,12/side,-,45s,Hip stability
+5,Sat,Upper Body + Accessories,1,Incline Bench Press,3,6,RIR 2,2 min,Upper body push strength
+5,Sat,Upper Body + Accessories,2,Chest-Supported Row,3,6,RIR 2,2 min,Upper body pull strength
+5,Sat,Upper Body + Accessories,3,DB Lateral Raise,3,12,RIR 2,60s,Shoulder health/size
+5,Sat,Upper Body + Accessories,4,EZ-Bar Curl + Triceps Pushdown,3,10,RIR 2,60s,Arm accessory work
+5,Sun,Rest,-,Rest,-,-,-,-,Full rest
+6,Mon,Deadlift Strength,1,Conventional Deadlift,4,4,80% (176kg),3-4 min,Main lift — primary strength driver
+6,Mon,Deadlift Strength,2,Pause Deadlift (pause at knee),3,3,65% (143kg),3 min,Sticking-point overload — mid-shin/knee transition
+6,Mon,Deadlift Strength,3,Barbell Row,4,6,RIR 2,90s,Lat/upper back — bar path control
+6,Mon,Deadlift Strength,4,Weighted Plank,3,45s,-,60s,Core/bracing
+6,Tue,Squat / Quad Emphasis,1,Front Squat,4,6,RIR 2,2-3 min,Quad strength — direct fix for knee-transition weak point
+6,Tue,Squat / Quad Emphasis,2,Bulgarian Split Squat,3,8/leg,RIR 2,90s,Unilateral quad/glute
+6,Tue,Squat / Quad Emphasis,3,Bench Press,4,6,RIR 2,2-3 min,Upper body push strength
+6,Tue,Squat / Quad Emphasis,4,Face Pull,3,15,RIR 2,60s,Rear delt/upper back health
+6,Wed,Rest,-,Rest,-,-,-,-,Full rest
+6,Thu,Deadlift Technical + Pull,1,Deficit Deadlift,3,5,67.5% (148kg),3 min,Off-floor drive overload — feeds knee-transition strength
+6,Thu,Deadlift Technical + Pull,2,Pull-up / Lat Pulldown,4,6,RIR 2,90s,Lat strength — bar path control
+6,Thu,Deadlift Technical + Pull,3,Overhead Press,4,6,RIR 2,2 min,Upper body push strength
+6,Thu,Deadlift Technical + Pull,4,Suitcase Carry,3,30m/side,-,60s,"Core anti-lateral-flexion, grip"
+6,Fri,Posterior Chain / Hip-Glute,1,Romanian Deadlift,4,6,RIR 2,2-3 min,Posterior chain — hip hinge strength
+6,Fri,Posterior Chain / Hip-Glute,2,Good Morning,3,8,RIR 2,2 min,Posterior chain — supports lockout
+6,Fri,Posterior Chain / Hip-Glute,3,Hip Thrust,4,8,RIR 2,90s,Glute strength — lockout drive
+6,Fri,Posterior Chain / Hip-Glute,4,Banded Lateral Walk,3,12/side,-,45s,Hip stability
+6,Sat,Upper Body + Accessories,1,Incline Bench Press,4,6,RIR 2,2 min,Upper body push strength
+6,Sat,Upper Body + Accessories,2,Chest-Supported Row,4,6,RIR 2,2 min,Upper body pull strength
+6,Sat,Upper Body + Accessories,3,DB Lateral Raise,3,12,RIR 2,60s,Shoulder health/size
+6,Sat,Upper Body + Accessories,4,EZ-Bar Curl + Triceps Pushdown,3,10,RIR 2,60s,Arm accessory work
+6,Sun,Rest,-,Rest,-,-,-,-,Full rest
+7,Mon,Deadlift Strength,1,Conventional Deadlift,3,2,87.5% (192kg),3-4 min,Main lift — primary strength driver
+7,Mon,Deadlift Strength,2,Pause Deadlift (pause at knee),3,2,70% (154kg),3 min,Sticking-point overload — mid-shin/knee transition
+7,Mon,Deadlift Strength,3,Barbell Row,3,5,RIR 1-2,90s,Lat/upper back — bar path control
+7,Mon,Deadlift Strength,4,Weighted Plank,3,50s,-,60s,Core/bracing
+7,Tue,Squat / Quad Emphasis,1,Front Squat,3,4,RIR 1-2,2-3 min,Quad strength — direct fix for knee-transition weak point
+7,Tue,Squat / Quad Emphasis,2,Bulgarian Split Squat,3,6/leg,RIR 1-2,90s,Unilateral quad/glute
+7,Tue,Squat / Quad Emphasis,3,Bench Press,3,4,RIR 1-2,2-3 min,Upper body push strength
+7,Tue,Squat / Quad Emphasis,4,Face Pull,3,15,RIR 2,60s,Rear delt/upper back health
+7,Wed,Rest,-,Rest,-,-,-,-,Full rest
+7,Thu,Deadlift Technical + Pull,1,Deficit Deadlift,3,3,72.5% (160kg),3 min,Off-floor drive overload — feeds knee-transition strength
+7,Thu,Deadlift Technical + Pull,2,Pull-up / Lat Pulldown,3,5,RIR 1-2,90s,Lat strength — bar path control
+7,Thu,Deadlift Technical + Pull,3,Overhead Press,3,4,RIR 1-2,2 min,Upper body push strength
+7,Thu,Deadlift Technical + Pull,4,Suitcase Carry,3,35m/side,-,60s,"Core anti-lateral-flexion, grip"
+7,Fri,Posterior Chain / Hip-Glute,1,Romanian Deadlift,3,5,RIR 1-2,2-3 min,Posterior chain — hip hinge strength
+7,Fri,Posterior Chain / Hip-Glute,2,Good Morning,3,5,RIR 1-2,2 min,Posterior chain — supports lockout
+7,Fri,Posterior Chain / Hip-Glute,3,Hip Thrust,3,6,RIR 1,90s,Glute strength — lockout drive
+7,Fri,Posterior Chain / Hip-Glute,4,Banded Lateral Walk,3,12/side,-,45s,Hip stability
+7,Sat,Upper Body + Accessories,1,Incline Bench Press,3,4,RIR 1-2,2 min,Upper body push strength
+7,Sat,Upper Body + Accessories,2,Chest-Supported Row,3,4,RIR 1-2,2 min,Upper body pull strength
+7,Sat,Upper Body + Accessories,3,DB Lateral Raise,3,12,RIR 2,60s,Shoulder health/size
+7,Sat,Upper Body + Accessories,4,EZ-Bar Curl + Triceps Pushdown,3,10,RIR 2,60s,Arm accessory work
+7,Sun,Rest,-,Rest,-,-,-,-,Full rest
+8,Mon,Deadlift Strength,1,Conventional Deadlift,3,5,62.5% (138kg),3-4 min,Main lift — primary strength driver
+8,Mon,Deadlift Strength,2,Pause Deadlift (pause at knee),2,3,55% (121kg),3 min,Sticking-point overload — mid-shin/knee transition
+8,Mon,Deadlift Strength,3,Barbell Row,3,8,RIR 4,90s,Lat/upper back — bar path control
+8,Mon,Deadlift Strength,4,Weighted Plank,3,35s,-,60s,Core/bracing
+8,Tue,Squat / Quad Emphasis,1,Front Squat,3,8,RIR 4,2-3 min,Quad strength — direct fix for knee-transition weak point
+8,Tue,Squat / Quad Emphasis,2,Bulgarian Split Squat,3,10/leg,RIR 4,90s,Unilateral quad/glute
+8,Tue,Squat / Quad Emphasis,3,Bench Press,3,8,RIR 4,2-3 min,Upper body push strength
+8,Tue,Squat / Quad Emphasis,4,Face Pull,3,15,RIR 3,60s,Rear delt/upper back health
+8,Wed,Rest,-,Rest,-,-,-,-,Full rest
+8,Thu,Deadlift Technical + Pull,1,Deficit Deadlift,2,5,55% (121kg),3 min,Off-floor drive overload — feeds knee-transition strength
+8,Thu,Deadlift Technical + Pull,2,Pull-up / Lat Pulldown,3,8,RIR 4,90s,Lat strength — bar path control
+8,Thu,Deadlift Technical + Pull,3,Overhead Press,3,8,RIR 4,2 min,Upper body push strength
+8,Thu,Deadlift Technical + Pull,4,Suitcase Carry,3,20m/side,-,60s,"Core anti-lateral-flexion, grip"
+8,Fri,Posterior Chain / Hip-Glute,1,Romanian Deadlift,3,8,RIR 4,2-3 min,Posterior chain — hip hinge strength
+8,Fri,Posterior Chain / Hip-Glute,2,Good Morning,3,8,RIR 4,2 min,Posterior chain — supports lockout
+8,Fri,Posterior Chain / Hip-Glute,3,Hip Thrust,3,10,RIR 3,90s,Glute strength — lockout drive
+8,Fri,Posterior Chain / Hip-Glute,4,Banded Lateral Walk,3,12/side,-,45s,Hip stability
+8,Sat,Upper Body + Accessories,1,Incline Bench Press,3,8,RIR 4,2 min,Upper body push strength
+8,Sat,Upper Body + Accessories,2,Chest-Supported Row,3,8,RIR 4,2 min,Upper body pull strength
+8,Sat,Upper Body + Accessories,3,DB Lateral Raise,3,12,RIR 3,60s,Shoulder health/size
+8,Sat,Upper Body + Accessories,4,EZ-Bar Curl + Triceps Pushdown,3,10,RIR 3,60s,Arm accessory work
+8,Sun,Rest,-,Rest,-,-,-,-,Full rest

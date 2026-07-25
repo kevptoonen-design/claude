@@ -3,14 +3,14 @@ Week,Day,Session,Order,Exercise,Sets,Reps,Intensity,Rest,Focus
 1,Mon,Deadlift Strength,2,Pause Deadlift (pause at knee),3,3,55% (121kg),3 min,Sticking-point overload — mid-shin/knee transition
 1,Mon,Deadlift Strength,3,Barbell Row,3,8,RIR 3,90s,Lat/upper back — bar path control
 1,Mon,Deadlift Strength,4,Weighted Plank,3,30s,-,60s,Core/bracing
-1,Tue,Squat / Quad Emphasis,1,Front Squat,3,8,RIR 3,2-3 min,Quad strength — direct fix for knee-transition weak point
+1,Tue,Squat / Quad Emphasis,1,Zercher Squat,3,8,RIR 3,2-3 min,Quad strength — direct fix for knee-transition weak point (bonus: upper-back/anti-flexion carryover to deadlift lockout)
 1,Tue,Squat / Quad Emphasis,2,Bulgarian Split Squat,3,10/leg,RIR 3,90s,Unilateral quad/glute
 1,Tue,Squat / Quad Emphasis,3,Bench Press,3,8,RIR 3,2-3 min,Upper body push strength
 1,Tue,Squat / Quad Emphasis,4,Face Pull,3,15,RIR 2,60s,Rear delt/upper back health
 1,Wed,Rest,-,Rest,-,-,-,-,Full rest
 1,Thu,Deadlift Technical + Pull,1,Deficit Deadlift,3,5,60% (132kg),3 min,Off-floor drive overload — feeds knee-transition strength
 1,Thu,Deadlift Technical + Pull,2,Pull-up / Lat Pulldown,3,8,RIR 3,90s,Lat strength — bar path control
-1,Thu,Deadlift Technical + Pull,3,Overhead Press,3,8,RIR 3,2 min,Upper body push strength
+1,Thu,Deadlift Technical + Pull,3,Cable Lateral Raise,3,15,RIR 2,60s,Shoulder strength/size — replaces OHP
 1,Thu,Deadlift Technical + Pull,4,Suitcase Carry,3,20m/side,-,60s,"Core anti-lateral-flexion, grip"
 1,Fri,Posterior Chain / Hip-Glute,1,Romanian Deadlift,3,8,RIR 3,2-3 min,Posterior chain — hip hinge strength
 1,Fri,Posterior Chain / Hip-Glute,2,Good Morning,3,8,RIR 3,2 min,Posterior chain — supports lockout
@@ -25,14 +25,14 @@ Week,Day,Session,Order,Exercise,Sets,Reps,Intensity,Rest,Focus
 2,Mon,Deadlift Strength,2,Pause Deadlift (pause at knee),3,3,57.5% (126kg),3 min,Sticking-point overload — mid-shin/knee transition
 2,Mon,Deadlift Strength,3,Barbell Row,4,8,RIR 3,90s,Lat/upper back — bar path control
 2,Mon,Deadlift Strength,4,Weighted Plank,3,35s,-,60s,Core/bracing
-2,Tue,Squat / Quad Emphasis,1,Front Squat,4,8,RIR 3,2-3 min,Quad strength — direct fix for knee-transition weak point
+2,Tue,Squat / Quad Emphasis,1,Zercher Squat,4,8,RIR 3,2-3 min,Quad strength — direct fix for knee-transition weak point (bonus: upper-back/anti-flexion carryover to deadlift lockout)
 2,Tue,Squat / Quad Emphasis,2,Bulgarian Split Squat,3,10/leg,RIR 3,90s,Unilateral quad/glute
 2,Tue,Squat / Quad Emphasis,3,Bench Press,4,8,RIR 3,2-3 min,Upper body push strength
 2,Tue,Squat / Quad Emphasis,4,Face Pull,3,15,RIR 2,60s,Rear delt/upper back health
 2,Wed,Rest,-,Rest,-,-,-,-,Full rest
 2,Thu,Deadlift Technical + Pull,1,Deficit Deadlift,3,6,62.5% (138kg),3 min,Off-floor drive overload — feeds knee-transition strength
 2,Thu,Deadlift Technical + Pull,2,Pull-up / Lat Pulldown,4,8,RIR 3,90s,Lat strength — bar path control
-2,Thu,Deadlift Technical + Pull,3,Overhead Press,4,8,RIR 3,2 min,Upper body push strength
+2,Thu,Deadlift Technical + Pull,3,Cable Lateral Raise,4,15,RIR 2,60s,Shoulder strength/size — replaces OHP
 2,Thu,Deadlift Technical + Pull,4,Suitcase Carry,3,25m/side,-,60s,"Core anti-lateral-flexion, grip"
 2,Fri,Posterior Chain / Hip-Glute,1,Romanian Deadlift,4,8,RIR 3,2-3 min,Posterior chain — hip hinge strength
 2,Fri,Posterior Chain / Hip-Glute,2,Good Morning,3,10,RIR 3,2 min,Posterior chain — supports lockout
@@ -47,14 +47,14 @@ Week,Day,Session,Order,Exercise,Sets,Reps,Intensity,Rest,Focus
 3,Mon,Deadlift Strength,2,Pause Deadlift (pause at knee),3,3,62.5% (138kg),3 min,Sticking-point overload — mid-shin/knee transition
 3,Mon,Deadlift Strength,3,Barbell Row,3,6,RIR 2,90s,Lat/upper back — bar path control
 3,Mon,Deadlift Strength,4,Weighted Plank,3,40s,-,60s,Core/bracing
-3,Tue,Squat / Quad Emphasis,1,Front Squat,3,5,RIR 2,2-3 min,Quad strength — direct fix for knee-transition weak point
+3,Tue,Squat / Quad Emphasis,1,Zercher Squat,3,5,RIR 2,2-3 min,Quad strength — direct fix for knee-transition weak point (bonus: upper-back/anti-flexion carryover to deadlift lockout)
 3,Tue,Squat / Quad Emphasis,2,Bulgarian Split Squat,3,8/leg,RIR 2,90s,Unilateral quad/glute
 3,Tue,Squat / Quad Emphasis,3,Bench Press,3,5,RIR 2,2-3 min,Upper body push strength
 3,Tue,Squat / Quad Emphasis,4,Face Pull,3,15,RIR 2,60s,Rear delt/upper back health
 3,Wed,Rest,-,Rest,-,-,-,-,Full rest
 3,Thu,Deadlift Technical + Pull,1,Deficit Deadlift,3,4,67.5% (148kg),3 min,Off-floor drive overload — feeds knee-transition strength
 3,Thu,Deadlift Technical + Pull,2,Pull-up / Lat Pulldown,3,6,RIR 2,90s,Lat strength — bar path control
-3,Thu,Deadlift Technical + Pull,3,Overhead Press,3,5,RIR 2,2 min,Upper body push strength
+3,Thu,Deadlift Technical + Pull,3,Cable Lateral Raise,3,12,RIR 1-2,60s,Shoulder strength/size — replaces OHP
 3,Thu,Deadlift Technical + Pull,4,Suitcase Carry,3,30m/side,-,60s,"Core anti-lateral-flexion, grip"
 3,Fri,Posterior Chain / Hip-Glute,1,Romanian Deadlift,3,6,RIR 2,2-3 min,Posterior chain — hip hinge strength
 3,Fri,Posterior Chain / Hip-Glute,2,Good Morning,3,6,RIR 2,2 min,Posterior chain — supports lockout
@@ -69,14 +69,14 @@ Week,Day,Session,Order,Exercise,Sets,Reps,Intensity,Rest,Focus
 4,Mon,Deadlift Strength,2,Pause Deadlift (pause at knee),2,3,50% (110kg),3 min,Sticking-point overload — mid-shin/knee transition
 4,Mon,Deadlift Strength,3,Barbell Row,3,8,RIR 4,90s,Lat/upper back — bar path control
 4,Mon,Deadlift Strength,4,Weighted Plank,3,30s,-,60s,Core/bracing
-4,Tue,Squat / Quad Emphasis,1,Front Squat,3,8,RIR 4,2-3 min,Quad strength — direct fix for knee-transition weak point
+4,Tue,Squat / Quad Emphasis,1,Zercher Squat,3,8,RIR 4,2-3 min,Quad strength — direct fix for knee-transition weak point (bonus: upper-back/anti-flexion carryover to deadlift lockout)
 4,Tue,Squat / Quad Emphasis,2,Bulgarian Split Squat,3,10/leg,RIR 4,90s,Unilateral quad/glute
 4,Tue,Squat / Quad Emphasis,3,Bench Press,3,8,RIR 4,2-3 min,Upper body push strength
 4,Tue,Squat / Quad Emphasis,4,Face Pull,3,15,RIR 3,60s,Rear delt/upper back health
 4,Wed,Rest,-,Rest,-,-,-,-,Full rest
 4,Thu,Deadlift Technical + Pull,1,Deficit Deadlift,2,5,50% (110kg),3 min,Off-floor drive overload — feeds knee-transition strength
 4,Thu,Deadlift Technical + Pull,2,Pull-up / Lat Pulldown,3,8,RIR 4,90s,Lat strength — bar path control
-4,Thu,Deadlift Technical + Pull,3,Overhead Press,3,8,RIR 4,2 min,Upper body push strength
+4,Thu,Deadlift Technical + Pull,3,Cable Lateral Raise,3,15,RIR 3,60s,Shoulder strength/size — replaces OHP
 4,Thu,Deadlift Technical + Pull,4,Suitcase Carry,3,20m/side,-,60s,"Core anti-lateral-flexion, grip"
 4,Fri,Posterior Chain / Hip-Glute,1,Romanian Deadlift,3,8,RIR 4,2-3 min,Posterior chain — hip hinge strength
 4,Fri,Posterior Chain / Hip-Glute,2,Good Morning,3,8,RIR 4,2 min,Posterior chain — supports lockout

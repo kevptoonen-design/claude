@@ -3,7 +3,7 @@ Week,Day,Session,Order,Exercise,Sets,Reps,Intensity,Rest,Focus
 5,Mon,Deadlift Strength,2,Pause Deadlift (pause at knee),3,3,62.5% (138kg),3 min,Sticking-point overload — mid-shin/knee transition
 5,Mon,Deadlift Strength,3,Barbell Row,3,6,RIR 2,90s,Lat/upper back — bar path control
 5,Mon,Deadlift Strength,4,Weighted Plank,3,40s,-,60s,Core/bracing
-5,Tue,Squat / Quad Emphasis,1,Zercher Squat,3,6,RIR 2,2-3 min,Quad strength — direct fix for knee-transition weak point (bonus: upper-back/anti-flexion carryover to deadlift lockout)
+5,Tue,Squat / Quad Emphasis,1,Box Squat,3,6,RIR 2,2-3 min,"Hip/glute power — explosive drive off a dead stop, conjugate rotation from Zercher Squat"
 5,Tue,Squat / Quad Emphasis,2,Bulgarian Split Squat,3,8/leg,RIR 2,90s,Unilateral quad/glute
 5,Tue,Squat / Quad Emphasis,3,Bench Press,3,6,RIR 2,2-3 min,Upper body push strength
 5,Tue,Squat / Quad Emphasis,4,Face Pull,3,15,RIR 2,60s,Rear delt/upper back health
@@ -25,7 +25,7 @@ Week,Day,Session,Order,Exercise,Sets,Reps,Intensity,Rest,Focus
 6,Mon,Deadlift Strength,2,Pause Deadlift (pause at knee),3,3,65% (143kg),3 min,Sticking-point overload — mid-shin/knee transition
 6,Mon,Deadlift Strength,3,Barbell Row,4,6,RIR 2,90s,Lat/upper back — bar path control
 6,Mon,Deadlift Strength,4,Weighted Plank,3,45s,-,60s,Core/bracing
-6,Tue,Squat / Quad Emphasis,1,Zercher Squat,4,6,RIR 2,2-3 min,Quad strength — direct fix for knee-transition weak point (bonus: upper-back/anti-flexion carryover to deadlift lockout)
+6,Tue,Squat / Quad Emphasis,1,Box Squat,4,6,RIR 2,2-3 min,"Hip/glute power — explosive drive off a dead stop, conjugate rotation from Zercher Squat"
 6,Tue,Squat / Quad Emphasis,2,Bulgarian Split Squat,3,8/leg,RIR 2,90s,Unilateral quad/glute
 6,Tue,Squat / Quad Emphasis,3,Bench Press,4,6,RIR 2,2-3 min,Upper body push strength
 6,Tue,Squat / Quad Emphasis,4,Face Pull,3,15,RIR 2,60s,Rear delt/upper back health
@@ -47,7 +47,7 @@ Week,Day,Session,Order,Exercise,Sets,Reps,Intensity,Rest,Focus
 7,Mon,Deadlift Strength,2,Pause Deadlift (pause at knee),3,2,70% (154kg),3 min,Sticking-point overload — mid-shin/knee transition
 7,Mon,Deadlift Strength,3,Barbell Row,3,5,RIR 1-2,90s,Lat/upper back — bar path control
 7,Mon,Deadlift Strength,4,Weighted Plank,3,50s,-,60s,Core/bracing
-7,Tue,Squat / Quad Emphasis,1,Zercher Squat,3,4,RIR 1-2,2-3 min,Quad strength — direct fix for knee-transition weak point (bonus: upper-back/anti-flexion carryover to deadlift lockout)
+7,Tue,Squat / Quad Emphasis,1,Box Squat,3,4,RIR 1-2,2-3 min,"Hip/glute power — explosive drive off a dead stop, conjugate rotation from Zercher Squat"
 7,Tue,Squat / Quad Emphasis,2,Bulgarian Split Squat,3,6/leg,RIR 1-2,90s,Unilateral quad/glute
 7,Tue,Squat / Quad Emphasis,3,Bench Press,3,4,RIR 1-2,2-3 min,Upper body push strength
 7,Tue,Squat / Quad Emphasis,4,Face Pull,3,15,RIR 2,60s,Rear delt/upper back health
@@ -69,7 +69,7 @@ Week,Day,Session,Order,Exercise,Sets,Reps,Intensity,Rest,Focus
 8,Mon,Deadlift Strength,2,Pause Deadlift (pause at knee),2,3,55% (121kg),3 min,Sticking-point overload — mid-shin/knee transition
 8,Mon,Deadlift Strength,3,Barbell Row,3,8,RIR 4,90s,Lat/upper back — bar path control
 8,Mon,Deadlift Strength,4,Weighted Plank,3,35s,-,60s,Core/bracing
-8,Tue,Squat / Quad Emphasis,1,Zercher Squat,3,8,RIR 4,2-3 min,Quad strength — direct fix for knee-transition weak point (bonus: upper-back/anti-flexion carryover to deadlift lockout)
+8,Tue,Squat / Quad Emphasis,1,Box Squat,3,8,RIR 4,2-3 min,"Hip/glute power — explosive drive off a dead stop, conjugate rotation from Zercher Squat"
 8,Tue,Squat / Quad Emphasis,2,Bulgarian Split Squat,3,10/leg,RIR 4,90s,Unilateral quad/glute
 8,Tue,Squat / Quad Emphasis,3,Bench Press,3,8,RIR 4,2-3 min,Upper body push strength
 8,Tue,Squat / Quad Emphasis,4,Face Pull,3,15,RIR 3,60s,Rear delt/upper back health

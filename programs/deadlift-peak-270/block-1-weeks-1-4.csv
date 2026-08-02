@@ -1,6 +1,6 @@
 Week,Day,Session,Order,Exercise,Sets,Reps,Intensity,Rest,Focus
-1,Mon,Deadlift Strength,1,Conventional Deadlift,3,5,70% (154kg),3-4 min,Main lift — primary strength driver
-1,Mon,Deadlift Strength,2,Pause Deadlift (pause at knee),3,3,55% (121kg),3 min,Sticking-point overload — mid-shin/knee transition
+1,Mon,Deadlift Strength,1,Conventional Deadlift,3,5,70% (164kg),3-4 min,Main lift — primary strength driver
+1,Mon,Deadlift Strength,2,Pause Deadlift (pause at knee),3,3,55% (129kg),3 min,Sticking-point overload — mid-shin/knee transition
 1,Mon,Deadlift Strength,3,Barbell Row,3,8,RIR 3,90s,Lat/upper back — bar path control
 1,Mon,Deadlift Strength,4,Weighted Plank,3,30s,-,60s,Core/bracing
 1,Tue,Squat / Quad Emphasis,1,Zercher Squat,3,8,RIR 3,2-3 min,Quad strength — direct fix for knee-transition weak point (bonus: upper-back/anti-flexion carryover to deadlift lockout)
@@ -8,7 +8,7 @@ Week,Day,Session,Order,Exercise,Sets,Reps,Intensity,Rest,Focus
 1,Tue,Squat / Quad Emphasis,3,Bench Press,3,8,RIR 3,2-3 min,Upper body push strength
 1,Tue,Squat / Quad Emphasis,4,Face Pull,3,15,RIR 2,60s,Rear delt/upper back health
 1,Wed,Rest,-,Rest,-,-,-,-,Full rest
-1,Thu,Deadlift Technical + Pull,1,Deficit Deadlift,3,5,60% (132kg),3 min,Off-floor drive overload — feeds knee-transition strength
+1,Thu,Deadlift Technical + Pull,1,Deficit Deadlift,3,5,60% (141kg),3 min,Off-floor drive overload — feeds knee-transition strength
 1,Thu,Deadlift Technical + Pull,2,Pull-up / Lat Pulldown,3,8,RIR 3,90s,Lat strength — bar path control
 1,Thu,Deadlift Technical + Pull,3,Cable Lateral Raise,3,15,RIR 2,60s,Shoulder strength/size — replaces OHP
 1,Thu,Deadlift Technical + Pull,4,Suitcase Carry,3,20m/side,-,60s,"Core anti-lateral-flexion, grip"
@@ -21,8 +21,8 @@ Week,Day,Session,Order,Exercise,Sets,Reps,Intensity,Rest,Focus
 1,Sat,Upper Body + Accessories,3,DB Lateral Raise,3,12,RIR 2,60s,Shoulder health/size
 1,Sat,Upper Body + Accessories,4,EZ-Bar Curl + Triceps Pushdown,3,10,RIR 2,60s,Arm accessory work
 1,Sun,Rest,-,Rest,-,-,-,-,Full rest
-2,Mon,Deadlift Strength,1,Conventional Deadlift,4,5,72.5% (160kg),3-4 min,Main lift — primary strength driver
-2,Mon,Deadlift Strength,2,Pause Deadlift (pause at knee),3,3,57.5% (126kg),3 min,Sticking-point overload — mid-shin/knee transition
+2,Mon,Deadlift Strength,1,Conventional Deadlift,4,5,72.5% (170kg),3-4 min,Main lift — primary strength driver
+2,Mon,Deadlift Strength,2,Pause Deadlift (pause at knee),3,3,57.5% (135kg),3 min,Sticking-point overload — mid-shin/knee transition
 2,Mon,Deadlift Strength,3,Barbell Row,4,8,RIR 3,90s,Lat/upper back — bar path control
 2,Mon,Deadlift Strength,4,Weighted Plank,3,35s,-,60s,Core/bracing
 2,Tue,Squat / Quad Emphasis,1,Zercher Squat,4,8,RIR 3,2-3 min,Quad strength — direct fix for knee-transition weak point (bonus: upper-back/anti-flexion carryover to deadlift lockout)
@@ -30,7 +30,7 @@ Week,Day,Session,Order,Exercise,Sets,Reps,Intensity,Rest,Focus
 2,Tue,Squat / Quad Emphasis,3,Bench Press,4,8,RIR 3,2-3 min,Upper body push strength
 2,Tue,Squat / Quad Emphasis,4,Face Pull,3,15,RIR 2,60s,Rear delt/upper back health
 2,Wed,Rest,-,Rest,-,-,-,-,Full rest
-2,Thu,Deadlift Technical + Pull,1,Deficit Deadlift,3,6,62.5% (138kg),3 min,Off-floor drive overload — feeds knee-transition strength
+2,Thu,Deadlift Technical + Pull,1,Deficit Deadlift,3,6,62.5% (147kg),3 min,Off-floor drive overload — feeds knee-transition strength
 2,Thu,Deadlift Technical + Pull,2,Pull-up / Lat Pulldown,4,8,RIR 3,90s,Lat strength — bar path control
 2,Thu,Deadlift Technical + Pull,3,Cable Lateral Raise,4,15,RIR 2,60s,Shoulder strength/size — replaces OHP
 2,Thu,Deadlift Technical + Pull,4,Suitcase Carry,3,25m/side,-,60s,"Core anti-lateral-flexion, grip"
@@ -43,8 +43,8 @@ Week,Day,Session,Order,Exercise,Sets,Reps,Intensity,Rest,Focus
 2,Sat,Upper Body + Accessories,3,DB Lateral Raise,3,12,RIR 2,60s,Shoulder health/size
 2,Sat,Upper Body + Accessories,4,EZ-Bar Curl + Triceps Pushdown,3,10,RIR 2,60s,Arm accessory work
 2,Sun,Rest,-,Rest,-,-,-,-,Full rest
-3,Mon,Deadlift Strength,1,Conventional Deadlift,3,3,80% (176kg),3-4 min,Main lift — primary strength driver
-3,Mon,Deadlift Strength,2,Pause Deadlift (pause at knee),3,3,62.5% (138kg),3 min,Sticking-point overload — mid-shin/knee transition
+3,Mon,Deadlift Strength,1,Conventional Deadlift,3,3,80% (188kg),3-4 min,Main lift — primary strength driver
+3,Mon,Deadlift Strength,2,Pause Deadlift (pause at knee),3,3,62.5% (147kg),3 min,Sticking-point overload — mid-shin/knee transition
 3,Mon,Deadlift Strength,3,Barbell Row,3,6,RIR 2,90s,Lat/upper back — bar path control
 3,Mon,Deadlift Strength,4,Weighted Plank,3,40s,-,60s,Core/bracing
 3,Tue,Squat / Quad Emphasis,1,Zercher Squat,3,5,RIR 2,2-3 min,Quad strength — direct fix for knee-transition weak point (bonus: upper-back/anti-flexion carryover to deadlift lockout)
@@ -52,7 +52,7 @@ Week,Day,Session,Order,Exercise,Sets,Reps,Intensity,Rest,Focus
 3,Tue,Squat / Quad Emphasis,3,Bench Press,3,5,RIR 2,2-3 min,Upper body push strength
 3,Tue,Squat / Quad Emphasis,4,Face Pull,3,15,RIR 2,60s,Rear delt/upper back health
 3,Wed,Rest,-,Rest,-,-,-,-,Full rest
-3,Thu,Deadlift Technical + Pull,1,Deficit Deadlift,3,4,67.5% (148kg),3 min,Off-floor drive overload — feeds knee-transition strength
+3,Thu,Deadlift Technical + Pull,1,Deficit Deadlift,3,4,67.5% (159kg),3 min,Off-floor drive overload — feeds knee-transition strength
 3,Thu,Deadlift Technical + Pull,2,Pull-up / Lat Pulldown,3,6,RIR 2,90s,Lat strength — bar path control
 3,Thu,Deadlift Technical + Pull,3,Cable Lateral Raise,3,12,RIR 1-2,60s,Shoulder strength/size — replaces OHP
 3,Thu,Deadlift Technical + Pull,4,Suitcase Carry,3,30m/side,-,60s,"Core anti-lateral-flexion, grip"
@@ -65,8 +65,8 @@ Week,Day,Session,Order,Exercise,Sets,Reps,Intensity,Rest,Focus
 3,Sat,Upper Body + Accessories,3,DB Lateral Raise,3,12,RIR 2,60s,Shoulder health/size
 3,Sat,Upper Body + Accessories,4,EZ-Bar Curl + Triceps Pushdown,3,10,RIR 2,60s,Arm accessory work
 3,Sun,Rest,-,Rest,-,-,-,-,Full rest
-4,Mon,Deadlift Strength,1,Conventional Deadlift,3,5,60% (132kg),3-4 min,Main lift — primary strength driver
-4,Mon,Deadlift Strength,2,Pause Deadlift (pause at knee),2,3,50% (110kg),3 min,Sticking-point overload — mid-shin/knee transition
+4,Mon,Deadlift Strength,1,Conventional Deadlift,3,5,60% (141kg),3-4 min,Main lift — primary strength driver
+4,Mon,Deadlift Strength,2,Pause Deadlift (pause at knee),2,3,50% (118kg),3 min,Sticking-point overload — mid-shin/knee transition
 4,Mon,Deadlift Strength,3,Barbell Row,3,8,RIR 4,90s,Lat/upper back — bar path control
 4,Mon,Deadlift Strength,4,Weighted Plank,3,30s,-,60s,Core/bracing
 4,Tue,Squat / Quad Emphasis,1,Zercher Squat,3,8,RIR 4,2-3 min,Quad strength — direct fix for knee-transition weak point (bonus: upper-back/anti-flexion carryover to deadlift lockout)
@@ -74,7 +74,7 @@ Week,Day,Session,Order,Exercise,Sets,Reps,Intensity,Rest,Focus
 4,Tue,Squat / Quad Emphasis,3,Bench Press,3,8,RIR 4,2-3 min,Upper body push strength
 4,Tue,Squat / Quad Emphasis,4,Face Pull,3,15,RIR 3,60s,Rear delt/upper back health
 4,Wed,Rest,-,Rest,-,-,-,-,Full rest
-4,Thu,Deadlift Technical + Pull,1,Deficit Deadlift,2,5,50% (110kg),3 min,Off-floor drive overload — feeds knee-transition strength
+4,Thu,Deadlift Technical + Pull,1,Deficit Deadlift,2,5,50% (118kg),3 min,Off-floor drive overload — feeds knee-transition strength
 4,Thu,Deadlift Technical + Pull,2,Pull-up / Lat Pulldown,3,8,RIR 4,90s,Lat strength — bar path control
 4,Thu,Deadlift Technical + Pull,3,Cable Lateral Raise,3,15,RIR 3,60s,Shoulder strength/size — replaces OHP
 4,Thu,Deadlift Technical + Pull,4,Suitcase Carry,3,20m/side,-,60s,"Core anti-lateral-flexion, grip"

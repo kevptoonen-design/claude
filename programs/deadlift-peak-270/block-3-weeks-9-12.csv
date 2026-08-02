@@ -1,6 +1,6 @@
 Week,Day,Session,Order,Exercise,Sets,Reps,Intensity,Rest,Focus
-9,Mon,Deadlift Strength,1,Conventional Deadlift,3,3,85% (187kg),3-4 min,Main lift — primary strength driver
-9,Mon,Deadlift Strength,2,Block Pull (from knee height),3,3,85% (187kg),3 min,Sticking-point specific overload — knee transition/lockout
+9,Mon,Deadlift Strength,1,Conventional Deadlift,3,3,85% (200kg),3-4 min,Main lift — primary strength driver
+9,Mon,Deadlift Strength,2,Block Pull (from knee height),3,3,85% (200kg),3 min,Sticking-point specific overload — knee transition/lockout
 9,Mon,Deadlift Strength,3,Barbell Row,3,5,RIR 1-2,90s,Lat/upper back — bar path control
 9,Mon,Deadlift Strength,4,Weighted Plank,3,45s,-,60s,Core/bracing
 9,Tue,Squat / Quad Emphasis,1,Zercher Squat,3,5,RIR 2,2-3 min,Quad strength — direct fix for knee-transition weak point (bonus: upper-back/anti-flexion carryover to deadlift lockout)
@@ -8,7 +8,7 @@ Week,Day,Session,Order,Exercise,Sets,Reps,Intensity,Rest,Focus
 9,Tue,Squat / Quad Emphasis,3,Bench Press,3,5,RIR 2,2-3 min,Upper body push strength
 9,Tue,Squat / Quad Emphasis,4,Face Pull,3,15,RIR 2,60s,Rear delt/upper back health
 9,Wed,Rest,-,Rest,-,-,-,-,Full rest
-9,Thu,Deadlift Technical + Pull,1,Speed Pull (off floor),5,2,55% (121kg),2 min,"Bar speed off the floor — max intent, not max load"
+9,Thu,Deadlift Technical + Pull,1,Speed Pull (off floor),5,2,55% (129kg),2 min,"Bar speed off the floor — max intent, not max load"
 9,Thu,Deadlift Technical + Pull,2,Pull-up / Lat Pulldown,3,5,RIR 2,90s,Lat strength — bar path control
 9,Thu,Deadlift Technical + Pull,3,Cable Lateral Raise,3,12,RIR 1-2,60s,Shoulder strength/size — replaces OHP
 9,Thu,Deadlift Technical + Pull,4,Suitcase Carry,3,30m/side,-,60s,"Core anti-lateral-flexion, grip"
@@ -21,8 +21,8 @@ Week,Day,Session,Order,Exercise,Sets,Reps,Intensity,Rest,Focus
 9,Sat,Upper Body + Accessories,3,DB Lateral Raise,3,12,RIR 2,60s,Shoulder health/size
 9,Sat,Upper Body + Accessories,4,EZ-Bar Curl + Triceps Pushdown,3,10,RIR 2,60s,Arm accessory work
 9,Sun,Rest,-,Rest,-,-,-,-,Full rest
-10,Mon,Deadlift Strength,1,Conventional Deadlift,4,2,87.5% (192kg),3-4 min,Main lift — primary strength driver
-10,Mon,Deadlift Strength,2,Block Pull (from knee height),3,2,90% (198kg),3 min,Sticking-point specific overload — knee transition/lockout
+10,Mon,Deadlift Strength,1,Conventional Deadlift,4,2,87.5% (206kg),3-4 min,Main lift — primary strength driver
+10,Mon,Deadlift Strength,2,Block Pull (from knee height),3,2,90% (212kg),3 min,Sticking-point specific overload — knee transition/lockout
 10,Mon,Deadlift Strength,3,Barbell Row,4,5,RIR 1-2,90s,Lat/upper back — bar path control
 10,Mon,Deadlift Strength,4,Weighted Plank,3,50s,-,60s,Core/bracing
 10,Tue,Squat / Quad Emphasis,1,Zercher Squat,3,4,RIR 2,2-3 min,Quad strength — direct fix for knee-transition weak point (bonus: upper-back/anti-flexion carryover to deadlift lockout)
@@ -30,7 +30,7 @@ Week,Day,Session,Order,Exercise,Sets,Reps,Intensity,Rest,Focus
 10,Tue,Squat / Quad Emphasis,3,Bench Press,3,4,RIR 2,2-3 min,Upper body push strength
 10,Tue,Squat / Quad Emphasis,4,Face Pull,3,15,RIR 2,60s,Rear delt/upper back health
 10,Wed,Rest,-,Rest,-,-,-,-,Full rest
-10,Thu,Deadlift Technical + Pull,1,Speed Pull (off floor),5,2,57.5% (126kg),2 min,"Bar speed off the floor — max intent, not max load"
+10,Thu,Deadlift Technical + Pull,1,Speed Pull (off floor),5,2,57.5% (135kg),2 min,"Bar speed off the floor — max intent, not max load"
 10,Thu,Deadlift Technical + Pull,2,Pull-up / Lat Pulldown,4,5,RIR 2,90s,Lat strength — bar path control
 10,Thu,Deadlift Technical + Pull,3,Cable Lateral Raise,3,12,RIR 2,60s,Shoulder strength/size — replaces OHP
 10,Thu,Deadlift Technical + Pull,4,Suitcase Carry,3,35m/side,-,60s,"Core anti-lateral-flexion, grip"
@@ -43,17 +43,17 @@ Week,Day,Session,Order,Exercise,Sets,Reps,Intensity,Rest,Focus
 10,Sat,Upper Body + Accessories,3,DB Lateral Raise,3,12,RIR 2,60s,Shoulder health/size
 10,Sat,Upper Body + Accessories,4,EZ-Bar Curl + Triceps Pushdown,3,10,RIR 2,60s,Arm accessory work
 10,Sun,Rest,-,Rest,-,-,-,-,Full rest
-11,Mon,Deadlift Strength — Checkpoint,1,Conventional Deadlift,1,3,70% (154kg),2 min,Warm-up
-11,Mon,Deadlift Strength — Checkpoint,2,Conventional Deadlift,1,2,80% (176kg),3 min,Warm-up
-11,Mon,Deadlift Strength — Checkpoint,3,Conventional Deadlift,1,1,90% (198kg),4 min,CHECKPOINT SINGLE — assess bar speed/RPE here. RPE<=8 and crisp bar speed = 270-280kg target is on track. Grindy/RPE9-10 = re-target 250-260kg for Week 14.
-11,Mon,Deadlift Strength — Checkpoint,4,Conventional Deadlift,2,3,80% (176kg),3 min,Backoff volume
+11,Mon,Deadlift Strength — Checkpoint,1,Conventional Deadlift,1,3,70% (164kg),2 min,Warm-up
+11,Mon,Deadlift Strength — Checkpoint,2,Conventional Deadlift,1,2,80% (188kg),3 min,Warm-up
+11,Mon,Deadlift Strength — Checkpoint,3,Conventional Deadlift,1,1,90% (212kg),4 min,CHECKPOINT SINGLE — assess bar speed/RPE here. RPE<=8 and crisp bar speed = 270-280kg target is on track. Grindy/RPE9-10 = re-target 250-260kg for Week 14.
+11,Mon,Deadlift Strength — Checkpoint,4,Conventional Deadlift,2,3,80% (188kg),3 min,Backoff volume
 11,Mon,Deadlift Strength — Checkpoint,5,Barbell Row,2,5,RIR 2,90s,"Lat/upper back — bar path control, taper volume"
 11,Tue,Squat / Quad Emphasis,1,Zercher Squat,2,2,RIR 1,2-3 min,Quad strength — direct fix for knee-transition weak point (bonus: upper-back/anti-flexion carryover to deadlift lockout)
 11,Tue,Squat / Quad Emphasis,2,Bulgarian Split Squat,2,6/leg,RIR 2,90s,Unilateral quad/glute — reduced sets
 11,Tue,Squat / Quad Emphasis,3,Bench Press,2,3,RIR 2,2-3 min,Upper body push strength
 11,Tue,Squat / Quad Emphasis,4,Face Pull,2,15,RIR 2,60s,Rear delt/upper back health
 11,Wed,Rest,-,Rest,-,-,-,-,Full rest
-11,Thu,Deadlift Technical + Pull,1,Speed Pull (off floor),3,2,60% (132kg),2 min,Bar speed — reduced volume near peak
+11,Thu,Deadlift Technical + Pull,1,Speed Pull (off floor),3,2,60% (141kg),2 min,Bar speed — reduced volume near peak
 11,Thu,Deadlift Technical + Pull,2,Pull-up / Lat Pulldown,2,5,RIR 2,90s,Lat strength — bar path control
 11,Thu,Deadlift Technical + Pull,3,Cable Lateral Raise,2,12,RIR 2,60s,Shoulder strength/size — replaces OHP
 11,Thu,Deadlift Technical + Pull,4,Suitcase Carry,2,25m/side,-,60s,"Core anti-lateral-flexion, grip — reduced"
@@ -66,8 +66,8 @@ Week,Day,Session,Order,Exercise,Sets,Reps,Intensity,Rest,Focus
 11,Sat,Upper Body + Accessories,3,DB Lateral Raise,2,12,RIR 2,60s,Shoulder health/size
 11,Sat,Upper Body + Accessories,4,EZ-Bar Curl + Triceps Pushdown,2,10,RIR 2,60s,Arm accessory work — taper
 11,Sun,Rest,-,Rest,-,-,-,-,Full rest
-12,Mon,Deadlift Strength — Deload,1,Conventional Deadlift,3,5,65% (143kg),2-3 min,"Deload — fatigue clears, movement quality only"
-12,Mon,Deadlift Strength — Deload,2,Block Pull (from knee height),2,3,70% (154kg),2 min,"Light technical touch, no grinding"
+12,Mon,Deadlift Strength — Deload,1,Conventional Deadlift,3,5,65% (153kg),2-3 min,"Deload — fatigue clears, movement quality only"
+12,Mon,Deadlift Strength — Deload,2,Block Pull (from knee height),2,3,70% (164kg),2 min,"Light technical touch, no grinding"
 12,Mon,Deadlift Strength — Deload,3,Barbell Row,3,8,RIR 4,90s,Lat/upper back — light
 12,Mon,Deadlift Strength — Deload,4,Weighted Plank,3,30s,-,60s,Core/bracing — light
 12,Tue,Squat / Quad Emphasis — Deload,1,Zercher Squat,3,6,RIR 4,2-3 min,Quad strength — direct fix for knee-transition weak point (bonus: upper-back/anti-flexion carryover to deadlift lockout)
@@ -75,7 +75,7 @@ Week,Day,Session,Order,Exercise,Sets,Reps,Intensity,Rest,Focus
 12,Tue,Squat / Quad Emphasis — Deload,3,Bench Press,3,8,RIR 4,2-3 min,Upper body push — light
 12,Tue,Squat / Quad Emphasis — Deload,4,Face Pull,3,15,RIR 3,60s,Rear delt/upper back health
 12,Wed,Rest,-,Rest,-,-,-,-,Full rest
-12,Thu,Deadlift Technical + Pull — Deload,1,Speed Pull (off floor),3,2,50% (110kg),2 min,Bar speed maintenance — light
+12,Thu,Deadlift Technical + Pull — Deload,1,Speed Pull (off floor),3,2,50% (118kg),2 min,Bar speed maintenance — light
 12,Thu,Deadlift Technical + Pull — Deload,2,Pull-up / Lat Pulldown,3,8,RIR 4,90s,Lat strength — light
 12,Thu,Deadlift Technical + Pull — Deload,3,Cable Lateral Raise,3,15,RIR 3,60s,Shoulder strength/size — replaces OHP
 12,Thu,Deadlift Technical + Pull — Deload,4,Suitcase Carry,3,20m/side,-,60s,Core/grip — light

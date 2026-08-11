@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Cert to Competent &mdash; A Coaching Fundamentals Primer</title>
+<style>
+  @page { size: A4; margin: 0; }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    color: #1a1919;
+    background: #ffffff;
+    font-size: 13.5px;
+    line-height: 1.6;
+  }
+
+  .page { padding: 46px 52px; }
+
+  .mono {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Cover */
+  .cover {
+    background: #12141c;
+    color: #ffffff;
+    padding: 68px 52px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    page-break-after: always;
+  }
+
+  .cover .eyebrow {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #6f8dfb;
+    font-weight: 700;
+    margin: 0 0 22px;
+  }
+
+  .cover h1 {
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.08;
+    margin: 0 0 18px;
+    max-width: 12ch;
+  }
+
+  .cover .sub {
+    font-size: 16.5px;
+    color: #b9c0d6;
+    max-width: 40ch;
+    margin: 0;
+  }
+
+  .cover .who {
+    margin-top: 44px;
+    border-left: 2px solid #2050f6;
+    padding-left: 16px;
+    max-width: 42ch;
+  }
+
+  .cover .who .k {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #6f8dfb;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .cover .who p { color: #d7dbea; font-size: 14px; margin: 0; }
+
+  .cover footer { color: #7d84a0; font-size: 12.5px; }
+  .cover footer .brand { color: #6f8dfb; font-weight: 700; }
+
+  /* Intro page */
+  .intro h2 {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #2050f6;
+    font-weight: 800;
+    margin: 0 0 14px;
+  }
+
+  .intro p { font-size: 14px; color: #2c2c2c; margin: 0 0 12px; }
+  .intro .lead { font-size: 17px; font-weight: 700; color: #1a1919; margin-bottom: 18px; }
+
+  .toc { margin-top: 26px; }
+  .toc-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 9px 0;
+    border-bottom: 1px solid #e7e9f2;
+    font-size: 13.5px;
+  }
+  .toc-row .n { color: #2050f6; font-weight: 800; margin-right: 10px; }
+  .toc-row .p { color: #9099b5; font-family: ui-monospace, "SF Mono", Consolas, monospace; }
+
+  /* Chapters */
+  .chapter { page-break-before: always; }
+
+  .chap-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+
+  .chap-label .n {
+    background: #2050f6;
+    color: #ffffff;
+    font-family: ui-monospace, "SF Mono", Consolas, monospace;
+    font-weight: 800;
+    font-size: 13px;
+    width: 26px;
+    height: 26px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+  }
+
+  .chap-label .tag {
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #9099b5;
+    font-weight: 700;
+  }
+
+  .chapter h2 {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    margin: 4px 0 18px;
+    color: #12141c;
+  }
+
+  .chapter p { font-size: 13.5px; color: #2c2c2c; margin: 0 0 12px; }
+  .chapter strong { color: #12141c; }
+
+  .quality-list { margin: 10px 0 16px; padding: 0; list-style: none; }
+  .quality-list li {
+    padding: 8px 0 8px 0;
+    border-bottom: 1px solid #eef0f7;
+    font-size: 13px;
+  }
+  .quality-list li:last-child { border-bottom: none; }
+  .quality-list .qname { font-weight: 800; color: #2050f6; margin-right: 6px; }
+
+  .receipt {
+    background: #eef2ff;
+    border-left: 3px solid #2050f6;
+    border-radius: 6px;
+    padding: 14px 16px;
+    margin: 16px 0;
+  }
+  .receipt .k {
+    font-weight: 800;
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #2050f6;
+    display: block;
+    margin-bottom: 6px;
+  }
+  .receipt p { font-size: 12.5px; color: #333a52; margin: 0; }
+
+  .payoff-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 14px 0 16px;
+  }
+  .payoff-card {
+    background: #f5f6fb;
+    border-top: 3px solid #2050f6;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .payoff-card .label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #6b7290;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .payoff-card .val { font-size: 12.5px; font-weight: 600; color: #12141c; }
+
+  .callout {
+    background: #12141c;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-top: 14px;
+  }
+  .callout .k {
+    font-weight: 800;
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #6f8dfb;
+    display: block;
+    margin-bottom: 6px;
+  }
+  .callout p { color: #d7dbea; font-size: 13px; margin: 0; }
+
+  ul.check { list-style: none; margin: 8px 0 16px; padding: 0; }
+  ul.check li { padding-left: 22px; position: relative; margin-bottom: 8px; font-size: 13px; }
+  ul.check li::before { content: "\2713"; position: absolute; left: 0; color: #2050f6; font-weight: 800; }
+
+  .closing {
+    page-break-before: always;
+    background: #12141c;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 68px 52px;
+  }
+  .closing .eyebrow {
+    font-family: ui-monospace, "SF Mono", Consolas, monospace;
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #6f8dfb;
+    font-weight: 700;
+    margin: 0 0 18px;
+  }
+  .closing h2 {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.2;
+    max-width: 16ch;
+    margin: 0 0 20px;
+  }
+  .closing p { font-size: 15px; color: #b9c0d6; max-width: 44ch; margin: 0 0 10px; }
+  .closing footer { margin-top: 40px; color: #7d84a0; font-size: 12.5px; }
+  .closing footer .brand { color: #6f8dfb; font-weight: 700; }
+
+  footer.doc-foot {
+    margin-top: 30px;
+    padding-top: 14px;
+    border-top: 1px solid #e7e9f2;
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #9099b5;
+  }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div>
+    <p class="eyebrow">@strengthelite &mdash; Coaching Education</p>
+    <h1>Cert to Competent</h1>
+    <p class="sub">A coaching fundamentals primer &mdash; the frameworks that turn a qualification into real, defensible programming.</p>
+    <div class="who">
+      <div class="k">Who this is for</div>
+      <p>Newer coaches and PTs who've got the certificate and want the judgement to go with it &mdash; the "why" behind the programming, not just another rep scheme to copy.</p>
+    </div>
+  </div>
+  <footer>Written by <span class="brand">@strengthelite</span> &mdash; the right data, applied.</footer>
+</div>
+
+<div class="page intro">
+  <h2>Before You Start</h2>
+  <p class="lead">A certificate teaches you the movements. It doesn't teach you why one plan works and another one just fills an hour.</p>
+  <p>This primer is deliberately short. Six chapters, each one a framework you can start applying in your very next session &mdash; not a literature review. We've already done the digging through the current research; what's here is the distilled, decided version, with a brief "receipt" in each chapter if you want to see where it comes from.</p>
+  <p>Read it once end to end. Then keep it on hand as a reference every time you sit down to write a program.</p>
+
+  <div class="toc">
+    <div class="toc-row"><span><span class="n">01</span>Why Periodisation Beats Random Programming</span><span class="p">p.3</span></div>
+    <div class="toc-row"><span><span class="n">02</span>How to Structure a Session</span><span class="p">p.5</span></div>
+    <div class="toc-row"><span><span class="n">03</span>Exercise Selection: Stop Looking For "The Best"</span><span class="p">p.7</span></div>
+    <div class="toc-row"><span><span class="n">04</span>Understanding Strength Qualities</span><span class="p">p.9</span></div>
+    <div class="toc-row"><span><span class="n">05</span>Deloads: Why Less (Sometimes) Is More</span><span class="p">p.11</span></div>
+    <div class="toc-row"><span><span class="n">06</span>Programming Smart, Not Busy</span><span class="p">p.13</span></div>
+  </div>
+</div>
+
+<div class="page chapter">
+  <div class="chap-label"><span class="n">01</span><span class="tag">Chapter One</span></div>
+  <h2>Why Periodisation Beats Random Programming</h2>
+
+  <p>Training is a stressor. Selye's General Adaptation Syndrome describes what happens next: your body absorbs the stress and adapts &mdash; or, if the stress never lets up, breaks down under it instead. Bannister's Fitness-Fatigue model puts a number on the same idea: <strong>Performance = Fitness &minus; Fatigue.</strong> Every session adds both. Fatigue just clears faster.</p>
+
+  <p>Random programming has no mechanism for either side of that equation. It doesn't systematically increase the stimulus once an athlete adapts, and it has no plan for shedding fatigue before it buries the fitness sitting underneath it. Periodisation is simply the stress-recovery cycle, applied on purpose instead of left to chance.</p>
+
+  <p>It also explains why the <em>order</em> you build qualities in matters. Issurin's block periodisation model rests on "residual training effects" &mdash; how long an adaptation sticks around once you stop directly training it. Maximal strength and aerobic base decay slowest. Power, rate of force development, and reactive strength decay fastest. So the sequence that works: build the long-lasting qualities first, convert them into more specific strength qualities, then peak the fast-decaying ones right before they're needed.</p>
+
+  <div class="receipt">
+    <span class="k">The Receipt</span>
+    <p>Williams et al. (2017, <em>Sports Medicine</em>) found periodised training outperforms non-periodised/constant training for strength gains. A separate review (Grgic et al.) found the periodisation <em>model</em> &mdash; linear vs undulating &mdash; barely moves hypertrophy once volume is equated. The win isn't the model. It's having a plan at all.</p>
+  </div>
+
+  <div class="payoff-row">
+    <div class="payoff-card"><div class="label">Short term</div><div class="val">Fatigue managed, no staleness.</div></div>
+    <div class="payoff-card"><div class="label">Medium term</div><div class="val">Peaking timed to competition.</div></div>
+    <div class="payoff-card"><div class="label">Long term</div><div class="val">Fewer injuries, longer careers.</div></div>
+  </div>
+
+  <div class="callout">
+    <span class="k">Don't Make This Mistake</span>
+    <p>Periodising gets an athlete MORE from training, not less. A planned deload isn't a day off &mdash; it's where fatigue clears so the fitness underneath it can show up. Skipping deloads, or adding in extra work because the athlete "feels good," stacks fatigue nobody is tracking. That's the line between functional overreaching (planned, short-term, pays off) and non-functional overreaching (unplanned, weeks to dig out of) &mdash; per the ECSS/ACSM joint consensus statement on overtraining (Meeusen et al., 2013). Feeling good mid-block isn't a green light.</p>
+  </div>
+</div>
+
+<div class="page chapter">
+  <div class="chap-label"><span class="n">02</span><span class="tag">Chapter Two</span></div>
+  <h2>How to Structure a Session</h2>
+
+  <p>A session isn't a random list of exercises &mdash; it's ordered on purpose. The template: <strong>Prep &rarr; Power &rarr; Main &rarr; Secondary &rarr; Accessories.</strong></p>
+
+  <p><strong>Prep</strong> uses the RAMP method &mdash; Raise (elevate heart rate and tissue temperature), Activate (wake up the muscles about to be loaded), Mobilise (move the joints through the ranges the session needs), Potentiate (prime the nervous system with a lighter, faster version of what's coming).</p>
+
+  <p><strong>Power</strong> comes next, while the nervous system is freshest &mdash; jumps, throws, olympic lift variations. These need maximum quality per rep, so they can never sit after your athlete is already fatigued.</p>
+
+  <p><strong>Main</strong> is the primary strength lift for the day &mdash; squat, deadlift, bench, or the sport-specific equivalent. This is where load and technical demand are highest.</p>
+
+  <p><strong>Secondary</strong> is a related but less demanding lift, building the same pattern at lower stakes.</p>
+
+  <p><strong>Accessories</strong> close the session &mdash; this is where you attack the weak spots and build the strengths a needs analysis flagged, with sets, reps, and tempo picked for that individual, not copy-pasted from a template.</p>
+
+  <div class="receipt">
+    <span class="k">The Receipt</span>
+    <p>NSCA exercise-order guidance: sequence fatigue-sensitive, high-skill work first. Ask an athlete to jump explosively after their legs are already smoked from squats, and you get neither a good jump nor a safe one.</p>
+  </div>
+
+  <div class="callout">
+    <span class="k">Remember: "It Depends"</span>
+    <p>The exact structure bends around the athlete in front of you &mdash; training age, sport, current phase of the season, injury history. A first-year athlete and a ten-year veteran don't need the same accessory work, even when the main lift on the page looks identical.</p>
+  </div>
+</div>
+
+<div class="page chapter">
+  <div class="chap-label"><span class="n">03</span><span class="tag">Chapter Three</span></div>
+  <h2>Exercise Selection: Stop Looking For "The Best"</h2>
+
+  <p>There is no universally "best" hamstring exercise, best core exercise, best anything. There's the right exercise for this goal, this person, in this session. Chasing size under load? Romanian deadlifts or Nordic curls. Training speed-specific hamstring function? Something loaded closer to sprint speed. The question was never "what's best" &mdash; it's "best for what."</p>
+
+  <p>That same needs-analysis thinking is what protects your athletes from injury. Take a session that strings together front squats, deadlifts, front rack lunges, and RDLs &mdash; four individually excellent exercises. Programmed back-to-back, three of them (deadlift, lunge, RDL) load the exact same tissue: the lumbar erectors and posterior chain, with no recovery window between bouts.</p>
+
+  <p>The injury mechanism isn't the exercise &mdash; it's fatigue-driven form breakdown. As the lower back fatigues through the session, trunk flexion under load increases, the athlete loses neutral spine, and load meant for muscle shifts onto the discs and passive tissue instead.</p>
+
+  <div class="callout">
+    <span class="k">Don't Be a Lazy Coach</span>
+    <p>Stacking spine-loading movement after spine-loading movement without accounting for cumulative fatigue isn't programming &mdash; it's guessing, and the lower back pays for it. Know what tissue you've already loaded before you load it again.</p>
+  </div>
+</div>
+
+<div class="page chapter">
+  <div class="chap-label"><span class="n">04</span><span class="tag">Chapter Four</span></div>
+  <h2>Understanding Strength Qualities</h2>
+
+  <p>"Strength" isn't one thing &mdash; it sits on a spectrum, the force-velocity curve, and different qualities live at different points on it:</p>
+
+  <ul class="quality-list">
+    <li><span class="qname">Maximal Strength</span> &mdash; the most force you can produce, regardless of speed.</li>
+    <li><span class="qname">Strength-Speed</span> &mdash; moving heavy loads as fast as possible.</li>
+    <li><span class="qname">Speed-Strength</span> &mdash; moving light loads as fast as possible.</li>
+    <li><span class="qname">Power</span> &mdash; force &times; velocity, the whole curve at once.</li>
+    <li><span class="qname">Rate of Force Development</span> &mdash; how fast force is produced; decisive under ~250ms (a sprint start, a change of direction).</li>
+    <li><span class="qname">Starting Strength</span> &mdash; force production from a dead stop.</li>
+    <li><span class="qname">Reactive / Elastic Strength</span> &mdash; force through the stretch-shortening cycle (bounding, jumping).</li>
+    <li><span class="qname">Strength Endurance</span> &mdash; sustaining force output across repeated efforts.</li>
+    <li><span class="qname">Eccentric Strength</span> &mdash; controlling force as a muscle lengthens under load.</li>
+  </ul>
+
+  <p>Even athletes with one obvious headline quality train more than that quality. A powerlifter's outcome is maximal strength, but rate of force development matters at the sticking points &mdash; off the chest in bench, off the floor in deadlift &mdash; which is why speed work with submaximal loads shows up in most serious powerlifting programs. Strength endurance matters too: an athlete needs the work capacity to handle the training volume that builds the strength in the first place.</p>
+
+  <div class="callout">
+    <span class="k">The Takeaway</span>
+    <p>The qualities all serve the one goal. Training only 1RM attempts, and nothing else, is a fast way to plateau.</p>
+  </div>
+</div>
+
+<div class="page chapter">
+  <div class="chap-label"><span class="n">05</span><span class="tag">Chapter Five</span></div>
+  <h2>Deloads: Why Less (Sometimes) Is More</h2>
+
+  <p>A deload isn't a reward, and it isn't optional once fatigue has been banked &mdash; it's the part of the plan where the adaptation an athlete has been training for actually shows up.</p>
+
+  <p><strong>Volume is the primary lever, not intensity.</strong> Cut volume 25&ndash;45% for lower recovery needs, 40&ndash;60% for higher, while holding intensity closer to the athlete's working range. Crashing intensity down to 60&ndash;65% is the common mistake.</p>
+
+  <div class="receipt">
+    <span class="k">The Receipt</span>
+    <p>Bell et al. (2025, <em>Strength and Conditioning Journal</em>), backed by the Bell et al. (2023) Delphi consensus, found maintaining intensity while cutting volume delivers superior results for strength and power outcomes than crashing intensity down.</p>
+  </div>
+
+  <div class="callout">
+    <span class="k">Why This Matters</span>
+    <p>Skip the deload, or quietly add in extra sets because an athlete "feels good," and you're stacking fatigue nobody is tracking. The research draws a clear line between functional overreaching (planned, short recovery, comes back as a gain) and non-functional overreaching (unplanned, weeks to months to dig out of) &mdash; the ECSS/ACSM joint consensus statement on overtraining (Meeusen et al., 2013). Feeling good mid-block isn't a green light. It's fatigue that hasn't been paid for yet.</p>
+  </div>
+</div>
+
+<div class="page chapter">
+  <div class="chap-label"><span class="n">06</span><span class="tag">Chapter Six</span></div>
+  <h2>Programming Smart, Not Busy</h2>
+
+  <p>Every idea in this primer points at the same discipline: know why an exercise, a rep range, or a deload is in the program &mdash; or take it out.</p>
+
+  <p>A session full of exercises that "feel productive" but weren't chosen against a needs analysis isn't thorough. It's noise. Filling an hour isn't the job. Building an athlete is.</p>
+
+  <p>Before you write the next session, ask three questions:</p>
+
+  <ul class="check">
+    <li>What quality is this developing?</li>
+    <li>Has this tissue already been loaded today?</li>
+    <li>Does this athlete need more volume, more intensity, or more recovery, right now?</li>
+  </ul>
+
+  <p>If you can't answer those three, you're not programming yet &mdash; you're just filling space.</p>
+
+  <footer class="doc-foot">
+    <span class="mono">@strengthelite</span>
+    <span>Cert to Competent &mdash; a coaching fundamentals primer</span>
+  </footer>
+</div>
+
+<div class="closing">
+  <p class="eyebrow">Keep This On Hand</p>
+  <h2>Know the why behind every choice you make.</h2>
+  <p>This primer covers the fundamentals &mdash; the frameworks that should sit underneath every session you write from here. Come back to it whenever a program starts feeling like a guess instead of a plan.</p>
+  <p>Build your programs around the athlete in front of you, not a template you found online.</p>
+  <footer>Written by <span class="brand">@strengthelite</span> &mdash; the right data, applied.</footer>
+</div>
+
+</body>
+</html>

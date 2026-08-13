@@ -21,6 +21,7 @@ Firm, educational, no-bullshit. This is the user's own brand voice — apply it 
 - IG carousel pattern: title/hook → formula/principles → worked example → why it works → sign-off (~5 pages), background fill asset `MADatd_WXzA` + logo overlay asset `MAG3g5DLY20`.
 - Canvas is 1080×1350. Text containers must stay above roughly y≈1200 (handle tag sits at y=1242). Increasing font size grows container height fast (~font_size²), so trim copy whenever sizing text up, and re-check thumbnails before committing.
 - User wants body text noticeably larger than the Canva template defaults (original was reported as "a bit small").
+- **Don't ask permission separately for each Canva step.** Once the user has approved a draft's copy (e.g. "yeah lets load it into canva"), fold any needed page-count expansion into that same go-ahead rather than stopping to ask again — e.g. "Happy with this before I load it into Canva? I'll need to add N extra pages to fit it." One approval covers the whole build. (The `merge-designs` tool still requires some form of confirmation before it'll run — this is about not making that a separate, repetitive interruption, not skipping it entirely.)
 - Content must be scientifically grounded, not just "sounds cool" — ground claims in real, named principles/research rather than vague fitness-influencer claims:
   - SAID principle (Specific Adaptation to Imposed Demand)
   - Henneman's size principle / motor unit recruitment (strength trained via near-maximal loads)

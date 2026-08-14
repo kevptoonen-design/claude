@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Recomposition Nutrition Guide</title>
+<style>
+  @page { size: A4; margin: 0; }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    color: #1a1e1c;
+    background: #ffffff;
+    font-size: 13.5px;
+    line-height: 1.55;
+  }
+
+  .page {
+    padding: 40px 48px;
+  }
+
+  .mono {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Cover */
+  .cover {
+    background: #1a1e1c;
+    color: #ffffff;
+    padding: 64px 48px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    page-break-after: always;
+  }
+
+  .cover .eyebrow {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #ff8a5c;
+    font-weight: 700;
+    margin: 0 0 20px;
+  }
+
+  .cover h1 {
+    font-size: 44px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin: 0 0 20px;
+    max-width: 11ch;
+  }
+
+  .cover .sub {
+    font-size: 16px;
+    color: #cfd6d2;
+    max-width: 42ch;
+    margin: 0;
+  }
+
+  .cover .stat-row {
+    display: flex;
+    gap: 32px;
+    margin-top: 48px;
+  }
+
+  .cover .stat {
+    border-left: 2px solid #e05a2b;
+    padding-left: 14px;
+  }
+
+  .cover .stat .num {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  .cover .stat .label {
+    font-size: 11.5px;
+    color: #9aa39d;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-top: 2px;
+  }
+
+  .cover footer {
+    color: #7a827d;
+    font-size: 12.5px;
+  }
+
+  .cover footer .brand {
+    color: #6fb6c1;
+    font-weight: 700;
+  }
+
+  /* Section styling */
+  section { page-break-inside: avoid; margin-bottom: 30px; }
+
+  .sec-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .sec-label .n {
+    background: #e05a2b;
+    color: #ffffff;
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;
+    font-weight: 700;
+    font-size: 12.5px;
+    width: 22px;
+    height: 22px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+  }
+
+  .sec-label h2 {
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+
+  p { margin: 0 0 10px; }
+  .muted { color: #4b524e; }
+
+  /* Macro cards */
+  .macro-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 14px 0 16px;
+  }
+
+  .macro-card {
+    background: #f6f8f7;
+    border-top: 3px solid #2f6f7a;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+
+  .macro-card.cal { border-top-color: #e05a2b; }
+
+  .macro-card .label {
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #7a827d;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .macro-card .val {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1e1c;
+  }
+
+  /* Meal timeline */
+  .meal {
+    display: grid;
+    grid-template-columns: 76px 1fr;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #e8ebe9;
+  }
+
+  .meal:last-child { border-bottom: none; }
+
+  .meal .time {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #2f6f7a;
+  }
+
+  .meal .what strong { display: block; font-size: 13.5px; margin-bottom: 2px; }
+  .meal .what span { color: #4b524e; font-size: 12.5px; }
+
+  /* Callout */
+  .callout {
+    background: #dfeaec;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-top: 6px;
+  }
+
+  .callout.warn { background: #fbe9df; color: #8a3a12; }
+  .callout .k { font-weight: 800; font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; display: block; margin-bottom: 4px; }
+
+  ul.check { list-style: none; margin: 8px 0; padding: 0; }
+  ul.check li { padding-left: 22px; position: relative; margin-bottom: 7px; font-size: 13px; }
+  ul.check li::before { content: "\2713"; position: absolute; left: 0; color: #2f6f7a; font-weight: 800; }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  /* Hand-portion guide */
+  .hand-row {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 14px;
+    padding: 9px 0;
+    border-bottom: 1px solid #e8ebe9;
+    align-items: baseline;
+  }
+  .hand-row:last-child { border-bottom: none; }
+  .hand-row .measure {
+    font-weight: 800;
+    font-size: 12.5px;
+    color: #e05a2b;
+  }
+  .hand-row .what strong { display: block; font-size: 13px; margin-bottom: 1px; }
+  .hand-row .what span { color: #4b524e; font-size: 12px; }
+
+  /* Program cards */
+  .program-card {
+    background: #f6f8f7;
+    border: 1px solid #d3d9d4;
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  .program-card .tag {
+    display: inline-block;
+    font-size: 10.5px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #e05a2b;
+    background: #fbe4da;
+    padding: 3px 9px;
+    border-radius: 999px;
+    margin-bottom: 10px;
+  }
+
+  .program-card h3 { font-size: 17px; font-weight: 800; margin: 0 0 8px; }
+  .program-card p { font-size: 13px; color: #4b524e; }
+
+  .program-card .link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #2f6f7a;
+    word-break: break-all;
+  }
+
+  footer.doc-foot {
+    margin-top: 36px;
+    padding-top: 16px;
+    border-top: 1px solid #d3d9d4;
+    display: flex;
+    justify-content: space-between;
+    font-size: 11.5px;
+    color: #7a827d;
+  }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div>
+    <p class="eyebrow">@strengthelite &mdash; Personal Nutrition Guide</p>
+    <h1>Build muscle. Lean up. One plan, not two.</h1>
+    <p class="sub">A recomposition plan built around food you already eat &mdash; steak, mince, eggs, rice, potato &mdash; sized correctly and scaled up gradually to where it needs to be.</p>
+    <div class="stat-row">
+      <div class="stat"><div class="num">98kg</div><div class="label">Current weight</div></div>
+      <div class="stat"><div class="num">15%</div><div class="label">Body fat</div></div>
+      <div class="stat"><div class="num">2,950</div><div class="label">Target kcal/day</div></div>
+    </div>
+  </div>
+  <footer>Prepared by <span class="brand">@strengthelite</span> &mdash; facts, not fads.</footer>
+</div>
+
+<div class="page">
+
+  <section>
+    <div class="sec-label"><span class="n">1</span><h2>The goal &amp; the approach</h2></div>
+    <p class="muted">The goal is a true recomposition: build muscle <em>and</em> bring body fat down at the same time &mdash; not one after the other. At 98kg and 15% body fat, you're already lean enough that this works best from maintenance-to-slight-surplus calories, not a deficit. Right now you're eating ~2,300&ndash;2,500 kcal/day, sometimes less &mdash; that's under-fueling for your size and training, and it's working against the muscle you're trying to build, not for it. The fix isn't restriction, it's getting enough food in consistently &mdash; built from four foods you already eat without issue: steak, mince, eggs, and protein shakes, plus rice and potato for carbs.</p>
+  </section>
+
+  <section>
+    <div class="sec-label"><span class="n">2</span><h2>Starting numbers</h2></div>
+    <p class="muted">These are a starting point, not a fixed rule &mdash; section 8 covers exactly how and when to adjust them.</p>
+    <div class="macro-row">
+      <div class="macro-card cal"><div class="label">Calories</div><div class="val">2,950</div></div>
+      <div class="macro-card"><div class="label">Protein</div><div class="val">244g</div></div>
+      <div class="macro-card"><div class="label">Fat</div><div class="val">136g</div></div>
+      <div class="macro-card"><div class="label">Carbs</div><div class="val">188g</div></div>
+    </div>
+    <p class="muted">Protein is the priority number on this page &mdash; at ~2.5g/kg, it's what builds and protects muscle while body fat comes down. This is the final target; section 7 covers how you ramp up to it without wrecking adherence in week one.</p>
+  </section>
+
+  <section>
+    <div class="sec-label"><span class="n">3</span><h2>Your day, meal by meal</h2></div>
+    <p class="muted">Four meals, same structure every day &mdash; simple on purpose, so it's easy to actually hit.</p>
+    <div class="meal"><div class="time">Breakfast</div><div class="what"><strong>4 whole eggs + &frac12; avocado + protein shake</strong><span>~50g protein, ~530 kcal. Sets up the day without needing carbs this early.</span></div></div>
+    <div class="meal"><div class="time">Lunch</div><div class="what"><strong>Steak (250g) cooked in olive oil + rice (350g)</strong><span>~82g protein, ~98g carbs, ~1,050 kcal. Main training-fuel meal of the day.</span></div></div>
+    <div class="meal"><div class="time">Dinner</div><div class="what"><strong>Beef mince (250g) cooked in olive oil + potato (450g)</strong><span>~74g protein, ~90g carbs, ~1,135 kcal. Biggest meal &mdash; replenishes what the day's training used.</span></div></div>
+    <div class="meal"><div class="time">Snack</div><div class="what"><strong>2 whole eggs + protein shake</strong><span>~38g protein, ~265 kcal. Closes the protein target out, easy to fit in wherever it works.</span></div></div>
+  </section>
+
+  <section>
+    <div class="sec-label"><span class="n">4</span><h2>Eyeballing it &mdash; no scale required</h2></div>
+    <div class="callout">
+      <span class="k">The hand-portion method</span>
+      Use your own hand instead of a scale. It's not lab-accurate, but it's accurate enough to hit these targets consistently &mdash; and consistent beats perfect. Sizes below are for cooked/prepared food.
+    </div>
+    <div style="margin-top:10px;">
+      <div class="hand-row"><div class="measure">2 palms</div><div class="what"><strong>Steak or mince</strong><span>Thickness and size of your palm, fingers excluded &mdash; that's your 250g protein portion at lunch and dinner.</span></div></div>
+      <div class="hand-row"><div class="measure">2&ndash;3 cupped hands</div><div class="what"><strong>Rice or potato</strong><span>One cupped hand &asymp; 130&ndash;150g cooked. Rice at lunch runs ~2.5 cupped hands, potato at dinner ~3.</span></div></div>
+      <div class="hand-row"><div class="measure">1&ndash;2 thumbs</div><div class="what"><strong>Olive oil</strong><span>Thumb tip to first knuckle &asymp; 1 tbsp. Use one per pan when cooking the steak and the mince.</span></div></div>
+      <div class="hand-row"><div class="measure">Half a fist</div><div class="what"><strong>Avocado</strong><span>Roughly half an avocado at breakfast.</span></div></div>
+      <div class="hand-row"><div class="measure">Count them</div><div class="what"><strong>Eggs</strong><span>No estimating needed &mdash; 4 in the morning, 2 at the snack.</span></div></div>
+    </div>
+    <p class="muted" style="margin-top:10px;">If progress stalls for 2&ndash;3 weeks straight and you can't tell why, that's the one time to weigh food for a few days to find out where the drift actually is &mdash; not a daily requirement.</p>
+  </section>
+
+  <section>
+    <div class="sec-label"><span class="n">5</span><h2>Budget staples</h2></div>
+    <p class="muted">Everything here is built from six ingredients &mdash; nothing exotic, nothing that needs a special shop:</p>
+    <div class="grid-2">
+      <ul class="check">
+        <li>Steak (sirloin or similar lean cut)</li>
+        <li>Beef mince (85/15)</li>
+        <li>Eggs</li>
+      </ul>
+      <ul class="check">
+        <li>Protein powder</li>
+        <li>Rice &amp; potatoes</li>
+        <li>Olive oil &amp; avocado</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-label"><span class="n">6</span><h2>The flexible-meal fix</h2></div>
+    <div class="callout warn">
+      <span class="k">Pasta swap, not a cheat meal</span>
+      When rice or potato gets repetitive, swap in pasta at roughly the same cooked weight (300g pasta &asymp; 350g rice for carbs) &mdash; same targets, less monotony. If a takeout meal happens, hit protein through eggs/shake as normal earlier in the day and let takeout cover the rest. Planned flexibility is sustainable; total rigidity usually isn't.
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-label"><span class="n">7</span><h2>Building up, not jumping in</h2></div>
+    <p class="muted">Going from ~2,300&ndash;2,500 kcal straight to 2,950 overnight is a 20%+ jump &mdash; you'll feel overly full, adherence will drop, and you'll likely bail back to old habits within a week. Step it up instead:</p>
+    <ul class="check">
+      <li><strong>Week 1 &mdash; ~2,600 kcal:</strong> add the snack (2 eggs + shake) to your current eating.</li>
+      <li><strong>Week 2 &mdash; ~2,800 kcal:</strong> bring the rice and potato portions up to full size.</li>
+      <li><strong>Week 3 onward &mdash; ~2,950 kcal:</strong> full plan, olive oil and avocado included.</li>
+    </ul>
+    <p class="muted" style="margin-top:10px;">This isn't just about comfort &mdash; consistently under-eating relative to training load is the mechanism behind Relative Energy Deficiency in Sport (RED-S), the IOC's consensus term for chronic low energy availability. It blunts recovery and hormonal function, which directly works against building muscle. The ramp-up gets you to an adequate intake without your gut vetoing the plan in week one.</p>
+  </section>
+
+  <section>
+    <div class="sec-label"><span class="n">8</span><h2>Timeline &amp; how to adjust</h2></div>
+    <p class="muted">Recomposition is slower than a pure bulk or pure cut &mdash; it's asking the body to do two things at once. Set expectations at <strong>12&ndash;16+ weeks</strong>, not a fast transformation.</p>
+    <div class="callout">
+      <span class="k">Monitoring</span>
+      Weigh in 3x/week (same conditions), track the weekly average. Waist measurement every 2 weeks. Photos every 2&ndash;4 weeks.
+    </div>
+    <p class="muted" style="margin-top:10px;">Reassess every 2&ndash;3 weeks: if weight/waist aren't trending and lifts are climbing, this is working &mdash; hold. If waist keeps rising with no strength gains, trim 150&ndash;200 kcal from carbs first. If strength starts dropping or you're losing weight fast, add calories back &mdash; that's muscle loss, not fat loss, and it undoes the whole point of this plan.</p>
+  </section>
+
+  <section>
+    <div class="sec-label"><span class="n">9</span><h2>Your program</h2></div>
+    <p class="muted">Nutrition sets the ceiling &mdash; the training program is what actually builds the muscle and shapes the recomposition. Two options, pick the one that fits where you want to focus first:</p>
+    <div class="grid-2">
+      <div class="program-card">
+        <span class="tag">Recommended</span>
+        <h3>Strong &amp; Lean</h3>
+        <p>Built specifically for strength and shape together &mdash; the direct match for "build muscle and lean up" as one combined goal, rather than choosing between the two.</p>
+        <a class="link" href="https://share.newie.app/offerings/0FD08F08-9E1D-47A9-9031-CD595BF2287D">share.newie.app/offerings/0FD08F08&hellip;</a>
+      </div>
+      <div class="program-card">
+        <span class="tag">Alternative</span>
+        <h3>Mass 2.0</h3>
+        <p>If you'd rather prioritize size first and address leanness in a second phase, this is the dedicated hypertrophy block to build off.</p>
+        <a class="link" href="https://share.newie.app/offerings/1C6A39F9-5200-4618-BD3C-1B7595C687A0">share.newie.app/offerings/1C6A39F9&hellip;</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="doc-foot">
+    <span class="mono">@strengthelite</span>
+    <span>Facts, not fads. Get the food in &mdash; then let the numbers do their job.</span>
+  </footer>
+
+</div>
+</body>
+</html>

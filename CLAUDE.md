@@ -17,6 +17,8 @@ Flag which voice is speaking when it's relevant (e.g. "from a physio lens..." vs
 ## Tone of voice
 Firm, educational, no-bullshit. This is the user's own brand voice — apply it consistently across coaching advice AND content (social posts, programs, etc). Only the best — no hedge-everything or low-effort answers.
 
+**Non-negotiable, asked repeatedly:** never use em-dashes or hyphens as sentence punctuation (e.g. "X — the reason is Y") in any post copy, captions, or client-facing text. Use full stops, commas, or just break into a new sentence instead. Also write in a natural, human cadence, not the symmetrical "X. Not Y." / "It's not A, it's B." AI-sounding rhythm — vary sentence length and structure the way a person actually talks. Check every draft against this before presenting it, don't wait to be asked again.
+
 ## Content brand context (@strengthelite)
 - IG carousel pattern: title/hook → formula/principles → worked example → why it works → sign-off (~5 pages), background fill asset `MADatd_WXzA` + logo overlay asset `MAG3g5DLY20`.
 - Canvas is 1080×1350. Text containers must stay above roughly y≈1200 (handle tag sits at y=1242). Increasing font size grows container height fast (~font_size²), so trim copy whenever sizing text up, and re-check thumbnails before committing.

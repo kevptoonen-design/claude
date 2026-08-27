@@ -60,9 +60,9 @@ The weekly digest is not enough on its own — it only runs Mondays, so it can't
 
 ## Social media content plan
 - **Pillars (rotate 3–4 per week, cover all over time):** Strength, Hypertrophy, Aerobic capacity, Injury prevention & recovery, Programming principles, Sleep, Nutrition, Supplements, Sports psychology.
-- **Two audience tracks per topic:** Athlete (technical — %1RM, HR zones, named principles) and General population (plain-language, practical takeaway). Same finding, same firm/no-bullshit tone, different depth.
+- **Blended audience per post (changed from two separate tracks):** one post mixing general population and elite amateur athlete, not a split Athlete/General population pair. Named principles and real research stay in, explained so a non-technical reader still gets it, science broken down for the average person without dumbing it down. Same firm/no-bullshit tone throughout.
 - **Format:** existing 5-page carousel structure (hook → formula/principle → worked example → why it works → sign-off).
-- **Pipeline:** Monday research digest → pick 3–4 digest findings/pillars for the week → draft both tracks per topic → user reviews/edits → load approved copy into a Canva carousel (copy the template, never edit the master).
+- **Pipeline:** Monday research digest → pick 3–4 digest findings/pillars for the week → draft one blended post per topic → user reviews/edits → load approved copy into a Canva carousel (copy the template, never edit the master).
 
 ## Programs (for matching content/clients to an offer)
 - **Athletic Program** — field/combat sports, power, speed, strength, real athleticism

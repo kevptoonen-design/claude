@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ME/CFS Movement &amp; Nutrition Guide</title>
+<style>
+  @page { size: A4; margin: 0; }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    color: #1a1e1c;
+    background: #ffffff;
+    font-size: 13.5px;
+    line-height: 1.6;
+  }
+
+  .page {
+    padding: 40px 48px;
+  }
+
+  .mono {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Cover */
+  .cover {
+    background: #1a1e1c;
+    color: #ffffff;
+    padding: 64px 48px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    page-break-after: always;
+  }
+
+  .cover .eyebrow {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #ff8a5c;
+    font-weight: 700;
+    margin: 0 0 20px;
+  }
+
+  .cover h1 {
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin: 0 0 20px;
+    max-width: 14ch;
+  }
+
+  .cover .sub {
+    font-size: 15.5px;
+    color: #cfd6d2;
+    max-width: 46ch;
+    margin: 0;
+  }
+
+  .cover .stat-row {
+    display: flex;
+    gap: 28px;
+    margin-top: 48px;
+    flex-wrap: wrap;
+  }
+
+  .cover .stat {
+    border-left: 2px solid #e05a2b;
+    padding-left: 14px;
+    max-width: 15ch;
+  }
+
+  .cover .stat .num {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .cover .stat .label {
+    font-size: 11px;
+    color: #9aa39d;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 3px;
+  }
+
+  .cover footer {
+    color: #7a827d;
+    font-size: 12.5px;
+  }
+
+  .cover footer .brand {
+    color: #6fb6c1;
+    font-weight: 700;
+  }
+
+  /* Section styling */
+  section { page-break-inside: avoid; margin-bottom: 28px; }
+
+  .sec-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .sec-label .n {
+    background: #e05a2b;
+    color: #ffffff;
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;
+    font-weight: 700;
+    font-size: 12.5px;
+    width: 22px;
+    height: 22px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+  }
+
+  .sec-label h2 {
+    font-size: 16.5px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+
+  p { margin: 0 0 10px; }
+  .muted { color: #3d423f; }
+
+  /* Voice tag */
+  .voice {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #2f6f7a;
+    background: #dfeaec;
+    padding: 3px 8px;
+    border-radius: 999px;
+    margin: 0 0 8px;
+  }
+
+  .voice.doc { color: #8a3a12; background: #fbe9df; }
+  .voice.psych { color: #6a3d8f; background: #ece3f5; }
+
+  /* Callout */
+  .callout {
+    background: #dfeaec;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-top: 6px;
+  }
+
+  .callout.warn { background: #fbe9df; color: #8a3a12; }
+  .callout.crit { background: #f8dede; color: #8f1f1f; border: 1px solid #e8b4b4; }
+  .callout .k { font-weight: 800; font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; display: block; margin-bottom: 4px; }
+
+  ul.check { list-style: none; margin: 8px 0; padding: 0; }
+  ul.check li { padding-left: 22px; position: relative; margin-bottom: 7px; font-size: 13px; }
+  ul.check li::before { content: "\2713"; position: absolute; left: 0; color: #2f6f7a; font-weight: 800; }
+
+  ul.cross { list-style: none; margin: 8px 0; padding: 0; }
+  ul.cross li { padding-left: 22px; position: relative; margin-bottom: 7px; font-size: 13px; }
+  ul.cross li::before { content: "\2715"; position: absolute; left: 0; color: #b3401f; font-weight: 800; }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  /* Step cards */
+  .step-row { display: flex; flex-direction: column; gap: 10px; margin: 10px 0; }
+  .step {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    gap: 12px;
+    background: #f6f8f7;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .step .num-badge {
+    width: 24px; height: 24px;
+    border-radius: 999px;
+    background: #2f6f7a;
+    color: #fff;
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;
+    font-weight: 700;
+    font-size: 12px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .step strong { display: block; font-size: 13px; margin-bottom: 2px; }
+  .step span { color: #4b524e; font-size: 12.5px; }
+
+  table.food-table { width: 100%; border-collapse: collapse; margin: 10px 0 4px; font-size: 12.5px; }
+  table.food-table th {
+    text-align: left;
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #7a827d;
+    border-bottom: 1px solid #d3d9d4;
+    padding: 6px 8px;
+  }
+  table.food-table td {
+    padding: 7px 8px;
+    border-bottom: 1px solid #e8ebe9;
+    vertical-align: top;
+  }
+  table.food-table td:first-child { font-weight: 700; white-space: nowrap; }
+
+  .program-card {
+    background: #f6f8f7;
+    border: 1px solid #d3d9d4;
+    border-radius: 10px;
+    padding: 18px;
+  }
+
+  .program-card .tag {
+    display: inline-block;
+    font-size: 10.5px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #e05a2b;
+    background: #fbe4da;
+    padding: 3px 9px;
+    border-radius: 999px;
+    margin-bottom: 10px;
+  }
+
+  .program-card h3 { font-size: 16px; font-weight: 800; margin: 0 0 8px; }
+  .program-card p { font-size: 12.5px; color: #4b524e; }
+
+  .source-note {
+    font-size: 11px;
+    color: #7a827d;
+    margin-top: 4px;
+  }
+
+  footer.doc-foot {
+    margin-top: 36px;
+    padding-top: 16px;
+    border-top: 1px solid #d3d9d4;
+    display: flex;
+    justify-content: space-between;
+    font-size: 11.5px;
+    color: #7a827d;
+  }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div>
+    <p class="eyebrow">@strengthelite: ME/CFS Client Reference</p>
+    <h1>Movement and food with confirmed chronic fatigue.</h1>
+    <p class="sub">A pacing-first guide for a confirmed ME/CFS diagnosis with post-exertional malaise. This is not standard programming slowed down. It is a different set of rules, built from current clinical guidance, not gym instinct.</p>
+    <div class="stat-row">
+      <div class="stat"><div class="num">24&ndash;72h</div><div class="label">Typical PEM crash delay</div></div>
+      <div class="stat"><div class="num">50%</div><div class="label">Energy envelope ceiling</div></div>
+      <div class="stat"><div class="num">Zero</div><div class="label">Fixed incremental exercise plans</div></div>
+    </div>
+  </div>
+  <footer>Prepared by <span class="brand">@strengthelite</span>. Facts, not fads.</footer>
+</div>
+
+<div class="page">
+
+  <section>
+    <div class="sec-label"><span class="n">1</span><h2>What this guide is, and what it isn't</h2></div>
+    <p class="muted">This guide is for a client with a confirmed diagnosis of Myalgic Encephalomyelitis / Chronic Fatigue Syndrome (ME/CFS) who experiences post-exertional malaise (PEM). The National Academy of Medicine's 2015 diagnostic report sets the core criteria: a substantial reduction in the ability to do pre-illness activities for six months or more, fatigue that isn't fixed by rest, unrefreshing sleep, and PEM, plus either cognitive impairment or orthostatic intolerance. If your client meets that picture, this guide applies. If they're just run down, under-slept, or overtrained, this isn't the right document. Send them to the "what's already working" style recovery advice in a normal program instead, and get bloodwork done before assuming ME/CFS.</p>
+    <p class="muted">This guide supports what the treating doctor and any ME/CFS-experienced physio are already managing. It doesn't replace them. Nothing here is a treatment plan, and no coach should be the one adjusting medication, diagnosing a flare's cause, or clearing a client for more activity on their own judgement alone.</p>
+    <div class="callout warn">
+      <span class="k">The mission statement doesn't apply here</span>
+      Everything else in this business is built around aggressive, evidence-based progression. ME/CFS is the deliberate exception. The evidence base for this condition specifically shows that pushing intensity or volume on a schedule causes harm rather than adaptation. Programming ambition here is measured in stability, not progression.
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-label"><span class="n">2</span><h2>The one rule that overrides everything: PEM</h2></div>
+    <span class="voice doc">Sports Doctor's note</span>
+    <p class="muted">Post-exertional malaise is a delayed, disproportionate worsening of symptoms after physical, cognitive, or even emotional exertion that would have been trivial before the illness. It typically shows up 24 to 72 hours after the triggering activity, not immediately, which is exactly why it gets missed or blamed on something else. A crash can last days to weeks and can include worse fatigue, pain, cognitive fog, and flu-like symptoms. Research from the Workwell Foundation using two-day cardiopulmonary exercise testing has shown this is a measurable physiological response, a drop in the ability to reproduce the same effort a day later, not deconditioning and not a motivation problem.</p>
+    <p class="muted">This is why the old "graded exercise therapy" model, steadily increasing activity on a fixed schedule regardless of symptoms, has been formally withdrawn as a recommended treatment. The UK's NICE guideline (NG206, 2021) reviewed the evidence and concluded graded exercise therapy should not be offered for ME/CFS, and that any activity advice has to be personalised and responsive to PEM, never a fixed incremental plan. The CDC's 2024 clinical toolkit on managing PEM lands in the same place: individualised energy management, not scheduled increases in exertion.</p>
+  </section>
+
+  <section>
+    <div class="sec-label"><span class="n">3</span><h2>Movement: the do-not list</h2></div>
+    <span class="voice">S&amp;C Coach's note</span>
+    <p class="muted">Every instinct that makes a normal program work is the wrong instinct here. Read this list before writing anything for this client.</p>
+    <ul class="cross">
+      <li><strong>No fixed progression schedule.</strong> "Add 5 minutes a week" or "add a rep every session" ignores PEM by design. Progress is decided by symptom response, not the calendar.</li>
+      <li><strong>No training through symptoms.</strong> "Push through it" or "work through the tiredness" is the single most damaging piece of advice a well-meaning trainer can give this client. It's the mechanism that causes a crash, not a sign of grit.</li>
+      <li><strong>No chasing a good day.</strong> A day with more energy is not permission to make up for lost sessions. This is the boom-bust pattern, doing much more on a good day and paying for it 24 to 72 hours later, and it's one of the most common ways clients undo weeks of stability.</li>
+      <li><strong>No cardio "zones" borrowed from endurance programming.</strong> Zone 2 language and HR-zone building blocks from the Capacity Program don't transfer here. A heart rate that's easy for a healthy aerobic system can sit above this client's anaerobic threshold and trigger PEM.</li>
+      <li><strong>No exercise testing to find a baseline.</strong> A max effort test, a time trial, a "let's see what you can do" session, all of these are PEM triggers in someone with confirmed post-exertional malaise. Baseline comes from a symptom diary, not a test.</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="sec-label"><span class="n">4</span><h2>Movement: pacing, the actual method</h2></div>
+    <p class="muted">Pacing means staying inside a sustainable energy budget rather than working to a target output. It's an active skill, not just "resting more."</p>
+    <div class="step-row">
+      <div class="step">
+        <div class="num-badge">1</div>
+        <div><strong>Find the energy envelope</strong><span>Track activity and symptoms for two weeks before changing anything. The envelope is the amount of activity the client can sustain most days without a delayed crash. It's usually lower than either of you expects.</span></div>
+      </div>
+      <div class="step">
+        <div class="num-badge">2</div>
+        <div><strong>Spend about half of it</strong><span>The working rule from ME/CFS pacing programs is to use roughly 50% of perceived available energy on any given task or day, leaving a buffer rather than budgeting to the edge.</span></div>
+      </div>
+      <div class="step">
+        <div class="num-badge">3</div>
+        <div><strong>Break movement into snacks, not sessions</strong><span>Several short bouts through the day, a minute or two of gentle movement, seated stretching, a short slow walk if tolerated, beat one longer session. Short bouts are easier to stop before threshold is crossed.</span></div>
+      </div>
+      <div class="step">
+        <div class="num-badge">4</div>
+        <div><strong>Use a heart rate ceiling, not a feeling</strong><span>Workwell Foundation's research anchors safe activity to a heart rate below the client's anaerobic threshold, found through specialised CPET testing. Without access to that test, a conservative practical ceiling many clinicians use is resting heart rate plus 15 beats per minute. A cheap HR strap or watch turns this into a real-time stop signal instead of a guess.</span></div>
+      </div>
+      <div class="step">
+        <div class="num-badge">5</div>
+        <div><strong>Schedule rest before the crash, not after</strong><span>Planned rest between and within activities is part of the prescription, not a reward for finishing it. Rest breaks go in the plan on paper, before the session, not decided in the moment when it's already too late.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-label"><span class="n">5</span><h2>Position matters: orthostatic intolerance</h2></div>
+    <span class="voice doc">Physio &amp; Sports Doctor's note</span>
+    <p class="muted">Many people with ME/CFS also have orthostatic intolerance, including POTS, where standing upright raises heart rate and worsens dizziness, brain fog, and fatigue. If that's part of this client's picture, prolonged standing is its own PEM trigger, separate from exertion.</p>
+    <ul class="check">
+      <li>Favour seated or recumbent positions for exercise: seated marching, recumbent bike if tolerated, floor-based gentle range of motion.</li>
+      <li>Avoid long periods of standing still, standing in queues, standing to cook, is often harder than walking the same duration.</li>
+      <li>Compression garments, increased fluid, and increased sodium are common medical strategies for orthostatic intolerance, but these are prescribed by the treating doctor. Don't independently recommend a high-sodium protocol.</li>
+      <li>If tilting from lying to sitting to standing consistently spikes symptoms, that's a conversation for their doctor, not something to train around.</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="sec-label"><span class="n">6</span><h2>If and when to rebuild capacity</h2></div>
+    <p class="muted">Capacity can sometimes be rebuilt, carefully, once the client has been stable within their energy envelope for a genuine stretch of time, generally two to four weeks with no PEM crashes, and only with their doctor's sign-off. When that's the case:</p>
+    <ul class="check">
+      <li>Increase by the smallest meaningful unit, often 1 to 2 minutes of activity or one extra short bout in the day, never a percentage jump.</li>
+      <li>Hold the new level for one to two full weeks before considering another increase.</li>
+      <li>Any hint of PEM at the new level means dropping straight back to the last stable level, not holding there and hoping it settles.</li>
+      <li>Quality over output always. A short bout done at an easy, HR-capped effort beats a longer bout that flirts with threshold.</li>
+    </ul>
+    <p class="muted">Some clients with ME/CFS never move past very small, well-tolerated amounts of activity, and that's a legitimate outcome, not a failure of the plan. The goal is stability and function, not a return to a previous training capacity on a fixed timeline.</p>
+  </section>
+
+  <section>
+    <div class="sec-label"><span class="n">7</span><h2>Best foods and eating pattern</h2></div>
+    <span class="voice">Dietician's note</span>
+    <p class="muted">There is no validated "ME/CFS diet." A 2025 systematic review of dietary supplementation for fatigue in ME/CFS, and an earlier systematic review on dietary and nutrition interventions, both found the evidence for specific diets or elimination protocols insufficient to recommend them. That cuts both ways: don't promise a diet will fix this, and don't let a restrictive elimination approach get adopted without the treating doctor involved, since unnecessary restriction adds stress and can worsen nutrient intake in someone already running on limited energy for food prep.</p>
+    <table class="food-table">
+      <tr><th>Focus</th><th>Why it matters here</th></tr>
+      <tr><td>Regular, adequate meals</td><td>Under-eating compounds fatigue and makes energy crashes worse. This isn't the place for a deficit unless a doctor is managing weight separately.</td></tr>
+      <tr><td>Steady blood sugar</td><td>Smaller, more frequent meals with protein and fibre at each one help avoid the energy spikes and dips that stack on top of PEM-related fatigue.</td></tr>
+      <tr><td>Protein at each meal</td><td>Supports basic tissue maintenance during a period where structured resistance training isn't driving the usual demand.</td></tr>
+      <tr><td>Hydration and electrolytes</td><td>Especially relevant with orthostatic intolerance. Water plus electrolytes, not just water, if dizziness on standing is part of the picture, and only at levels the doctor has approved.</td></tr>
+      <tr><td>Easy-prep meals</td><td>Cooking itself is exertion. Batch-friendly, low-effort meals protect the energy envelope as much as any exercise choice does.</td></tr>
+      <tr><td>Individual trigger foods</td><td>Caffeine and alcohol affect sleep and symptoms differently person to person. Track them in the same symptom diary used for activity, don't apply a blanket rule.</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <div class="sec-label"><span class="n">8</span><h2>Supplements: what the evidence actually says</h2></div>
+    <p class="muted">Clients will ask about CoQ10, D-ribose, L-carnitine, B12, and vitamin D, these come up constantly in ME/CFS communities. The honest answer from the current systematic review evidence is that results are mixed and inconclusive, not that any of them are proven fatigue fixes. Some individuals report benefit from specific ones, but the research doesn't support recommending them as standard practice, and several interact with medications this client may already be on.</p>
+    <div class="callout">
+      <span class="k">Position on supplements</span>
+      Food first, always. If a client wants to trial a specific supplement, that conversation goes through their doctor first, both for interactions and because self-directed supplement chasing can become its own source of hope-and-crash cycling that mirrors the boom-bust pattern in movement.
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-label"><span class="n">9</span><h2>Sleep isn't just hygiene here</h2></div>
+    <p class="muted">Unrefreshing sleep is one of the core diagnostic features of ME/CFS, not a lifestyle habit to correct. A client can sleep a full eight hours and wake up as tired as when they lay down. Standard sleep hygiene, consistent sleep and wake times, a dark and cool room, screens off before bed, still helps and is worth doing properly, but set the expectation honestly: it supports the condition, it doesn't resolve it. If there's a suspected comorbid sleep disorder, such as sleep apnoea, that's a referral to a sleep specialist, not something to manage through coaching.</p>
+  </section>
+
+  <section>
+    <div class="sec-label"><span class="n">10</span><h2>The psychology of pacing</h2></div>
+    <span class="voice psych">Sports Psychologist's note</span>
+    <p class="muted">Pacing is genuinely hard to accept for anyone who used to be active, and it's often harder for driven clients who are used to measuring themselves by output. Resting on a good day feels like giving something up. Expect guilt, expect grief for the training capacity and identity that used to be there, and expect the pull to "test" themselves on a good day just to see. Name this early rather than waiting for it to show up as a crash.</p>
+    <ul class="check">
+      <li>Reframe pacing as the active treatment, not the absence of training. Staying inside the envelope is the work, not a break from it.</li>
+      <li>Use the symptom diary to make progress visible in a way that isn't tied to output, fewer crashes, more stable days, is real progress worth naming.</li>
+      <li>Address boom-bust directly as a pattern, not a one-off lapse. It usually comes from a good day plus a belief that more effort proves recovery. Both need addressing.</li>
+      <li>Keep language steady and factual. This client doesn't need to be talked into pushing harder, they need to be believed when they say a day is bad.</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="sec-label"><span class="n">11</span><h2>Red flags: hand this back to the medical team</h2></div>
+    <div class="callout crit">
+      <span class="k">Escalate, don't manage these yourself</span>
+      <ul class="check" style="margin-top:6px;">
+        <li>PEM crashes getting worse or more frequent despite consistent pacing</li>
+        <li>New chest pain, fainting, or severe dizziness on standing</li>
+        <li>Significant unintentional weight loss or an inability to eat enough</li>
+        <li>A marked drop in cognitive function or new neurological symptoms</li>
+        <li>Signs of depression or hopelessness beyond the expected adjustment to a chronic diagnosis</li>
+      </ul>
+      Any of these go back to the treating doctor promptly. This guide manages day-to-day pacing and food. It is not equipped to assess these, and treating them as a programming problem instead of a medical one is a genuine risk to the client.
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-label"><span class="n">12</span><h2>Where this fits in the programs on offer</h2></div>
+    <p class="muted">This client doesn't fit a standard program, and shouldn't be sold into one on the promise it can be "scaled down." Individualisation here isn't a lighter version of a template, it's a different plan every review.</p>
+    <div class="program-card">
+      <span class="tag">The correct fit</span>
+      <h3>Premium Coaching</h3>
+      <p>Fully custom coaching is the right pairing for confirmed ME/CFS with PEM. Pacing needs frequent, individual adjustment based on a symptom diary, doctor input, and week-to-week stability, which a fixed program structure can't deliver.</p>
+    </div>
+  </section>
+
+  <footer class="doc-foot">
+    <span class="mono">@strengthelite</span>
+    <span>Sources: National Academy of Medicine 2015 diagnostic report, NICE NG206 (2021), CDC PEM management toolkit (2024), Workwell Foundation CPET research, Nutrients 2025 systematic review on ME/CFS supplementation.</span>
+  </footer>
+
+</div>
+</body>
+</html>

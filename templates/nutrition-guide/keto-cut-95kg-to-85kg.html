@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>High Protein Keto Cut Guide</title>
+<style>
+  @page { size: A4; margin: 0; }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    color: #1a1e1c;
+    background: #ffffff;
+    font-size: 13.5px;
+    line-height: 1.55;
+  }
+
+  .page {
+    padding: 40px 48px;
+  }
+
+  .mono {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Cover */
+  .cover {
+    background: #1a1e1c;
+    color: #ffffff;
+    padding: 64px 48px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    page-break-after: always;
+  }
+
+  .cover .eyebrow {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #ff8a5c;
+    font-weight: 700;
+    margin: 0 0 20px;
+  }
+
+  .cover h1 {
+    font-size: 44px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin: 0 0 20px;
+    max-width: 11ch;
+  }
+
+  .cover .sub {
+    font-size: 16px;
+    color: #cfd6d2;
+    max-width: 42ch;
+    margin: 0;
+  }
+
+  .cover .stat-row {
+    display: flex;
+    gap: 32px;
+    margin-top: 48px;
+  }
+
+  .cover .stat {
+    border-left: 2px solid #e05a2b;
+    padding-left: 14px;
+  }
+
+  .cover .stat .num {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  .cover .stat .label {
+    font-size: 11.5px;
+    color: #9aa39d;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-top: 2px;
+  }
+
+  .cover footer {
+    color: #7a827d;
+    font-size: 12.5px;
+  }
+
+  .cover footer .brand {
+    color: #6fb6c1;
+    font-weight: 700;
+  }
+
+  /* Section styling */
+  section { page-break-inside: avoid; margin-bottom: 30px; }
+
+  .sec-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .sec-label .n {
+    background: #e05a2b;
+    color: #ffffff;
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;
+    font-weight: 700;
+    font-size: 12.5px;
+    width: 22px;
+    height: 22px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+  }
+
+  .sec-label h2 {
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+
+  p { margin: 0 0 10px; }
+  .muted { color: #4b524e; }
+
+  /* Macro cards */
+  .macro-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 14px 0 16px;
+  }
+
+  .macro-card {
+    background: #f6f8f7;
+    border-top: 3px solid #2f6f7a;
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+
+  .macro-card.cal { border-top-color: #e05a2b; }
+
+  .macro-card .label {
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #7a827d;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .macro-card .val {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1e1c;
+  }
+
+  /* Meal timeline */
+  .meal {
+    display: grid;
+    grid-template-columns: 76px 1fr;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #e8ebe9;
+  }
+
+  .meal:last-child { border-bottom: none; }
+
+  .meal .time {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #2f6f7a;
+  }
+
+  .meal .what strong { display: block; font-size: 13.5px; margin-bottom: 2px; }
+  .meal .what span { color: #4b524e; font-size: 12.5px; }
+
+  /* Callout */
+  .callout {
+    background: #dfeaec;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-top: 6px;
+  }
+
+  .callout.warn { background: #fbe9df; color: #8a3a12; }
+  .callout .k { font-weight: 800; font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; display: block; margin-bottom: 4px; }
+
+  ul.check { list-style: none; margin: 8px 0; padding: 0; }
+  ul.check li { padding-left: 22px; position: relative; margin-bottom: 7px; font-size: 13px; }
+  ul.check li::before { content: "\2713"; position: absolute; left: 0; color: #2f6f7a; font-weight: 800; }
+
+  ul.cross { list-style: none; margin: 8px 0; padding: 0; }
+  ul.cross li { padding-left: 22px; position: relative; margin-bottom: 7px; font-size: 13px; }
+  ul.cross li::before { content: "\2715"; position: absolute; left: 0; color: #b3401f; font-weight: 800; }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  /* Program cards */
+  .program-card {
+    background: #f6f8f7;
+    border: 1px solid #d3d9d4;
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  .program-card .tag {
+    display: inline-block;
+    font-size: 10.5px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #e05a2b;
+    background: #fbe4da;
+    padding: 3px 9px;
+    border-radius: 999px;
+    margin-bottom: 10px;
+  }
+
+  .program-card h3 { font-size: 17px; font-weight: 800; margin: 0 0 8px; }
+  .program-card p { font-size: 13px; color: #4b524e; }
+
+  .program-card .link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #2f6f7a;
+    word-break: break-all;
+  }
+
+  footer.doc-foot {
+    margin-top: 36px;
+    padding-top: 16px;
+    border-top: 1px solid #d3d9d4;
+    display: flex;
+    justify-content: space-between;
+    font-size: 11.5px;
+    color: #7a827d;
+  }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div>
+    <p class="eyebrow">@strengthelite: Personal Nutrition Guide</p>
+    <h1>High protein keto. 95 down to 85.</h1>
+    <p class="sub">Keto stays. Protein goes up hard, calories land at a number built to lose fat without stripping the muscle you're carrying at 95kg.</p>
+    <div class="stat-row">
+      <div class="stat"><div class="num">95kg &rarr; 85kg</div><div class="label">Current to goal</div></div>
+      <div class="stat"><div class="num">2,300</div><div class="label">Daily kcal</div></div>
+      <div class="stat"><div class="num">210g</div><div class="label">Daily protein</div></div>
+    </div>
+  </div>
+  <footer>Prepared by <span class="brand">@strengthelite</span>. Facts, not fads.</footer>
+</div>
+
+<div class="page">
+
+  <section>
+    <div class="sec-label"><span class="n">1</span><h2>The goal and the approach</h2></div>
+    <p class="muted">Ten kilos to lose, keto is staying, and protein is going up. That's a good combination, not a compromise. Keto's real value in a cut isn't some metabolic trick, it's appetite control. Higher fat and protein blunt hunger far better than a carb heavy diet does at the same calories, which is what actually determines whether a deficit gets followed for sixteen weeks instead of two. The deficit and the protein number are doing the work here. Ketosis itself doesn't burn extra fat on its own.</p>
+    <p class="muted">Pushing protein to around 210g a day inside a keto framework is sometimes called a high protein ketogenic diet, and it holds up in the research: higher protein increases satiety, raises the small metabolic cost of digesting food, and protects lean mass while you're eating below maintenance. That last point matters most at 95kg. The goal is to arrive at 85kg carrying the muscle you have now, not a smaller, softer version of the same weight loss.</p>
+  </section>
+
+  <section>
+    <div class="sec-label"><span class="n">2</span><h2>Starting numbers</h2></div>
+    <p class="muted">These are a starting point built off your current weight, not a fixed rule. Section 7 covers exactly how and when to adjust them.</p>
+    <div class="macro-row">
+      <div class="macro-card cal"><div class="label">Calories</div><div class="val">2,300</div></div>
+      <div class="macro-card"><div class="label">Protein</div><div class="val">210g</div></div>
+      <div class="macro-card"><div class="label">Fat</div><div class="val">150g</div></div>
+      <div class="macro-card"><div class="label">Carbs</div><div class="val">&le;25g</div></div>
+    </div>
+    <p class="muted">Protein at 210g works out to roughly 2.2g per kilo of your current bodyweight, the higher end of what's useful in a deficit, and it's the number to defend hardest on a bad day. Carbs stay capped at 25g or under, mostly from vegetables, to keep you in ketosis. Fat fills the rest of the calories and is the lever you adjust if the scale stalls, not protein and not the carb cap.</p>
+    <p class="muted">Off a rough estimate of your maintenance intake at 95kg, 2,300 kcal sits around a 500 to 700 kcal daily deficit. That lines up with roughly 0.5 to 0.7kg lost a week, which puts the 10kg target somewhere around 14 to 20 weeks depending on adherence and how your body responds. That's an estimate to monitor, not a promise.</p>
+  </section>
+
+  <section>
+    <div class="sec-label"><span class="n">3</span><h2>A day that hits the numbers</h2></div>
+    <p class="muted">Build your day around three solid meals plus a protein top up if training lands late. Move the timing to fit your schedule, the structure is what matters.</p>
+    <div class="meal"><div class="time">Meal 1</div><div class="what"><strong>4 whole eggs, 2 rashers bacon, spinach in butter</strong><span>Protein and fat forward start, near enough zero carb, keeps you full into the afternoon.</span></div></div>
+    <div class="meal"><div class="time">Meal 2</div><div class="what"><strong>200g grilled chicken thigh, big salad, olive oil, half an avocado</strong><span>The biggest single protein hit of the day, fat comes from real food, not a bottle of dressing.</span></div></div>
+    <div class="meal"><div class="time">Meal 3</div><div class="what"><strong>200&ndash;250g beef mince or salmon, roasted broccoli or cauliflower, butter or oil</strong><span>Second big protein hit, carb from the veg only, this is where most of the day's fat can flex up or down.</span></div></div>
+    <div class="meal"><div class="time">Top up</div><div class="what"><strong>Whey or casein shake, or a handful of macadamias/almonds</strong><span>Use this to close the gap to 210g protein on days meal 2 or 3 come up short, or to fill remaining fat calories with nuts.</span></div></div>
+  </section>
+
+  <section>
+    <div class="sec-label"><span class="n">4</span><h2>Budget staples</h2></div>
+    <p class="muted">Keto runs a bit more expensive than a rice and chicken plan because fat sources replace cheap carb fillers. Build around these and it stays manageable:</p>
+    <div class="grid-2">
+      <ul class="check">
+        <li>Eggs, chicken thighs, beef mince</li>
+        <li>Canned tuna and salmon</li>
+        <li>Butter, ghee, olive oil</li>
+        <li>Block cheese</li>
+      </ul>
+      <ul class="check">
+        <li>Frozen broccoli, cauliflower, spinach</li>
+        <li>Avocado, when it's on sale buy several</li>
+        <li>Macadamias or almonds</li>
+        <li>Whey or casein protein powder</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-label"><span class="n">5</span><h2>Eating out and the weekend fix</h2></div>
+    <div class="callout warn">
+      <span class="k">Order protein and fat, skip the rest</span>
+      Steak, chicken, or fish with a salad or non-starchy veg, sauce and dressing on the side. Skip the bun, the rice, the pasta, and the chips, that's where a "safe looking" meal quietly adds forty grams of carbs. If alcohol is part of the night, spirits with soda water or a dry wine in real moderation, beer and cocktails are carb heavy and alcohol hits harder without the carbs to buffer it. One planned flexible meal a week is fine. Trying to eliminate eating out completely is usually what causes the whole plan to fall apart by week three.
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-label"><span class="n">6</span><h2>Keto specific watch outs</h2></div>
+    <ul class="check">
+      <li><strong>Electrolytes in week one and two:</strong> headaches, fatigue, and light headedness in the first fortnight are usually sodium, potassium, and magnesium leaving with the water your body's dropping, not a sign keto isn't working. Salt your food properly, don't go easy on it.</li>
+      <li><strong>Fibre doesn't take care of itself:</strong> low carb often means low fibre by accident. Keep the leafy greens and cruciferous veg in every day, add a tablespoon of chia or psyllium if things get sluggish.</li>
+      <li><strong>Ketone testing is optional, not required:</strong> the scale and the tape measure are the metrics that matter. Strips or a meter are fine if you want the data, but chasing a specific ketone number isn't the goal, fat loss is.</li>
+      <li><strong>A stall isn't a signal to cut carbs to zero:</strong> the fat number moves first if progress stalls for two to three weeks straight. Protein and the carb cap don't move.</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="sec-label"><span class="n">7</span><h2>Timeline and how to adjust</h2></div>
+    <div class="callout">
+      <span class="k">Monitoring</span>
+      Weigh in 3x a week under the same conditions, track the weekly average rather than any single reading. Waist measurement every two weeks. Photos every two to four weeks.
+    </div>
+    <p class="muted" style="margin-top:10px;">Reassess every two to three weeks. If the weekly average and waist aren't trending down, drop fat by 15 to 20g a day, protein and the carb cap stay fixed. If you're losing faster than around 1% of bodyweight a week or strength in the gym is dropping off noticeably, add 15 to 20g of fat back in, that's muscle going with the fat, not extra progress.</p>
+  </section>
+
+  <section>
+    <div class="sec-label"><span class="n">8</span><h2>Your program</h2></div>
+    <p class="muted">Nutrition sets the deficit, training decides whether the 10kg that comes off includes muscle or not.</p>
+    <div class="program-card">
+      <span class="tag">Recommended</span>
+      <h3>Strong &amp; Lean</h3>
+      <p>Built for exactly this, holding and building strength while body composition changes. The higher protein target in this guide is there specifically to support what this program is asking your body to do.</p>
+      <a class="link" href="https://share.newie.app/offerings/0FD08F08-9E1D-47A9-9031-CD595BF2287D">share.newie.app/offerings/0FD08F08&hellip;</a>
+    </div>
+    <p class="muted" style="margin-top:12px;">If time is genuinely the constraint rather than the training itself, Built in 3 is the alternative pick, one to two focused sessions a week is still enough to protect muscle at this calorie target. I haven't got a verified link for it in this file, so grab it from the training diagnostic tool before sending this on rather than trusting a pasted one here.</p>
+  </section>
+
+  <footer class="doc-foot">
+    <span class="mono">@strengthelite</span>
+    <span>Facts, not fads. The deficit and the protein do the work, keto just makes the deficit easier to hold.</span>
+  </footer>
+
+</div>
+</body>
+</html>

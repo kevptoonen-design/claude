@@ -4,6 +4,7 @@ Week,Day,Session,Order,Exercise,Sets,Reps,Intensity,Rest,Notes
 1,Mon,Heavy Strength + Tendon,3,Bulgarian Split Squat,3,8/side,RIR 3,90 sec,
 1,Mon,Heavy Strength + Tendon,4,Heavy Calf Raise (slow tempo),3,8,RIR 3,90 sec,"3 sec up, 3 sec down. Load drives tendon stiffness, tempo is not optional here."
 1,Mon,Heavy Strength + Tendon,5,Pallof Press,3,10/side,Controlled,60 sec,
+1,Mon,Heavy Strength + Tendon,6,Chest Supported Row,3,10,RIR 2-3,90 sec,"Upper back endurance for arm swing mechanics late in a run. Chest pinned to the pad, no swinging."
 1,Tue,Running (client's own plan),,,,,,,"Strength days sit alongside your running, not against it. Keep these sessions light on the legs heading into a hard run or long run."
 1,Wed,Plyometric Power,1,Pogo Hops,3,10-15 sec,Fast ground contact,60 sec,"Stiff ankle, minimal knee bend. General prep, not max effort."
 1,Wed,Plyometric Power,2,Double Leg Broad Bound,3,5,Full recovery,90 sec,"Distance over reps. Full reset between attempts, this is not conditioning."
@@ -16,6 +17,8 @@ Week,Day,Session,Order,Exercise,Sets,Reps,Intensity,Rest,Notes
 1,Fri,Single Leg Strength + Hip and Tendon Resilience,3,Standing Hip Abduction (cable/band),3,12/side,RIR 2,60 sec,
 1,Fri,Single Leg Strength + Hip and Tendon Resilience,4,Seated Calf Raise,3,12,RIR 2,60 sec,
 1,Fri,Single Leg Strength + Hip and Tendon Resilience,5,Bird Dog,3,8/side,Slow and controlled,45 sec,
+1,Fri,Single Leg Strength + Hip and Tendon Resilience,6,Face Pull,3,12,RIR 2,60 sec,"Rear delt and upper back, holds arm swing form together as the shoulders fatigue."
+1,Fri,Single Leg Strength + Hip and Tendon Resilience,7,Farmer's Carry,3,20m,"Heavy, RIR 2-3",90 sec,Grip and anti-lateral flexion under load. Carries straight over to holding form when tired late in a run.
 1,Sat,Running (client's own plan),,,,,,,
 1,Sun,Rest,,,,,,,
 2,Mon,Heavy Strength + Tendon,1,Trap Bar Deadlift,5,5,RIR 3,2-3 min,Volume week. One more set across the board.
@@ -23,6 +26,7 @@ Week,Day,Session,Order,Exercise,Sets,Reps,Intensity,Rest,Notes
 2,Mon,Heavy Strength + Tendon,3,Bulgarian Split Squat,4,8/side,RIR 3,90 sec,
 2,Mon,Heavy Strength + Tendon,4,Heavy Calf Raise (slow tempo),4,8,RIR 3,90 sec,
 2,Mon,Heavy Strength + Tendon,5,Pallof Press,4,10/side,Controlled,60 sec,
+2,Mon,Heavy Strength + Tendon,6,Chest Supported Row,4,10,RIR 2-3,90 sec,
 2,Tue,Running (client's own plan),,,,,,,
 2,Wed,Plyometric Power,1,Pogo Hops,3,10-15 sec,Fast ground contact,60 sec,
 2,Wed,Plyometric Power,2,Double Leg Broad Bound,3,5,Full recovery,90 sec,
@@ -35,6 +39,8 @@ Week,Day,Session,Order,Exercise,Sets,Reps,Intensity,Rest,Notes
 2,Fri,Single Leg Strength + Hip and Tendon Resilience,3,Standing Hip Abduction (cable/band),4,12/side,RIR 2,60 sec,
 2,Fri,Single Leg Strength + Hip and Tendon Resilience,4,Seated Calf Raise,4,12,RIR 2,60 sec,
 2,Fri,Single Leg Strength + Hip and Tendon Resilience,5,Bird Dog,3,10/side,Slow and controlled,45 sec,
+2,Fri,Single Leg Strength + Hip and Tendon Resilience,6,Face Pull,4,12,RIR 2,60 sec,
+2,Fri,Single Leg Strength + Hip and Tendon Resilience,7,Farmer's Carry,4,20m,"Heavy, RIR 2-3",90 sec,
 2,Sat,Running (client's own plan),,,,,,,
 2,Sun,Rest,,,,,,,
 3,Mon,Heavy Strength + Tendon,1,Trap Bar Deadlift,4,3,RIR 2,2-3 min,"Intensity week. Load goes up, reps come down, sets pull back from Week 2's peak volume."
@@ -42,6 +48,7 @@ Week,Day,Session,Order,Exercise,Sets,Reps,Intensity,Rest,Notes
 3,Mon,Heavy Strength + Tendon,3,Bulgarian Split Squat,3,6/side,RIR 2,90 sec,
 3,Mon,Heavy Strength + Tendon,4,Heavy Calf Raise (slow tempo),3,6,RIR 2,90 sec,Heaviest load of the block.
 3,Mon,Heavy Strength + Tendon,5,Pallof Press,3,10/side,Controlled,60 sec,
+3,Mon,Heavy Strength + Tendon,6,Chest Supported Row,3,8,RIR 2,90 sec,
 3,Tue,Running (client's own plan),,,,,,,
 3,Wed,Plyometric Power,1,Pogo Hops,3,10-15 sec,Fast ground contact,60 sec,
 3,Wed,Plyometric Power,2,Alternate Leg Bounding (continuous),4,6/side,Full recovery,2 min,Most running specific drill in the block. Continuous alternating bounds down a straight line.
@@ -54,6 +61,8 @@ Week,Day,Session,Order,Exercise,Sets,Reps,Intensity,Rest,Notes
 3,Fri,Single Leg Strength + Hip and Tendon Resilience,3,Standing Hip Abduction (cable/band),3,10/side,RIR 2,60 sec,
 3,Fri,Single Leg Strength + Hip and Tendon Resilience,4,Seated Calf Raise,3,10,RIR 1-2,60 sec,
 3,Fri,Single Leg Strength + Hip and Tendon Resilience,5,Bird Dog,3,10/side,Slow and controlled,45 sec,
+3,Fri,Single Leg Strength + Hip and Tendon Resilience,6,Face Pull,3,10,RIR 1-2,60 sec,
+3,Fri,Single Leg Strength + Hip and Tendon Resilience,7,Farmer's Carry,3,25m,Heaviest load of the block,90 sec,Heavier load this week. Distance can dip a little if that's what it takes to keep it heavy.
 3,Sat,Running (client's own plan),,,,,,,
 3,Sun,Rest,,,,,,,
 4,Mon,Heavy Strength + Tendon,1,Trap Bar Deadlift,2,5,RIR 4-5,2 min,"Deload. Volume down roughly 40-50 percent, movement frequency held so nothing goes rusty."

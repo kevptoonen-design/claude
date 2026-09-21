@@ -63,9 +63,18 @@ The weekly digest is not enough on its own — it only runs Mondays, so it can't
 
 ## Social media content plan
 - **Pillars (rotate 3–4 per week, cover all over time):** Strength, Hypertrophy, Aerobic capacity, Injury prevention & recovery, Programming principles, Sleep, Nutrition, Supplements, Sports psychology.
+- **Proof pillar (10th pillar, non-rotating, non-negotiable):** one post every single week, every Friday by default, showing a real client result, transformation, PR, or testimonial tied to a specific named program. This is not a rotating pillar like the other 9 — it runs every week regardless of what else is scheduled. Purpose: the education pillars build trust in the method, this pillar builds trust that the coaching itself produces results, which is what actually drives purchases.
+- **Every caption ends by naming the paid step.** One line connecting the free lesson just taught to what's actually for sale, not a hard pitch, a natural extension of the point (e.g. "if you want a program built around what actually moves the needle, link in bio"). Apply this by default on every new post going forward. Root cause this exists: 40k Instagram followers were not converting to program/ebook purchases because content taught everything for free without ever naming that a paid next step exists.
 - **Two audience tracks per topic:** Athlete (technical — %1RM, HR zones, named principles) and General population (plain-language, practical takeaway). Same finding, same firm/no-bullshit tone, different depth.
 - **Format:** existing 5-page carousel structure (hook → formula/principle → worked example → why it works → sign-off).
 - **Pipeline:** Monday research digest → pick 3–4 digest findings/pillars for the week → draft both tracks per topic → user reviews/edits → load approved copy into a Canva carousel (copy the template, never edit the master).
+
+## Funnel strategy (owned audience, added because reach wasn't converting)
+- **The core problem:** 40k Instagram followers is rented reach, not an owned audience. No email list existed anywhere off Instagram, so there was no way to reach followers independent of the algorithm, and no nurture sequence to walk someone from free content to a purchase.
+- **The fix:** the training-diagnostic tool (see Programs section) gates its personalized program result behind an email capture, turning it into the lead magnet. Every Stories link and bio link should point here first.
+- **Weekly Stories habit (in addition to existing Stories use):** one weekly "which program fits you" walkthrough using the diagnostic tool (poll/quiz sticker), one weekly testimonial re-share with a link sticker to the specific matching program.
+- **Funnel shape:** Reach (posts/Stories) → Proof pillar builds buying intent → email capture via the diagnostic tool → nurture sequence (still to be built) → ebook as the low-friction first purchase (ebooks already exist and are for sale) → follow-up sequence pointing ebook buyers toward the matching program.
+- Do not reduce how much real information is given away for free. The free content is the proof of expertise; the fix is an owned channel plus always naming the paid step, not less value.
 
 ## Programs (for matching content/clients to an offer)
 - **Athletic Program** — field/combat sports, power, speed, strength, real athleticism

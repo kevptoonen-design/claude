@@ -21,7 +21,7 @@ Firm, educational, no-bullshit. This is the user's own brand voice — apply it 
 
 ## Content brand context (@strengthelite)
 - IG carousel pattern: title/hook → formula/principles → worked example → why it works → sign-off (~5 pages), background fill asset `MADatd_WXzA` + logo overlay asset `MAG3g5DLY20`.
-- Page 1 heading text color: use the same blue as the body text (`#2050f6`) rather than the template's default dark/black heading color. Apply this by default on every new post going forward, not just when asked.
+- All text on every page, including the Page 1 heading, uses blue (`#2050f6`), never the template's default dark/black. Apply this by default on every new post going forward, not just when asked.
 - Canvas is 1080×1350. Text containers must stay above roughly y≈1200 (handle tag sits at y=1242). Increasing font size grows container height fast (~font_size²), so trim copy whenever sizing text up, and re-check thumbnails before committing.
 - User wants body text noticeably larger than the Canva template defaults (original was reported as "a bit small").
 - **Fixed font sizes, non-negotiable default on every new post:** Page 1 hook = 75px. All other body pages = 30px. Never shrink these to make copy fit. If content doesn't fit within the safe zone at these sizes, expand to 6 (or more) pages instead of downsizing the font.

@@ -1,0 +1,100 @@
+Week,Day,Session,Order,Exercise,Sets,Reps,Intensity,Rest,Outcome
+1,Mon,Plyometrics,1,Dynamic Warm-up + A-Skips,-,-,-,-,5-8 min
+1,Mon,Plyometrics,2,Pogo Hops,3,20,Low intensity - sub-maximal,60s,Ankle/tendon stiffness
+1,Mon,Plyometrics,3,Lateral Skater Bounds,3,8 each side,Low intensity - controlled landing,60s,Frontal-plane control
+1,Mon,Plyometrics,4,Box Step-off to Stick (low box),3,5 each side,Low intensity - landing mechanics,60s,Landing mechanics
+1,Mon,Plyometrics,5,Cool-down + Calf/Achilles Mobility,-,-,-,-,5 min
+1,Tue,Strength A - Lower,1,Mobility Warm-up (hips/ankles),-,-,-,-,5-8 min
+1,Tue,Strength A - Lower,2,Back Squat,5,5,72-75% (RIR 3),2-3 min,Main lift - heavy strength for running economy
+1,Tue,Strength A - Lower,3,Bulgarian Split Squat,3,8 each leg,RIR 2-3,90s,Unilateral strength
+1,Tue,Strength A - Lower,4,Standing Calf Raise,4,8,RIR 2-3,60-90s,Tendon/ankle stiffness
+1,Tue,Strength A - Lower,5,Front Plank or Pallof Press,3,30-40s / 10 each side,RIR 2-3,45-60s,Trunk stability
+1,Wed,Easy Run,1,Warm-up Walk/Jog,-,-,-,-,5 min
+1,Wed,Easy Run,2,Zone 2 Continuous Run,1,30 min,60-70% HRmax,-,Conversational pace - aerobic base
+1,Wed,Easy Run,3,Cool-down + Stretch,-,-,-,-,5 min
+1,Thu,Hard Run - Threshold,1,Progressive Warm-up + Strides,-,-,-,-,10 min
+1,Thu,Hard Run - Threshold,2,Threshold Intervals,6,2 min,Threshold effort (comfortably hard),90s jog,Lactate threshold
+1,Thu,Hard Run - Threshold,3,Cool-down Jog,-,-,-,-,10 min
+1,Fri,Strength B - Posterior/Upper,1,Mobility Warm-up (hips/T-spine),-,-,-,-,5-8 min
+1,Fri,Strength B - Posterior/Upper,2,Romanian Deadlift,4,6,75-78% (RIR 2-3),2-3 min,Posterior chain strength
+1,Fri,Strength B - Posterior/Upper,3,Hip Thrust,3,8,RIR 2-3,90s,Glute drive/propulsion
+1,Fri,Strength B - Posterior/Upper,4,Chest-Supported Row,3,10-12,RIR 1-2,90s,Upper back - posture maintenance
+1,Fri,Strength B - Posterior/Upper,5,Single-Leg Calf Raise,3,10 each leg,RIR 2-3,60s,Tendon/ankle stiffness
+1,Sat,Long Run,1,Warm-up Walk/Jog,-,-,-,-,5-10 min
+1,Sat,Long Run,2,Steady Long Run,1,45 min,Easy/steady effort,-,Aerobic durability - build gradually (Nielsen et al. 2025 - keep session growth within ~10% of recent longest run)
+1,Sat,Long Run,3,Cool-down + Stretch,-,-,-,-,5-10 min
+1,Sun,Rest,1,Full Rest or Light Walk,-,-,-,-,Recovery
+2,Mon,Plyometrics,1,Dynamic Warm-up + A-Skips,-,-,-,-,5-8 min
+2,Mon,Plyometrics,2,Pogo Hops,3,25,Low-moderate intensity,60s,Ankle/tendon stiffness
+2,Mon,Plyometrics,3,Ankle Hops (rebound focus),3,15,Moderate intensity - fast ground contact,60s,Reactive strength - running-specific
+2,Mon,Plyometrics,4,Single-Leg Bound (short distance),3,5 each side,Moderate intensity,90s,Unilateral power
+2,Mon,Plyometrics,5,Cool-down + Calf/Achilles Mobility,-,-,-,-,5 min
+2,Tue,Strength A - Lower,1,Mobility Warm-up (hips/ankles),-,-,-,-,5-8 min
+2,Tue,Strength A - Lower,2,Back Squat,5,4,80% (RIR 2-3),2-3 min,Main lift - load climbs and volume drops slightly
+2,Tue,Strength A - Lower,3,Bulgarian Split Squat,3,6 each leg,RIR 2,90s,Unilateral strength
+2,Tue,Strength A - Lower,4,Standing Calf Raise,4,6,RIR 2,60-90s,Tendon/ankle stiffness
+2,Tue,Strength A - Lower,5,Front Plank or Pallof Press,3,40-50s / 12 each side,RIR 2,45-60s,Trunk stability
+2,Wed,Easy Run,1,Warm-up Walk/Jog,-,-,-,-,5 min
+2,Wed,Easy Run,2,Zone 2 Continuous Run,1,35 min,60-70% HRmax,-,Conversational pace - aerobic base
+2,Wed,Easy Run,3,Cool-down + Stretch,-,-,-,-,5 min
+2,Thu,Hard Run - Threshold,1,Progressive Warm-up + Strides,-,-,-,-,10 min
+2,Thu,Hard Run - Threshold,2,Threshold Intervals,6,3 min,Threshold effort (comfortably hard),90s jog,Lactate threshold
+2,Thu,Hard Run - Threshold,3,Cool-down Jog,-,-,-,-,10 min
+2,Fri,Strength B - Posterior/Upper,1,Mobility Warm-up (hips/T-spine),-,-,-,-,5-8 min
+2,Fri,Strength B - Posterior/Upper,2,Romanian Deadlift,4,5,80% (RIR 2),2-3 min,Posterior chain strength
+2,Fri,Strength B - Posterior/Upper,3,Hip Thrust,3,6,RIR 2,90s,Glute drive/propulsion
+2,Fri,Strength B - Posterior/Upper,4,Chest-Supported Row,3,10-12,RIR 1-2,90s,Upper back - posture maintenance
+2,Fri,Strength B - Posterior/Upper,5,Single-Leg Calf Raise,3,10 each leg,RIR 2,60s,Tendon/ankle stiffness
+2,Sat,Long Run,1,Warm-up Walk/Jog,-,-,-,-,5-10 min
+2,Sat,Long Run,2,Steady Long Run,1,50 min,Easy/steady effort,-,Aerobic durability - ~10% up from Week 1 (Nielsen et al. 2025 threshold)
+2,Sat,Long Run,3,Cool-down + Stretch,-,-,-,-,5-10 min
+2,Sun,Rest,1,Full Rest or Light Walk,-,-,-,-,Recovery
+3,Mon,Plyometrics,1,Dynamic Warm-up + A-Skips,-,-,-,-,5-8 min
+3,Mon,Plyometrics,2,Bounding for Distance,4,15-20m,Moderate-high intensity,90s,Horizontal power - stride power
+3,Mon,Plyometrics,3,Depth Jumps (low box ~20-30cm),3,5,High intensity - near-maximal reactive effort,90-120s,Reactive strength/RFD
+3,Mon,Plyometrics,4,Ankle Hops (rebound focus),3,15,Moderate intensity,60s,Reactive strength - running-specific
+3,Mon,Plyometrics,5,Cool-down + Calf/Achilles Mobility,-,-,-,-,5 min
+3,Tue,Strength A - Lower,1,Mobility Warm-up (hips/ankles),-,-,-,-,5-8 min
+3,Tue,Strength A - Lower,2,Back Squat,4,3,87-90% (RIR 2),3 min,Main lift - peak week and near-maximal load
+3,Tue,Strength A - Lower,3,Bulgarian Split Squat,3,5 each leg,RIR 2,90s,Unilateral strength
+3,Tue,Strength A - Lower,4,Standing Calf Raise,4,5,RIR 2,90s,Tendon/ankle stiffness
+3,Tue,Strength A - Lower,5,Front Plank or Pallof Press,3,50-60s / 12 each side,RIR 2,45-60s,Trunk stability
+3,Wed,Easy Run,1,Warm-up Walk/Jog,-,-,-,-,5 min
+3,Wed,Easy Run,2,Zone 2 Continuous Run,1,35 min,60-70% HRmax,-,Conversational pace - aerobic base
+3,Wed,Easy Run,3,Cool-down + Stretch,-,-,-,-,5 min
+3,Thu,Hard Run - Threshold/VO2max,1,Progressive Warm-up + Strides,-,-,-,-,10 min
+3,Thu,Hard Run - Threshold/VO2max,2,Threshold/VO2max Intervals,5,4 min,Threshold to VO2max effort,2 min jog,Peak aerobic power session
+3,Thu,Hard Run - Threshold/VO2max,3,Cool-down Jog,-,-,-,-,10 min
+3,Fri,Strength B - Posterior/Upper,1,Mobility Warm-up (hips/T-spine),-,-,-,-,5-8 min
+3,Fri,Strength B - Posterior/Upper,2,Romanian Deadlift,4,4,87% (RIR 2),3 min,Posterior chain strength - peak week
+3,Fri,Strength B - Posterior/Upper,3,Hip Thrust,3,5,RIR 2,90s,Glute drive/propulsion
+3,Fri,Strength B - Posterior/Upper,4,Chest-Supported Row,3,10-12,RIR 1-2,90s,Upper back - posture maintenance
+3,Fri,Strength B - Posterior/Upper,5,Single-Leg Calf Raise,3,10 each leg,RIR 2,60s,Tendon/ankle stiffness
+3,Sat,Long Run,1,Warm-up Walk/Jog,-,-,-,-,5-10 min
+3,Sat,Long Run,2,Steady Long Run,1,55 min,Easy/steady effort,-,Aerobic durability - peak long run and ~10% up from Week 2 (Nielsen et al. 2025 threshold)
+3,Sat,Long Run,3,Cool-down + Stretch,-,-,-,-,5-10 min
+3,Sun,Rest,1,Full Rest or Light Walk,-,-,-,-,Recovery
+4,Mon,Plyometrics (Deload),1,Dynamic Warm-up + A-Skips,-,-,-,-,5 min
+4,Mon,Plyometrics (Deload),2,Pogo Hops,2,15,Low intensity - sub-maximal,60s,Maintain pattern - reduce impact stress
+4,Mon,Plyometrics (Deload),3,Ankle Hops (rebound focus),2,10,Low intensity,60s,Maintain pattern - reduce impact stress
+4,Mon,Plyometrics (Deload),4,Cool-down + Calf/Achilles Mobility,-,-,-,-,5 min
+4,Tue,Strength A - Lower (Deload),1,Mobility Warm-up (hips/ankles),-,-,-,-,5-8 min
+4,Tue,Strength A - Lower (Deload),2,Back Squat,3,3,65% (RIR 4-5),2 min,Deload - fatigue clears and groove pattern
+4,Tue,Strength A - Lower (Deload),3,Bulgarian Split Squat,2,8 each leg,RIR 4-5,60-90s,Unilateral strength - light
+4,Tue,Strength A - Lower (Deload),4,Standing Calf Raise,2,10,RIR 4-5,60s,Tendon maintenance
+4,Tue,Strength A - Lower (Deload),5,Front Plank or Pallof Press,2,30s / 10 each side,RIR 4-5,45s,Trunk stability - light
+4,Wed,Easy Run,1,Warm-up Walk/Jog,-,-,-,-,5 min
+4,Wed,Easy Run,2,Easy Recovery Jog,1,25 min,60-65% HRmax,-,Deload - reduced volume
+4,Wed,Easy Run,3,Cool-down + Stretch,-,-,-,-,5 min
+4,Thu,Hard Run (Deload),1,Progressive Warm-up + Strides,-,-,-,-,10 min
+4,Thu,Hard Run (Deload),2,Relaxed Strides,4,2 min,Easy-moderate effort,Full recovery,Deload - maintain turnover and no hard effort
+4,Thu,Hard Run (Deload),3,Cool-down Jog,-,-,-,-,10 min
+4,Fri,Strength B - Posterior/Upper (Deload),1,Mobility Warm-up (hips/T-spine),-,-,-,-,5-8 min
+4,Fri,Strength B - Posterior/Upper (Deload),2,Romanian Deadlift,3,4,65% (RIR 4-5),2 min,Deload - fatigue clears
+4,Fri,Strength B - Posterior/Upper (Deload),3,Hip Thrust,2,8,RIR 4-5,60-90s,Glute maintenance - light
+4,Fri,Strength B - Posterior/Upper (Deload),4,Chest-Supported Row,2,10-12,RIR 3-4,90s,Upper back - light
+4,Fri,Strength B - Posterior/Upper (Deload),5,Single-Leg Calf Raise,2,10 each leg,RIR 4-5,60s,Tendon maintenance
+4,Sat,Long Run (Deload),1,Warm-up Walk/Jog,-,-,-,-,5-10 min
+4,Sat,Long Run (Deload),2,Steady Long Run,1,35-40 min,Easy effort,-,Deload cutback - let fitness and tissue consolidate before next block
+4,Sat,Long Run (Deload),3,Cool-down + Stretch,-,-,-,-,5-10 min
+4,Sun,Rest,1,Full Rest or Light Walk,-,-,-,-,Recovery

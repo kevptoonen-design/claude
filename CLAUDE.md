@@ -85,7 +85,8 @@ The weekly digest is not enough on its own — it only runs Mondays, so it can't
 - **Built in 3** — time-poor pick (1–2 days/week), also pairs well with capacity/running goals
 - **Premium Coaching** — fully custom, the pick for recurring injuries or highly individual needs
 - **Female Specific Program** — strength + shape, female-specific alternative to Strong & Lean
-- Links for all 8 are in the training-diagnostic tool (`training-diagnostic.html`, sent to the user) and used as the client nutrition guide's closing program recommendation.
+- **Strength Training Program for Runners** — 2 strength sessions + 1 plyometric session per week, layered around running rather than competing with it. Improves running economy/performance and builds tendon/joint resilience for injury prevention. The pick for runners (including anyone rebuilding volume/intensity after a break or niggle).
+- Links for all 9 are in the training-diagnostic tool (`training-diagnostic.html`, sent to the user) and used as the client nutrition guide's closing program recommendation.
 
 ## Race-specific builds (event-driven, outside the 8 standard programs)
 - **Bridge to Brisbane 2026** (5K/10K, race day Sun 13 Sept) — 8-week polarized build (Seiler), started Mon 20 July. 3 running days/week (Easy, Hard, Long) + 2 running-specific strength days (Mon/Fri: glute/hip stability, calf/tendon resilience, plyometric economy work — never enough to leave legs sore for the hard day or long run) + rest. One cutback week (Week 5) to manage load spikes, taper in Week 8. Docs: "Bridge to Brisbane - 5K Build (8 Weeks)" and "...10K Build (8 Weeks)" in Google Drive.

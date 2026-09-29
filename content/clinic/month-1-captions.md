@@ -57,7 +57,7 @@ Signs that usually get put down to "just being busy":
 
 Please don't start iron tablets on a hunch. Too much iron causes its own problems. Test first, then act on the actual number.
 
-If this sounds like you, our doctors can include a full iron study in your health assessment. Link in bio.
+If this sounds like you, our doctors can check your iron levels with a simple blood test as part of your health assessment. Link in bio.
 
 ---
 
@@ -322,7 +322,7 @@ Where to start:
 • Two sessions a week is plenty to begin
 • Add some impact if your joints are happy with it
 
-Know your starting point first. Bone health can be part of your health assessment. Book through the link in bio.
+Know your starting point first. As part of your health assessment, our doctors can arrange a DEXA scan to measure your bone density. Book through the link in bio.
 
 ---
 

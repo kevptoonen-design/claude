@@ -57,7 +57,7 @@ Signs that usually get put down to "just being busy":
 
 Please don't start iron tablets on a hunch. Too much iron causes its own problems. Test first, then act on the actual number.
 
-If this sounds like you, our doctors can check your iron levels with a simple blood test as part of your health assessment. Link in bio.
+If this sounds like you, our doctors can include a full iron study, done with a simple blood test, as part of your health assessment. Link in bio.
 
 ---
 

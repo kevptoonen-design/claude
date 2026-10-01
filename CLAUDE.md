@@ -63,6 +63,26 @@ The weekly digest is not enough on its own — it only runs Mondays, so it can't
 - 2026 ACSM Resistance Training Position Stand — a commenter caught this before the weekly digest did. Root cause: the digest hadn't yet checked ACSM specifically that week. Fix: added the mandatory authoritative-bodies check (above) run every single digest, no exceptions.
 - Body recomposition post cited Longland et al. 2016 as the primary evidence without checking for a newer synthesis — a commenter cited MASS Research Review showing recomposition occurs across deficit/maintenance/surplus, with deficit actually being the hardest condition (not contradicting the post, but a materially more current and complete picture existed). Root cause: verification search stopped once *a* credible RCT was confirmed, instead of checking for the newest review/meta-analysis on the topic. Fix: rule 2 above — always check for the newest synthesis, not just any credible source.
 
+## Peptides, TRT & HRT research routine
+A second weekly digest, same two-part discipline as the exercise-science one above, run separately because this space moves on **regulatory** news as much as on studies, and a regulatory change (a substance added to or removed from a compounding list, a new diagnostic threshold) can make last week's accurate claim wrong overnight. From a Sports Doctor lens: this is a genuine grey zone for most peptides, so content here stays in "what the evidence and the regulatory status actually say" territory, never dosing or sourcing advice, and always points back to "get real bloodwork, see a doctor" as the actual next step, consistent with the preventive-health content.
+
+### Bodies/registries to check every digest (non-negotiable)
+- **FDA PCAC** (Pharmacy Compounding Advisory Committee) — Category 2 bulk drug substances list movements for peptides (BPC-157, CJC-1295, Ipamorelin, GHRP-2, etc.). This list is actively moving right now and is the single most important thing to check weekly in this routine.
+- **Endocrine Society** — TRT/testosterone deficiency diagnostic guidance and position statements.
+- **The Menopause Society** (formerly NAMS) — HRT/perimenopause guidance for women.
+- **TGA** (Therapeutic Goods Administration, Australia) — local legal/scheduling status, since content reaches an Australian audience.
+- **ISSN** — already tracked in the main routine, but flag here too if a position stand touches peptides/hormonal supplements specifically.
+
+### Reference log (verified, citable)
+- **BPC-157** — pentadecapeptide studied (almost entirely in animals) for tissue/gut/tendon healing. As of 2026 there is still no published peer-reviewed human RCT for any indication. Removed from the FDA's 503A Category 2 bulk substances list in April 2026 over safety concerns; a later PCAC vote (8-6) recommended reconsidering it, but legally compounded access is not expected before late 2027 at the earliest given the rulemaking timeline. Treat as "promising preclinically, unproven in humans, not currently legal to compound" until this changes.
+- **Tesamorelin** — the one peptide in this group with genuine FDA approval and real Phase II/III human trial data (816 patients), but approved specifically for reducing visceral fat in HIV-associated lipodystrophy. General fat-loss/anti-aging use is off-label extrapolation, not what the trials showed.
+- **GHRP-2** (pralmorelin) — approved in exactly one place, Japan, and only as a one-off diagnostic test for growth hormone deficiency, not an ongoing treatment. Any fitness/anti-aging claim is unapproved extrapolation.
+- **CJC-1295 & Ipamorelin** — each individually has human data showing they raise GH/IGF-1, but no published human trial has tested the specific combination as commonly used. Both were formally rejected by the FDA's PCAC in late 2024 and remain in Category 2 with no 503A compounding pathway as of 2026.
+- **2026 Endocrine Society statement on testosterone deficiency** (already logged in the main reference log above) — diagnosis requires two separate low total-T blood tests, not symptoms alone; <300 ng/dL is a reasonable cutoff. This is the anchor citation for any TRT content.
+
+### Real-time verification standard (same discipline as the main routine, with one addition)
+Before publishing anything on a specific peptide or hormone therapy, check its *current* regulatory/compounding status in addition to the usual evidence-synthesis check — the science might not have changed since last digest, but the legal status might have, and that changes what the content can responsibly say.
+
 ## Social media content plan
 - **Pillars (rotate 3–4 per week, cover all over time):** Strength, Hypertrophy, Aerobic capacity, Injury prevention & recovery, Programming principles, Sleep, Nutrition, Supplements, Sports psychology.
 - **Proof pillar (10th pillar, non-rotating, non-negotiable):** one post every single week, every Friday by default, showing a real client result, transformation, PR, or testimonial tied to a specific named program. This is not a rotating pillar like the other 9 — it runs every week regardless of what else is scheduled. Purpose: the education pillars build trust in the method, this pillar builds trust that the coaching itself produces results, which is what actually drives purchases.

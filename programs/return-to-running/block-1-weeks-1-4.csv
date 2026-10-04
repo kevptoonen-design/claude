@@ -1,0 +1,101 @@
+Week,Day,Session,Order,Exercise,Sets,Reps,Intensity,Rest,Notes
+1,Mon,Strength A - Lower,1,Mobility Warm-up (hips/ankles),-,-,-,-,5-8 min
+1,Mon,Strength A - Lower,2,Back Squat,3,8,RIR 3,2 min,Main lift - conservative re-entry load, deadlift peaking block shelved
+1,Mon,Strength A - Lower,3,Romanian Deadlift,3,8,RIR 3,90s,General posterior chain strength - not peaking
+1,Mon,Strength A - Lower,4,Standing Calf Raise,3,10,RIR 2-3,60s,Tendon/ankle resilience for return to running
+1,Mon,Strength A - Lower,5,Pallof Press,3,10 each side,-,45s,Core
+1,Tue,Conditioning - Easy Run-Walk,1,Warm-up Walk,1,5 min,-,-,Easy
+1,Tue,Conditioning - Easy Run-Walk,2,Run-Walk Intervals,8,1 min run / 1.5 min walk,Zone 2 (60-70% HRmax),-,Conservative re-entry volume - every rep conversational pace
+1,Tue,Conditioning - Easy Run-Walk,3,Cool-down Walk + Stretch,-,-,-,-,5 min
+1,Wed,Strength B - Upper,1,Shoulder/T-spine Mobility,-,-,-,-,5-8 min
+1,Wed,Strength B - Upper,2,Bench Press,3,8,RIR 3,2 min,Main lift - conservative re-entry load
+1,Wed,Strength B - Upper,3,Chest-Supported Row,3,10,RIR 2-3,90s,Upper back balance
+1,Wed,Strength B - Upper,4,DB Shoulder Press,3,10,RIR 2-3,60-90s,Accessory
+1,Wed,Strength B - Upper,5,Hanging Leg Raise or Dead Bug,3,10,-,45s,Core
+1,Thu,Conditioning - Easy Cross-Train,1,Easy Warm-up,-,-,-,-,5 min
+1,Thu,Conditioning - Easy Cross-Train,2,Zone 2 Continuous (bike/rower/ski erg),1,25 min,60-70% HRmax,-,Non-impact aerobic base - protects tissue while running volume is still low
+1,Thu,Conditioning - Easy Cross-Train,3,Cool-down + Mobility,-,-,-,-,5 min
+1,Fri,Strength C - Full Body/Posterior Chain,1,Mobility Warm-up (hips/T-spine),-,-,-,-,5-8 min
+1,Fri,Strength C - Full Body/Posterior Chain,2,Trap Bar or Conventional Deadlift,3,6,RIR 3,2-3 min,Main lift - general strength, not peaking
+1,Fri,Strength C - Full Body/Posterior Chain,3,Hip Thrust,3,10,RIR 2-3,90s,Glute drive - propulsion carryover for running
+1,Fri,Strength C - Full Body/Posterior Chain,4,Single-Leg Calf Raise,3,10 each leg,RIR 2-3,60s,Tendon/ankle resilience
+1,Fri,Strength C - Full Body/Posterior Chain,5,Chin-up or Lat Pulldown,3,8,RIR 2-3,90s,Upper back balance
+1,Sat,Conditioning - Easy Run-Walk (Long),1,Warm-up Walk,1,5 min,-,-,Easy
+1,Sat,Conditioning - Easy Run-Walk (Long),2,Run-Walk Intervals,8,1.5 min run / 1.5 min walk,Zone 2 (60-70% HRmax),-,Slightly longer than Tuesday - this is the week's long day
+1,Sat,Conditioning - Easy Run-Walk (Long),3,Cool-down Walk + Stretch,-,-,-,-,5-10 min
+1,Sun,Rest,1,Full Rest or Light Walk,-,-,-,-,Recovery
+2,Mon,Strength A - Lower,1,Mobility Warm-up (hips/ankles),-,-,-,-,5-8 min
+2,Mon,Strength A - Lower,2,Back Squat,4,8,RIR 2-3,2 min,Volume lever - +1 set
+2,Mon,Strength A - Lower,3,Romanian Deadlift,3,8,RIR 2-3,90s,Hold
+2,Mon,Strength A - Lower,4,Standing Calf Raise,3,10,RIR 2,60s,Hold
+2,Mon,Strength A - Lower,5,Pallof Press,3,10 each side,-,45s,Hold
+2,Tue,Conditioning - Easy Run-Walk,1,Warm-up Walk,1,5 min,-,-,Easy
+2,Tue,Conditioning - Easy Run-Walk,2,Run-Walk Intervals,9,1.5 min run / 1 min walk,Zone 2 (60-70% HRmax),-,Volume and ratio lever - more running, less walking
+2,Tue,Conditioning - Easy Run-Walk,3,Cool-down Walk + Stretch,-,-,-,-,5 min
+2,Wed,Strength B - Upper,1,Shoulder/T-spine Mobility,-,-,-,-,5-8 min
+2,Wed,Strength B - Upper,2,Bench Press,4,8,RIR 2-3,2 min,Volume lever - +1 set
+2,Wed,Strength B - Upper,3,Chest-Supported Row,3,10,RIR 2-3,90s,Hold
+2,Wed,Strength B - Upper,4,DB Shoulder Press,3,10,RIR 2,60-90s,Hold
+2,Wed,Strength B - Upper,5,Hanging Leg Raise or Dead Bug,3,10,-,45s,Hold
+2,Thu,Conditioning - Easy Cross-Train,1,Easy Warm-up,-,-,-,-,5 min
+2,Thu,Conditioning - Easy Cross-Train,2,Zone 2 Continuous (bike/rower/ski erg),1,30 min,60-70% HRmax,-,Volume lever - +5 min
+2,Thu,Conditioning - Easy Cross-Train,3,Cool-down + Mobility,-,-,-,-,5 min
+2,Fri,Strength C - Full Body/Posterior Chain,1,Mobility Warm-up (hips/T-spine),-,-,-,-,5-8 min
+2,Fri,Strength C - Full Body/Posterior Chain,2,Trap Bar or Conventional Deadlift,4,6,RIR 2-3,2-3 min,Volume lever - +1 set
+2,Fri,Strength C - Full Body/Posterior Chain,3,Hip Thrust,3,10,RIR 2-3,90s,Hold
+2,Fri,Strength C - Full Body/Posterior Chain,4,Single-Leg Calf Raise,3,10 each leg,RIR 2,60s,Hold
+2,Fri,Strength C - Full Body/Posterior Chain,5,Chin-up or Lat Pulldown,3,8,RIR 2-3,90s,Hold
+2,Sat,Conditioning - Easy Run-Walk (Long),1,Warm-up Walk,1,5 min,-,-,Easy
+2,Sat,Conditioning - Easy Run-Walk (Long),2,Run-Walk Intervals,8,2 min run / 1 min walk,Zone 2 (60-70% HRmax),-,Ratio lever - longest continuous running stretch so far
+2,Sat,Conditioning - Easy Run-Walk (Long),3,Cool-down Walk + Stretch,-,-,-,-,5-10 min
+2,Sun,Rest,1,Full Rest or Light Walk,-,-,-,-,Recovery
+3,Mon,Strength A - Lower,1,Mobility Warm-up (hips/ankles),-,-,-,-,5-8 min
+3,Mon,Strength A - Lower,2,Back Squat,4,8,RIR 2,2 min,Slight intensity nudge - still general strength, no max-effort work
+3,Mon,Strength A - Lower,3,Romanian Deadlift,3,8,RIR 2,90s,Hold
+3,Mon,Strength A - Lower,4,Standing Calf Raise,3,12,RIR 2,60s,Hold
+3,Mon,Strength A - Lower,5,Pallof Press,3,12 each side,-,45s,Hold
+3,Tue,Conditioning - Easy Run-Walk,1,Warm-up Walk,1,5 min,-,-,Easy
+3,Tue,Conditioning - Easy Run-Walk,2,Run-Walk Intervals,6,3 min run / 1 min walk,Zone 2 (60-70% HRmax),-,Ratio lever - longer running stretches, fewer walk breaks
+3,Tue,Conditioning - Easy Run-Walk,3,Cool-down Walk + Stretch,-,-,-,-,5 min
+3,Wed,Strength B - Upper,1,Shoulder/T-spine Mobility,-,-,-,-,5-8 min
+3,Wed,Strength B - Upper,2,Bench Press,4,8,RIR 2,2 min,Hold
+3,Wed,Strength B - Upper,3,Chest-Supported Row,3,12,RIR 2,90s,Hold
+3,Wed,Strength B - Upper,4,DB Shoulder Press,3,10,RIR 2,60-90s,Hold
+3,Wed,Strength B - Upper,5,Hanging Leg Raise or Dead Bug,3,12,-,45s,Hold
+3,Thu,Conditioning - Easy Cross-Train,1,Easy Warm-up,-,-,-,-,5 min
+3,Thu,Conditioning - Easy Cross-Train,2,Zone 2 Continuous (bike/rower/ski erg),1,35 min,60-70% HRmax,-,Volume lever - +5 min
+3,Thu,Conditioning - Easy Cross-Train,3,Cool-down + Mobility,-,-,-,-,5 min
+3,Fri,Strength C - Full Body/Posterior Chain,1,Mobility Warm-up (hips/T-spine),-,-,-,-,5-8 min
+3,Fri,Strength C - Full Body/Posterior Chain,2,Trap Bar or Conventional Deadlift,4,6,RIR 2,2-3 min,Hold
+3,Fri,Strength C - Full Body/Posterior Chain,3,Hip Thrust,3,10,RIR 2,90s,Hold
+3,Fri,Strength C - Full Body/Posterior Chain,4,Single-Leg Calf Raise,3,10 each leg,RIR 2,60s,Hold
+3,Fri,Strength C - Full Body/Posterior Chain,5,Chin-up or Lat Pulldown,3,8,RIR 2,90s,Hold
+3,Sat,Conditioning - Steady Run (Long),1,Warm-up Walk/Jog,1,5-8 min,-,-,Easy
+3,Sat,Conditioning - Steady Run (Long),2,Steady Zone 2 Run,1,20 min continuous,60-70% HRmax,-,First fully continuous run this block - only attempt if the last three weeks felt genuinely easy
+3,Sat,Conditioning - Steady Run (Long),3,Cool-down Walk + Stretch,-,-,-,-,5-10 min
+3,Sun,Rest,1,Full Rest or Light Walk,-,-,-,-,Recovery
+4,Mon,Strength A - Lower (Cutback),1,Mobility Warm-up (hips/ankles),-,-,-,-,5-8 min
+4,Mon,Strength A - Lower (Cutback),2,Back Squat,3,8,RIR 3-4,2 min,Cutback - volume and intensity both ease
+4,Mon,Strength A - Lower (Cutback),3,Romanian Deadlift,2,8,RIR 3-4,90s,Cutback
+4,Mon,Strength A - Lower (Cutback),4,Standing Calf Raise,2,10,RIR 3-4,60s,Cutback
+4,Mon,Strength A - Lower (Cutback),5,Pallof Press,2,10 each side,-,45s,Cutback
+4,Tue,Conditioning - Easy Run-Walk (Cutback),1,Warm-up Walk,1,5 min,-,-,Easy
+4,Tue,Conditioning - Easy Run-Walk (Cutback),2,Run-Walk Intervals,6,2 min run / 1.5 min walk,Zone 2 (60-70% HRmax),-,Cutback - reduce total volume ~25%, hold easy effort
+4,Tue,Conditioning - Easy Run-Walk (Cutback),3,Cool-down Walk + Stretch,-,-,-,-,5 min
+4,Wed,Strength B - Upper (Cutback),1,Shoulder/T-spine Mobility,-,-,-,-,5-8 min
+4,Wed,Strength B - Upper (Cutback),2,Bench Press,3,8,RIR 3-4,2 min,Cutback
+4,Wed,Strength B - Upper (Cutback),3,Chest-Supported Row,2,10,RIR 3-4,90s,Cutback
+4,Wed,Strength B - Upper (Cutback),4,DB Shoulder Press,2,10,RIR 3-4,60-90s,Cutback
+4,Wed,Strength B - Upper (Cutback),5,Hanging Leg Raise or Dead Bug,2,10,-,45s,Cutback
+4,Thu,Conditioning - Easy Cross-Train (Cutback),1,Easy Warm-up,-,-,-,-,5 min
+4,Thu,Conditioning - Easy Cross-Train (Cutback),2,Zone 2 Continuous (bike/rower/ski erg),1,20-25 min,60-70% HRmax,-,Cutback - easy, protect recovery
+4,Thu,Conditioning - Easy Cross-Train (Cutback),3,Cool-down + Mobility,-,-,-,-,5 min
+4,Fri,Strength C - Full Body/Posterior Chain (Cutback),1,Mobility Warm-up (hips/T-spine),-,-,-,-,5-8 min
+4,Fri,Strength C - Full Body/Posterior Chain (Cutback),2,Trap Bar or Conventional Deadlift,3,6,RIR 3-4,2-3 min,Cutback
+4,Fri,Strength C - Full Body/Posterior Chain (Cutback),3,Hip Thrust,2,10,RIR 3-4,90s,Cutback
+4,Fri,Strength C - Full Body/Posterior Chain (Cutback),4,Single-Leg Calf Raise,2,10 each leg,RIR 3-4,60s,Cutback
+4,Fri,Strength C - Full Body/Posterior Chain (Cutback),5,Chin-up or Lat Pulldown,2,8,RIR 3-4,90s,Cutback
+4,Sat,Conditioning - Easy Run-Walk (Cutback),1,Warm-up Walk,1,5 min,-,-,Easy
+4,Sat,Conditioning - Easy Run-Walk (Cutback),2,Run-Walk Intervals,6,2 min run / 1.5 min walk,Zone 2 (60-70% HRmax),-,Cutback - let tissue consolidate before progressing into block 2 (continuous running + first threshold work)
+4,Sat,Conditioning - Easy Run-Walk (Cutback),3,Cool-down Walk + Stretch,-,-,-,-,5-10 min
+4,Sun,Rest,1,Full Rest or Light Walk,-,-,-,-,Recovery

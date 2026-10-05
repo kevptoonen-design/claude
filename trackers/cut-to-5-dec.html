@@ -1,0 +1,264 @@
+<title>Cut to 5 December</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap">
+<style>
+/* Layout: one column training log. Summary strip, weight chart, then one block per week with a tick row per day. */
+:root{
+  --bg:#f3f5fb; --surface:#ffffff; --fg:#121726; --muted:#5b6478; --line:#dde2ee;
+  --accent:#2050f6; --accent-soft:#e6ecff; --good:#14864f; --good-soft:#dff3e8; --warn:#b4570b; --warn-soft:#fbeedd;
+  --display:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;
+  --body:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0c0f18; --surface:#151a27; --fg:#e8ecf6; --muted:#97a0b6; --line:#262d3f;
+  --accent:#6b8cff; --accent-soft:#1c2648; --good:#4cc98a; --good-soft:#143326; --warn:#f0a35a; --warn-soft:#3a2714; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0c0f18; --surface:#151a27; --fg:#e8ecf6; --muted:#97a0b6; --line:#262d3f;
+  --accent:#6b8cff; --accent-soft:#1c2648; --good:#4cc98a; --good-soft:#143326; --warn:#f0a35a; --warn-soft:#3a2714; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.45;padding-inline:16px;padding-block:20px 48px}
+.wrap{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance;letter-spacing:.01em}
+h1{font-size:clamp(34px,7vw,52px);font-weight:800;line-height:1;text-transform:uppercase;color:var(--accent)}
+.sub{color:var(--muted);margin:6px 0 0}
+.label{font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);font-weight:600}
+.num{font-family:var(--display);font-weight:700;font-variant-numeric:tabular-nums}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.stat .num{font-size:28px;line-height:1.1;display:block;margin-top:2px}
+.stat small{color:var(--muted);font-size:12px}
+@media (max-width:620px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px}
+.panel h2{font-size:22px;text-transform:uppercase}
+.goals{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.chip{border:1px solid var(--line);border-radius:999px;padding:4px 11px;font-size:13px;font-weight:500}
+.chart svg{width:100%;height:auto;display:block;margin-top:8px}
+.legend{display:flex;gap:16px;font-size:12px;color:var(--muted);margin-top:4px;flex-wrap:wrap}
+.legend i{display:inline-block;width:14px;height:3px;vertical-align:middle;margin-right:6px;border-radius:2px}
+.save{font-size:12px;color:var(--muted)}
+.week{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.week.current{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.whead{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:flex-end;justify-content:space-between;padding:14px 16px;border-bottom:1px solid var(--line)}
+.whead h3{font-size:26px;text-transform:uppercase;line-height:1}
+.whead .dates{color:var(--muted);font-size:13px}
+.wfocus{font-size:13.5px;color:var(--muted);padding:10px 16px 0;max-width:68ch}
+.wmeta{display:flex;flex-wrap:wrap;gap:6px}
+.pill{font-size:12px;font-weight:600;border-radius:6px;padding:3px 8px;background:var(--accent-soft);color:var(--accent);font-variant-numeric:tabular-nums}
+.pill.good{background:var(--good-soft);color:var(--good)}
+.pill.warn{background:var(--warn-soft);color:var(--warn)}
+.days{padding:10px 8px 12px;overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:600px}
+th{font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:600;text-align:center;padding:4px 4px 8px}
+th:first-child{text-align:left;padding-left:8px}
+td{text-align:center;padding:5px 4px;border-top:1px solid var(--line)}
+td:first-child{text-align:left;padding-left:8px;white-space:nowrap}
+tr.today td{background:var(--accent-soft)}
+tr.today td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
+tr.future td{opacity:.62}
+.dname{font-weight:600}.ddate{color:var(--muted);font-size:12.5px;margin-left:4px}
+.tick{appearance:none;-webkit-appearance:none;width:30px;height:30px;border:2px solid var(--line);border-radius:8px;background:var(--surface);cursor:pointer;display:inline-grid;place-content:center;margin:0;transition:background .12s,border-color .12s}
+.tick::before{content:"";width:12px;height:7px;border-left:3px solid #fff;border-bottom:3px solid #fff;transform:rotate(-45deg) translate(1px,-1px);opacity:0}
+.tick:checked{background:var(--accent);border-color:var(--accent)}
+.tick:checked::before{opacity:1}
+.tick:focus-visible,.in:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.in{width:76px;font:inherit;font-variant-numeric:tabular-nums;text-align:center;padding:5px 4px;border:1.5px solid var(--line);border-radius:8px;background:var(--surface);color:var(--fg)}
+.in.steps{width:86px}
+.in.hit{border-color:var(--good);color:var(--good);font-weight:600}
+.note{font-size:13px;color:var(--muted);max-width:70ch}
+.note p{margin:6px 0}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="label">99 kg → 91–92 kg · 5 Oct to Sat 5 Dec 2026</div>
+    <h1>Cut to 5 December</h1>
+    <p class="sub">Tick it off every day. Weigh in each morning after the toilet, before food or water. Judge progress on the weekly average, never one reading.</p>
+    <div class="goals" aria-label="Daily standards">
+      <span class="chip">Test injection daily</span><span class="chip">3 L water</span><span class="chip">200 g protein</span><span class="chip">10,000+ steps</span><span class="chip">4 strength sessions / week</span>
+    </div>
+  </header>
+
+  <section class="stats" aria-label="Progress summary">
+    <div class="stat"><span class="label">Today</span><span class="num" id="s-day">–</span><small id="s-dayof"></small></div>
+    <div class="stat"><span class="label">7-day avg weight</span><span class="num" id="s-avg">–</span><small id="s-avgnote">no weigh-ins yet</small></div>
+    <div class="stat"><span class="label">Lost so far</span><span class="num" id="s-lost">–</span><small>from 99.0 kg start</small></div>
+    <div class="stat"><span class="label">Daily habits hit</span><span class="num" id="s-comp">–</span><small>days logged to date</small></div>
+  </section>
+
+  <section class="panel chart">
+    <h2>Weekly average vs target</h2>
+    <div id="chart"></div>
+    <div class="legend"><span><i style="background:var(--muted)"></i>Target</span><span><i style="background:var(--accent)"></i>Your weekly average</span></div>
+  </section>
+
+  <div class="save" id="save">Connecting…</div>
+  <div id="weeks" style="display:flex;flex-direction:column;gap:16px"></div>
+
+  <section class="panel note">
+    <h2>Why these numbers</h2>
+    <p>99 to 91.5 kg over 8 weeks is about 0.95 kg a week, roughly 1% of bodyweight. That sits at the top of the 0.5 to 1% per week range Helms and colleagues found best for holding onto muscle while dieting. Aggressive, but manageable if protein and lifting stay locked in.</p>
+    <p>Expect week 1 to drop faster than target. That's mostly water and glycogen. Expect a stall week somewhere in the middle too. If the weekly average misses target two weeks running, trim around 150 to 200 kcal from carbs or fats. Protein stays at 200 g.</p>
+    <p>Targets finish on Sun 29 Nov so week 9 is a buffer and hold week before 5 Dec. Keep your bloodwork and test plan with your doctor. This page only tracks that you did it.</p>
+  </section>
+</div>
+
+<script>
+(function(){
+  const START = new Date(2026,9,5), END = new Date(2026,11,5);
+  const DAYS = Math.round((END-START)/864e5)+1; // 62
+  const START_KG = 99, GOAL_KG = 91.5, LOSS = (START_KG-GOAL_KG)/8;
+  const HABITS = [["test","Test"],["water","3 L water"],["protein","200 g protein"]];
+  const FOCUS = [
+    "Baseline week. Weigh every morning, nail the five daily ticks, log your 4 sessions. Scale will drop fast this week, mostly water.",
+    "Lock the routine. Same wake time, same weigh-in conditions. Hit 200 g protein before you think about anything else.",
+    "Keep training heavy. Strength is the signal that tells your body to keep the muscle while you diet. Don't chase pump work at the expense of the main lifts.",
+    "Halfway check. Compare this week's average to target. On track, change nothing. Behind two weeks running, trim 150 to 200 kcal from carbs or fats.",
+    "Hunger usually climbs here. Lean on volume foods, keep water at 3 L and don't skip steps on rest days.",
+    "Push the steps past 10k where you can. It's the cheapest extra burn you have and costs nothing in recovery.",
+    "Stay boring. Consistency now matters more than any new tweak. Sleep 7 to 9 hours, fatigue makes the diet feel harder.",
+    "Final target week. Weekly average 91 to 92 kg is the goal. Keep lifting heavy, no crash dieting in the last stretch.",
+    "Buffer and hold. Keep the daily ticks going, hold weight in the 91 to 92 kg range and arrive on 5 Dec sharp, not depleted."
+  ];
+  const dayOf = i => new Date(START.getFullYear(),START.getMonth(),START.getDate()+i);
+  const keyOf = d => d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+  const fmt = (d,o) => d.toLocaleDateString("en-AU",o);
+  const target = w => w>=8 ? GOAL_KG : +(START_KG-LOSS*(w+1)).toFixed(1);
+  const today = new Date(); today.setHours(0,0,0,0);
+  const todayIdx = Math.round((today-START)/864e5);
+
+  const state = {};
+  const get = k => state[k] || (state[k] = {});
+
+  // Build the weeks
+  const weeksEl = document.getElementById("weeks");
+  const weeks = Math.ceil(DAYS/7);
+  for(let w=0; w<weeks; w++){
+    const first = w*7, last = Math.min(first+6, DAYS-1);
+    const sec = document.createElement("section");
+    sec.className = "week"; sec.id = "week"+(w+1);
+    if(todayIdx>=first && todayIdx<=last) sec.classList.add("current");
+    sec.innerHTML = `<div class="whead"><div><h3>Week ${w+1}</h3><div class="dates">${fmt(dayOf(first),{day:"numeric",month:"short"})} to ${fmt(dayOf(last),{weekday:"short",day:"numeric",month:"short"})}</div></div>
+      <div class="wmeta"><span class="pill" title="Target weekly average">${w>=8?"Hold 91–92 kg":"Target "+target(w).toFixed(1)+" kg"}</span><span class="pill" data-w="avg"></span><span class="pill" data-w="str"></span><span class="pill" data-w="hab"></span></div></div>
+      <p class="wfocus">${FOCUS[w]}</p>
+      <div class="days"><table><thead><tr><th>Day</th><th>Weight kg</th><th>Test</th><th>3 L water</th><th>200 g protein</th><th>Steps</th><th>Strength</th></tr></thead><tbody></tbody></table></div>`;
+    const tb = sec.querySelector("tbody");
+    for(let i=first;i<=last;i++){
+      const d = dayOf(i), k = keyOf(d);
+      const tr = document.createElement("tr");
+      tr.dataset.key = k;
+      if(i===todayIdx) tr.className="today"; else if(i>todayIdx) tr.className="future";
+      const lbl = fmt(d,{weekday:"short",day:"numeric",month:"short"});
+      tr.innerHTML = `<td><span class="dname">${fmt(d,{weekday:"short"})}</span><span class="ddate">${fmt(d,{day:"numeric",month:"short"})}</span></td>
+        <td><input class="in" id="w-${k}" data-f="weight" type="number" inputmode="decimal" step="0.1" min="40" max="200" placeholder="–" aria-label="Weight ${lbl}"></td>
+        ${HABITS.map(([f,n])=>`<td><input class="tick" id="${f}-${k}" data-f="${f}" type="checkbox" aria-label="${n} ${lbl}"></td>`).join("")}
+        <td><input class="in steps" id="steps-${k}" data-f="steps" type="number" inputmode="numeric" step="100" min="0" placeholder="0" aria-label="Steps ${lbl}"></td>
+        <td><input class="tick" id="strength-${k}" data-f="strength" type="checkbox" aria-label="Strength session ${lbl}"></td>`;
+      tb.appendChild(tr);
+    }
+    weeksEl.appendChild(sec);
+  }
+
+  weeksEl.addEventListener("change", e=>{
+    const el = e.target, tr = el.closest("tr"); if(!tr || !el.dataset.f) return;
+    const k = tr.dataset.key, s = get(k), f = el.dataset.f;
+    if(el.type==="checkbox") s[f] = el.checked;
+    else { const v = parseFloat(el.value); if(isFinite(v) && v>0) s[f] = f==="steps"?Math.round(v):Math.round(v*10)/10; else delete s[f]; }
+    refresh(); save(k);
+  });
+
+  function weekData(w){
+    const first=w*7, last=Math.min(first+6,DAYS-1);
+    const ws=[]; let str=0, hab=0, possible=0;
+    for(let i=first;i<=last;i++){
+      const s = state[keyOf(dayOf(i))]||{};
+      if(s.weight) ws.push(s.weight);
+      if(s.strength) str++;
+      if(i<=todayIdx){ possible+=4; hab += (s.test?1:0)+(s.water?1:0)+(s.protein?1:0)+((s.steps||0)>=10000?1:0); }
+    }
+    return {avg: ws.length? ws.reduce((a,b)=>a+b,0)/ws.length : null, n:ws.length, str, hab, possible, started:first<=todayIdx};
+  }
+
+  function refresh(){
+    // sync inputs (skip the one being typed in)
+    document.querySelectorAll("#weeks tr[data-key]").forEach(tr=>{
+      const s = state[tr.dataset.key]||{};
+      tr.querySelectorAll("[data-f]").forEach(el=>{
+        const f=el.dataset.f;
+        if(el.type==="checkbox") el.checked=!!s[f];
+        else if(el!==document.activeElement) el.value = s[f]!=null ? s[f] : "";
+        if(f==="steps") el.classList.toggle("hit",(s.steps||0)>=10000);
+      });
+    });
+    let allHab=0, allPos=0; const avgs=[];
+    for(let w=0; w<weeks; w++){
+      const d = weekData(w), sec = document.getElementById("week"+(w+1));
+      allHab+=d.hab; allPos+=d.possible; avgs.push(d.avg);
+      const a = sec.querySelector('[data-w="avg"]'), st = sec.querySelector('[data-w="str"]'), h = sec.querySelector('[data-w="hab"]');
+      if(d.avg!=null){ const ok = w>=8 ? d.avg<=92.05 : d.avg<=target(w)+0.05; a.textContent="Avg "+d.avg.toFixed(1)+" kg"; a.className="pill "+(ok?"good":"warn"); a.hidden=false; }
+      else a.hidden=true;
+      const need = w===8?3:4;
+      st.textContent = "Strength "+d.str+"/"+need; st.className="pill "+(d.str>=need?"good":"");
+      if(d.started && d.possible){ const p=Math.round(d.hab/d.possible*100); h.textContent="Habits "+p+"%"; h.className="pill "+(p>=90?"good":p<70?"warn":""); h.hidden=false; }
+      else h.hidden=true;
+    }
+    // header stats
+    const di = Math.min(Math.max(todayIdx,0),DAYS-1);
+    document.getElementById("s-day").textContent = todayIdx<0 ? "Starts 5 Oct" : todayIdx>=DAYS ? "Done" : "Day "+(todayIdx+1);
+    document.getElementById("s-dayof").textContent = todayIdx>=0 && todayIdx<DAYS ? "of "+DAYS+", week "+(Math.floor(todayIdx/7)+1) : "";
+    const recent=[]; for(let i=di;i>=Math.max(0,di-6);i--){ const s=state[keyOf(dayOf(i))]; if(s&&s.weight) recent.push(s.weight); }
+    let latest=null; for(let i=di;i>=0;i--){ const s=state[keyOf(dayOf(i))]; if(s&&s.weight){latest=s.weight;break;} }
+    if(recent.length){ const a=recent.reduce((x,y)=>x+y,0)/recent.length; document.getElementById("s-avg").textContent=a.toFixed(1)+" kg"; document.getElementById("s-avgnote").textContent=recent.length+" weigh-in"+(recent.length>1?"s":"")+" in last 7 days"; document.getElementById("s-lost").textContent=(START_KG-a).toFixed(1)+" kg"; }
+    else { document.getElementById("s-avg").textContent="–"; document.getElementById("s-avgnote").textContent="no weigh-ins yet"; document.getElementById("s-lost").textContent = latest? (START_KG-latest).toFixed(1)+" kg":"–"; }
+    document.getElementById("s-comp").textContent = allPos? Math.round(allHab/allPos*100)+"%" : "–";
+    drawChart(avgs);
+  }
+
+  function drawChart(avgs){
+    const W=640,H=230,L=40,R=14,T=14,B=30, lo=90, hi=100;
+    const x = w => L + (W-L-R)*(w/(weeks)), y = v => T + (H-T-B)*(1-(v-lo)/(hi-lo));
+    let g="";
+    for(let v=lo; v<=hi; v+=2){ g+=`<line x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)" stroke-width="1"/><text x="${L-8}" y="${y(v)+4}" text-anchor="end" font-size="11" fill="var(--muted)">${v}</text>`; }
+    for(let w=0; w<=weeks; w++){ g+=`<text x="${x(w)}" y="${H-10}" text-anchor="middle" font-size="11" fill="var(--muted)">${w===0?"Start":"W"+w}</text>`; }
+    g+=`<rect x="${L}" y="${y(92)}" width="${W-L-R}" height="${y(91)-y(92)}" fill="var(--good-soft)"/>`;
+    const tp=[[0,START_KG]]; for(let w=0;w<weeks;w++) tp.push([w+1,target(w)]);
+    g+=`<polyline points="${tp.map(([w,v])=>x(w)+","+y(v)).join(" ")}" fill="none" stroke="var(--muted)" stroke-width="2" stroke-dasharray="5 5"/>`;
+    const ap=[[0,START_KG]]; avgs.forEach((v,w)=>{ if(v!=null) ap.push([w+1,v]); });
+    if(ap.length>1) g+=`<polyline points="${ap.map(([w,v])=>x(w)+","+y(Math.min(hi,Math.max(lo,v)))).join(" ")}" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linejoin="round"/>`;
+    ap.forEach(([w,v],i)=>{ const last=i===ap.length-1; g+=`<circle cx="${x(w)}" cy="${y(Math.min(hi,Math.max(lo,v)))}" r="${last?5.5:4}" fill="var(--accent)" stroke="var(--surface)" stroke-width="2"/>`; if(last&&i>0) g+=`<text x="${x(w)+9}" y="${y(v)-8}" font-size="12" font-weight="600" fill="var(--accent)">${v.toFixed(1)}</text>`; });
+    document.getElementById("chart").innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Weekly average weight against target">${g}</svg>`;
+  }
+
+  // Storage: artifact db when available, this browser otherwise
+  const saveEl = document.getElementById("save");
+  let db=null; const timers={}, busy={}, again={}, pending={};
+  const LS="cut5dec";
+  function lsLoad(){ try{ Object.assign(state, JSON.parse(localStorage.getItem(LS)||"{}")); }catch(e){} }
+  function lsSave(){ try{ localStorage.setItem(LS, JSON.stringify(state)); }catch(e){} }
+  function save(k){
+    if(!db){ lsSave(); return; }
+    clearTimeout(timers[k]); pending[k]=true;
+    timers[k]=setTimeout(async function run(){
+      if(busy[k]){ again[k]=true; return; }
+      busy[k]=true; saveEl.textContent="Saving…";
+      try{ await db.doc("days/"+k).set(Object.assign({},state[k])); saveEl.textContent="Saved"; }
+      catch(e){ saveEl.textContent = e&&e.code==="invalid_argument" ? "Only the owner can save changes here." : "Couldn't save. Check your connection and tick again."; }
+      busy[k]=false;
+      if(again[k]){ again[k]=false; run(); } else pending[k]=false;
+    },400);
+  }
+
+  lsLoad(); refresh();
+  const row = document.querySelector("tr.today");
+  if(row) setTimeout(()=>row.closest(".week").scrollIntoView({block:"start"}),50);
+
+  (window.claude && window.claude.use ? window.claude.use("db") : Promise.resolve(null)).then(d=>{
+    if(!d){ saveEl.textContent="Saving on this device only."; return; }
+    db=d; saveEl.textContent="Synced. Your ticks save automatically.";
+    db.collection("days").onSnapshot(snap=>{
+      snap.docs.forEach(doc=>{ if(!pending[doc.id]) state[doc.id]=Object.assign({},doc.data()); });
+      refresh();
+    }, ()=>{ saveEl.textContent="Live sync dropped. Reload the page to reconnect."; });
+  }).catch(()=>{ saveEl.textContent="Saving on this device only."; });
+})();
+</script>

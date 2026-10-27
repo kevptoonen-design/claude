@@ -4,7 +4,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Literata:opsz,wght@7..72,400;7..72,600&family=JetBrains+Mono:wght@400;600&display=swap">
 <style>
-/* Layout: a lab-report notebook. Sticky week selector, one column of day "specimen cards", reference-range strip in the header. */
+/* Layout: a lab-report notebook. Sticky week selector, one column of day cards that open into a full lesson. */
 :root {
   --bg: #f3f5f6;
   --surface: #ffffff;
@@ -16,6 +16,7 @@
   --amber: #9a5b00;
   --amber-soft: #fbefd9;
   --done: #2f7a3e;
+  --s1: #0d6e74; --s2: #7aa7ab; --s3: #9a5b00;
   --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
   --font-body: "Literata", Georgia, "Times New Roman", serif;
   --font-mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
@@ -24,22 +25,24 @@
   :root:not([data-theme="light"]) {
     --bg: #0e1518; --surface: #151f23; --ink: #e4ecef; --muted: #98a9b1; --line: #2a3a40;
     --accent: #5cc4c9; --accent-soft: #163a3d; --amber: #f0b45a; --amber-soft: #3a2a10; --done: #72c886;
+    --s1: #5cc4c9; --s2: #2f6f73; --s3: #f0b45a;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --bg: #0e1518; --surface: #151f23; --ink: #e4ecef; --muted: #98a9b1; --line: #2a3a40;
   --accent: #5cc4c9; --accent-soft: #163a3d; --amber: #f0b45a; --amber-soft: #3a2a10; --done: #72c886;
+  --s1: #5cc4c9; --s2: #2f6f73; --s3: #f0b45a;
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
 body {
-  background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.6;
+  background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 16.5px; line-height: 1.65;
   padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
 }
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
-.wrap { max-width: 820px; margin: 0 auto; padding-block: 32px 64px; display: grid; gap: 28px; }
-h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; line-height: 1.15; }
+.wrap { max-width: 780px; margin: 0 auto; padding-block: 32px 64px; display: grid; gap: 28px; }
+h1, h2, h3, h4 { font-family: var(--font-display); text-wrap: balance; margin: 0; line-height: 1.2; }
 h1 { font-size: clamp(2rem, 6vw, 3rem); font-weight: 700; letter-spacing: -0.01em; }
 h2 { font-size: 1.5rem; font-weight: 700; }
 h3 { font-size: 1.15rem; font-weight: 700; }
@@ -48,7 +51,7 @@ p { margin: 0; }
 .lede { color: var(--muted); max-width: 62ch; font-size: 1.05rem; }
 header { display: grid; gap: 14px; }
 
-.strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; }
+.strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(165px, 1fr)); gap: 10px; }
 .strip div { border: 1px solid var(--line); background: var(--surface); padding: 12px 14px; border-radius: 6px; display: grid; gap: 2px; }
 .strip b { font-family: var(--font-mono); font-size: 1.05rem; font-variant-numeric: tabular-nums; }
 .strip span { font-size: 0.82rem; color: var(--muted); font-family: var(--font-display); }
@@ -56,8 +59,8 @@ header { display: grid; gap: 14px; }
 .note { border-left: 3px solid var(--amber); background: var(--amber-soft); padding: 14px 16px; border-radius: 0 6px 6px 0; display: grid; gap: 6px; font-size: 0.95rem; }
 .note strong { font-family: var(--font-display); }
 
-.method { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; }
-.method div { display: grid; gap: 4px; }
+.method { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
+.method div { display: grid; gap: 4px; align-content: start; }
 .method b { font-family: var(--font-display); }
 .method span { color: var(--muted); font-size: 0.92rem; }
 
@@ -68,7 +71,7 @@ header { display: grid; gap: 14px; }
   padding: 7px 12px; border-radius: 999px; cursor: pointer;
 }
 .tabs button[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: var(--surface); }
-.tabs button:focus-visible, .btn:focus-visible, input:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+button:focus-visible, input:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .row { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; font-family: var(--font-display); font-size: 0.88rem; color: var(--muted); }
 .row label { display: flex; gap: 8px; align-items: center; }
 .row input[type="date"] { font-family: var(--font-mono); font-size: 0.85rem; padding: 4px 6px; border: 1px solid var(--line); border-radius: 4px; background: var(--surface); color: var(--ink); }
@@ -78,37 +81,65 @@ header { display: grid; gap: 14px; }
 
 .week-head { display: grid; gap: 6px; }
 .week-head p { color: var(--muted); max-width: 64ch; }
-.days { display: grid; gap: 12px; }
+.days { display: grid; gap: 12px; margin-top: 16px; }
 details.day { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; }
 details.day.is-today { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
-details.day.is-done summary h3 { color: var(--muted); }
-summary { list-style: none; cursor: pointer; padding: 14px 16px; display: grid; grid-template-columns: auto 1fr auto; gap: 12px; align-items: center; }
-summary::-webkit-details-marker { display: none; }
+details.day.is-done > summary h3 { color: var(--muted); }
+details.day > summary { list-style: none; cursor: pointer; padding: 14px 16px; display: grid; grid-template-columns: auto 1fr auto; gap: 12px; align-items: center; }
+details.day > summary::-webkit-details-marker { display: none; }
 .date { font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted); text-align: center; line-height: 1.2; min-width: 44px; font-variant-numeric: tabular-nums; }
 .date b { display: block; font-size: 1.15rem; color: var(--ink); }
 .sum-text { min-width: 0; display: grid; gap: 3px; }
-.sum-text small { font-family: var(--font-display); color: var(--muted); font-size: 0.82rem; }
 .chip { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 2px 7px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); justify-self: start; }
 .chip.case { background: var(--amber-soft); color: var(--amber); }
 .check { width: 22px; height: 22px; accent-color: var(--done); cursor: pointer; }
-.body { padding: 0 16px 18px; display: grid; gap: 16px; border-top: 1px dashed var(--line); padding-top: 16px; }
-.block { display: grid; gap: 6px; min-width: 0; }
-.block h4 { margin: 0; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
-.block ul { margin: 0; padding-left: 1.15em; display: grid; gap: 6px; }
-.block.read p { font-size: 0.95rem; }
-.block.apply { background: var(--accent-soft); padding: 12px 14px; border-radius: 6px; }
-.block.recall p { font-style: italic; }
+
+.lesson { padding: 18px 18px 22px; border-top: 1px dashed var(--line); display: grid; gap: 22px; }
+.lesson .why { font-size: 1.05rem; color: var(--ink); border-left: 3px solid var(--accent); padding-left: 14px; }
+.label { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+.sec { display: grid; gap: 10px; min-width: 0; }
+.sec h4 { font-size: 1.08rem; font-weight: 700; }
+.sec p { max-width: 66ch; }
+.explain { display: grid; gap: 22px; }
+.figure { border: 1px solid var(--line); border-radius: 8px; padding: 14px; overflow-x: auto; background: var(--bg); display: grid; gap: 8px; }
+.figure svg { display: block; width: 100%; max-width: 640px; min-width: 300px; height: auto; margin: 0 auto; }
+.figure figcaption { font-family: var(--font-display); font-size: 0.85rem; color: var(--muted); }
+.svg-box { fill: var(--surface); stroke: var(--line); stroke-width: 1.5; }
+.svg-box.accent { stroke: var(--accent); }
+.svg-box.amber { stroke: var(--amber); stroke-dasharray: 5 4; }
+.svg-t { fill: var(--ink); font-family: var(--font-display); font-size: 15px; font-weight: 700; }
+.svg-s { fill: var(--muted); font-family: var(--font-display); font-size: 12.5px; }
+.svg-a { stroke: var(--accent); stroke-width: 2; fill: none; }
+.svg-f { stroke: var(--amber); stroke-width: 2; fill: none; stroke-dasharray: 6 5; }
+.svg-ha { fill: var(--accent); } .svg-hf { fill: var(--amber); }
+.stack { display: flex; height: 34px; border-radius: 6px; overflow: hidden; border: 1px solid var(--line); }
+.stack span { display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 0.75rem; color: var(--surface); white-space: nowrap; overflow: hidden; }
+.legend { display: grid; gap: 4px; font-size: 0.88rem; font-family: var(--font-display); color: var(--muted); }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: middle; }
+
+.example { background: var(--accent-soft); border-radius: 8px; padding: 16px; display: grid; gap: 10px; }
+.example h4 { font-size: 1.02rem; }
+.keys ul, .sec ul { margin: 0; padding-left: 1.15em; display: grid; gap: 6px; }
+.keys { display: grid; gap: 8px; border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; }
+.tasks { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.tasks > div { display: grid; gap: 6px; align-content: start; min-width: 0; }
+.quiz { display: grid; gap: 10px; }
+.q { border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; display: grid; gap: 8px; }
+.q p.qt { font-weight: 600; }
+.q details summary { cursor: pointer; font-family: var(--font-display); font-size: 0.88rem; color: var(--accent); width: max-content; max-width: 100%; }
+.q details p { margin-top: 8px; padding-left: 12px; border-left: 2px solid var(--done); }
 .sunday { padding: 14px 16px; border: 1px dashed var(--line); border-radius: 8px; color: var(--muted); font-size: 0.95rem; display: grid; gap: 4px; }
 .sunday b { font-family: var(--font-display); color: var(--ink); }
 footer { color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--line); padding-top: 16px; }
-@media (max-width: 480px) { summary { grid-template-columns: auto 1fr; } summary .check { grid-column: 2; justify-self: start; } }
+.loading { color: var(--muted); font-family: var(--font-display); }
+@media (max-width: 480px) { details.day > summary { grid-template-columns: auto 1fr; } details.day > summary .check { grid-column: 2; justify-self: start; } .lesson { padding: 16px 14px 20px; } }
 </style>
 
 <div class="wrap">
   <header>
     <p class="eyebrow">Strength Elite · Self-study curriculum</p>
     <h1>Hormones &amp; Peptides Mastery</h1>
-    <p class="lede">Six weeks, about 45 minutes a day. You finish knowing the physiology, the guidelines, the trial data and the regulatory status well enough to explain any of it to a client, spot a bad claim in a comment, and know exactly when to send someone to a doctor.</p>
+    <p class="lede">Six weeks, about an hour a day. Each lesson explains how the system works and why, step by step, with worked examples and answers you can check yourself against. You finish able to explain any of it to a client, spot a bad claim in a comment, and know exactly when to send someone to a doctor.</p>
     <div class="strip" aria-label="Reference numbers you will know cold">
       <div><b>× 0.0347</b><span>ng/dL to nmol/L testosterone</span></div>
       <div><b>9.2 nmol/L</b><span>Endocrine Society lower limit (264 ng/dL)</span></div>
@@ -123,10 +154,10 @@ footer { color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--li
   </div>
 
   <section class="method" aria-label="Daily method">
-    <div><b>Learn · 20 min</b><span>Work through the key points until you can say each one without looking.</span></div>
-    <div><b>Read · 15 min</b><span>The named source. Abstract and conclusions at minimum, full paper on case days.</span></div>
-    <div><b>Apply · 10 min</b><span>Turn it into a client explanation or a piece of content. This is where it sticks.</span></div>
-    <div><b>Recall · 2 min</b><span>Answer the question from memory tomorrow morning before the next lesson.</span></div>
+    <div><b>Read the lesson · 30 min</b><span>Work through the explanation slowly. Draw any diagram yourself.</span></div>
+    <div><b>Source · 15 min</b><span>The named paper or guideline. Abstract and conclusions at minimum.</span></div>
+    <div><b>Apply · 10 min</b><span>Turn it into a client explanation or a piece of content.</span></div>
+    <div><b>Check yourself · 5 min</b><span>Answer each question out loud, then open the answer. Redo them the next morning.</span></div>
   </section>
 
   <div class="controls">
@@ -139,324 +170,109 @@ footer { color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--li
     </div>
   </div>
 
-  <main id="week"></main>
+  <main id="week"><p class="loading">Loading lessons…</p></main>
 
   <footer>
-    Sources are the guidelines, position statements and trials already verified in your operating memory, plus standard texts. Regulatory status for peptides moves fast (FDA PCAC, TGA scheduling), so re-check any status before it goes into a post. Free reference text for the physiology days: Endotext (endotext.org), peer-reviewed and maintained by endocrinologists.
+    Sources are the guidelines, position statements and trials already verified in your operating memory, plus standard texts. Regulatory status for peptides moves fast (FDA PCAC, TGA scheduling), so re-check any status before it goes into a post. Free reference text for the physiology lessons: Endotext (endotext.org), peer-reviewed and maintained by endocrinologists.
   </footer>
 </div>
 
-<script>
-const WEEKS = [
-{ title: "Endocrine foundations", blurb: "Everything later depends on this week. If you understand feedback loops, binding proteins and how a blood test can mislead, you can reason through any hormone question instead of memorising answers.", days: [
- { t: "How hormones work: the three classes", learn: [
-   "Peptide hormones (insulin, GH, LH, GLP-1) are chains of amino acids. Water-soluble, they bind receptors on the cell surface, act fast and clear fast.",
-   "Steroid hormones (testosterone, estradiol, progesterone, cortisol) are built from cholesterol. Fat-soluble, they cross the cell membrane, bind receptors inside the cell and change gene expression. Slower onset, longer effect.",
-   "Amine hormones (adrenaline, thyroid hormone) are derived from single amino acids and behave like one class or the other depending on the hormone.",
-   "Practical payoff: this is why testosterone can be absorbed through skin as a gel, while most peptides have to be injected. Your gut digests peptides like any other protein."],
-   read: "Endotext, chapter \"Principles of Hormone Action\". Or Guyton & Hall, Textbook of Medical Physiology, the chapter introducing endocrinology.",
-   apply: "Explain to an imaginary client in three sentences why a peptide \"capsule\" claim deserves suspicion. Record it on your phone. Play it back. Cut anything vague.",
-   recall: "Why can testosterone work as a skin gel when most peptides cannot be swallowed?" },
- { t: "The HPG axis and negative feedback", learn: [
-   "Hypothalamus pulses GnRH. Pituitary responds with LH and FSH. In men, LH drives Leydig cells to make testosterone and FSH plus high local testosterone drive sperm production in the Sertoli cells. In women, the same hormones run the ovarian cycle.",
-   "Testosterone and estradiol feed back to switch GnRH and LH down. The body is a thermostat, not a tap.",
-   "So when testosterone comes from outside, LH and FSH fall, the testes go quiet and sperm production drops. This is why TRT is a fertility issue and why it has been trialled as male contraception.",
-   "Primary hypogonadism means the testes fail (LH high, trying to compensate). Secondary means the signal fails (LH low or inappropriately normal). The LH number tells a doctor where to look."],
-   read: "Endotext, \"Physiology of Testicular Function\" (or the HPG overview in Greenspan's Basic & Clinical Endocrinology).",
-   apply: "Draw the HPG loop from memory on paper, with arrows for stimulation and feedback. Then add a syringe of external testosterone and show what happens to each arrow.",
-   recall: "A man has low testosterone and high LH. Primary or secondary hypogonadism, and why?" },
- { t: "Binding proteins: total vs free testosterone", learn: [
-   "Most circulating testosterone is bound. Roughly 2% is free. Around half is loosely bound to albumin and the rest tightly bound to SHBG (sex hormone binding globulin).",
-   "Free plus albumin-bound is called bioavailable testosterone. SHBG-bound testosterone is largely unavailable to tissue.",
-   "SHBG goes up with age, hyperthyroidism, liver disease and some medications. It goes down with obesity, insulin resistance and hypothyroidism.",
-   "Big consequence: an overweight man can have a low total T because his SHBG is low, while his free T is actually normal. That is why a doctor orders SHBG and calculates free T (the Vermeulen equation) in borderline cases."],
-   read: "Bhasin et al. 2018, \"Testosterone Therapy in Men With Hypogonadism: An Endocrine Society Clinical Practice Guideline\", J Clin Endocrinol Metab. Read the section on free testosterone measurement.",
-   apply: "Write a two-line Instagram story answer to \"my total T came back low, do I need TRT?\" that brings in SHBG without jargon.",
-   recall: "Name two things that lower SHBG and explain how that could make total testosterone look misleadingly low." },
- { t: "Lab literacy: how a hormone test misleads", learn: [
-   "Units: testosterone is reported as ng/dL (US) or nmol/L (Australia, UK). Multiply ng/dL by 0.0347 to get nmol/L. 300 ng/dL is about 10.4 nmol/L.",
-   "Timing: testosterone peaks in the early morning and can drop meaningfully by afternoon, especially in younger men. Eating glucose also drops it temporarily. Hence the rule: early morning, fasting, repeated.",
-   "Assays: cheaper immunoassays can disagree with each other on the same sample. LC-MS/MS is the reference method. The 2026 Endocrine Society statement pushes CDC HoST-certified assays for exactly this reason.",
-   "A reference range is the middle 95% of a population. It is a statistic, not a target. Being at the 20th percentile is not a diagnosis, and \"optimal range\" marketing is usually invented."],
-   read: "The CDC Hormone Standardization Program (HoST) overview page, then revisit the July 2026 Endocrine Society statement summary in your operating memory.",
-   apply: "Convert these to nmol/L in your head, then check: 264, 300, 450, 800 ng/dL. Then write one sentence on why an afternoon test after breakfast is not a valid result.",
-   recall: "What three conditions should a testosterone blood test meet before anyone interprets it?" },
- { t: "The other axes athletes care about", learn: [
-   "HPA axis (cortisol): the stress system. Cortisol is not the enemy. It is needed for training. Chronic elevation with poor sleep and under-fuelling is the problem.",
-   "Thyroid: TSH from the pituitary drives T4, which converts to active T3. Under-eating lowers T3. Coaches see this as \"my metabolism slowed\" during long diets.",
-   "GH is released in pulses, mostly during slow-wave sleep. A single GH blood sample is almost meaningless, so IGF-1 is used as the integrated marker.",
-   "Hard training plus low energy availability suppresses the HPG axis in both sexes. Testosterone in men and the menstrual cycle in women are early warning lights for under-recovery, not just sex hormones."],
-   read: "Endotext, \"Exercise and the Hypothalamic-Pituitary-Gonadal Axis\" (or any review on the exercise-hypogonadal male condition by Hackney).",
-   apply: "List five client symptoms you might hear (always tired, low libido, missing periods, cold all the time, stalled progress) and match each to the axis most likely involved. Note which ones are an immediate referral.",
-   recall: "Why is IGF-1 measured instead of growth hormone itself?" },
- { t: "Case day: the low testosterone that wasn't", kind: "case", learn: [
-   "Case: 34-year-old man, BMI 32, sleeps 5 hours, snores. One afternoon blood test shows total testosterone 9.5 nmol/L. He wants TRT.",
-   "Work through it: the test fails timing and fasting. It was a single test. No SHBG, no LH or FSH, no prolactin. Obesity lowers SHBG and suppresses the axis. Snoring plus obesity raises the question of sleep apnoea, which itself lowers testosterone.",
-   "Clinical next step a doctor would take: repeat early-morning fasting tests on two separate days, add SHBG, LH, FSH, prolactin, and assess sleep. Per the 2026 Endocrine Society statement, if obesity is the cause, weight loss comes first.",
-   "Coach's role: training, nutrition and sleep work that may fix the number on its own, plus getting him to the right doctor."],
-   read: "Re-read your operating memory entries on the 2026 Endocrine Society statements (July and September). Note every specific requirement.",
-   apply: "Write a full Instagram caption, \"Your testosterone test might be wrong\", built from this case. One version, general population, ends by naming the paid step (Strong & Lean or Premium Coaching). Check it for em-dashes and the \"X. Not Y.\" rhythm before you call it done.",
-   recall: "List the four problems with that man's single test result." }
-]},
-{ title: "Male hormones and TRT", blurb: "Diagnosis, the different forms of testosterone treatment, how doctors monitor it, what the big trials actually showed, and the difference between TRT and steroid use.", days: [
- { t: "What testosterone does, and how it changes with age", learn: [
-   "Testosterone drives muscle protein synthesis, bone density, red blood cell production, libido, erectile function and parts of mood and motivation. Some of its effects in men come from conversion to estradiol, which men need for bone and libido.",
-   "Total testosterone declines slowly with age, and free testosterone declines faster because SHBG rises.",
-   "The European Male Ageing Study (Wu et al. 2010, NEJM, 3,369 men) found genuine late-onset hypogonadism was relatively uncommon and best defined by low testosterone plus sexual symptoms together, not low numbers alone.",
-   "Obesity, poor sleep, heavy alcohol, opioids and chronic illness cause more low testosterone in practice than age itself. Many of those are modifiable, which is your territory."],
-   read: "Wu FC et al. 2010, \"Identification of late-onset hypogonadism in middle-aged and elderly men\", NEJM. Abstract and discussion.",
-   apply: "Write five bullet points for a client handout: \"Things that lower testosterone you can actually change\". Each point needs one specific action.",
-   recall: "Which symptom group did the EMAS study find most linked to genuinely low testosterone?" },
- { t: "Diagnosis: what the guidelines require", learn: [
-   "Endocrine Society (Bhasin 2018, reinforced July and Sept 2026): symptoms consistent with deficiency plus unequivocally low testosterone on two separate early-morning fasting tests.",
-   "Thresholds differ by body. Endocrine Society uses a harmonised lower limit of 264 ng/dL (9.2 nmol/L). The AUA uses 300 ng/dL. AACE 200, International Society of Andrology 230. Match the number to the body you cite.",
-   "Workup includes LH and FSH to locate the cause, prolactin and sometimes pituitary imaging if very low, haematocrit and PSA as baselines.",
-   "Treatment is not recommended for men who are planning fertility in the near term, or with certain cancers, untreated severe sleep apnoea, uncontrolled heart failure, or high haematocrit."],
-   read: "Mulhall et al. 2018, \"Evaluation and Management of Testosterone Deficiency: AUA Guideline\", J Urol. Compare its approach to the Endocrine Society guideline you read last week.",
-   apply: "Make a one-page comparison table: Endocrine Society vs AUA. Threshold, number of tests, timing, first-line considerations. Keep it. You will use it in replies to comments for years.",
-   recall: "What is the Endocrine Society's lower limit in nmol/L, and what is the AUA's in ng/dL?" },
- { t: "Forms of treatment and how they behave", learn: [
-   "Injectable esters (enanthate, cypionate): given every one to two weeks, with a peak after the injection and a trough before the next. Smaller, more frequent doses flatten that curve.",
-   "Long-acting testosterone undecanoate: injected roughly every 10 to 12 weeks after loading. Steady, low maintenance, used widely in Australia.",
-   "Transdermal gels and creams: daily, steadier levels, but can transfer to partners and children through skin contact.",
-   "In Australia, PBS subsidy is restricted to specialist-confirmed hypogonadism with defined criteria. Check the current PBS listing before saying anything specific about cost or access.",
-   "The concept that matters for clients: different forms mean different curves, and side effects often track the peaks, not the average."],
-   read: "Endotext, \"Testosterone Replacement Therapy\" chapter, the formulations section.",
-   apply: "Explain peaks and troughs using an analogy a client would get (coffee timing works well). Two sentences. No numbers.",
-   recall: "Why can a man on fortnightly injections feel great in week one and flat in week two?" },
- { t: "Monitoring and side effects", learn: [
-   "Haematocrit: testosterone stimulates red blood cell production. Above 54% the Endocrine Society says stop or adjust therapy because blood gets thick. Baseline above 50% calls for caution.",
-   "Prostate: PSA and symptoms at baseline and during follow-up. Testosterone does not appear to cause prostate cancer in diagnosed men (2026 meta-analyses), but it is monitored.",
-   "Estradiol: some testosterone converts to estradiol, and men need it. Reflexively adding aromatase inhibitors to chase a number is a common online practice the guidelines do not support.",
-   "Other things doctors watch: blood pressure, acne, sleep apnoea, breast tenderness, mood, and fertility. Testosterone treatment suppresses sperm production.",
-   "Typical schedule: review at 3 to 12 months after starting, then annually."],
-   read: "Bhasin et al. 2018 Endocrine Society guideline, the monitoring table. It is short and it is the whole playbook.",
-   apply: "Write the five red flags you would tell a client on TRT to report to their doctor straight away. This becomes part of your referral script in Week 6.",
-   recall: "At what haematocrit does the Endocrine Society recommend stopping or adjusting TRT?" },
- { t: "The evidence: what the big trials showed", learn: [
-   "T Trials (Snyder et al. 2016, NEJM, 790 men aged 65+): modest improvements in sexual function and mood, small walking benefit, no meaningful improvement in vitality. Real but modest.",
-   "TRAVERSE (Lincoff et al. 2023, NEJM, 5,246 men aged 45 to 80 with hypogonadism and high cardiovascular risk): testosterone gel was non-inferior to placebo for major cardiovascular events, but more atrial fibrillation, acute kidney injury and pulmonary embolism.",
-   "2026 meta-analyses (your operating memory): no increase in CV death, stroke, heart attack, all-cause mortality or prostate cancer in diagnosed men, with arrhythmia the one real signal.",
-   "The sharpest point: men using testosterone without documented hypogonadism had about 50% higher risk of serious CV events and close to double all-cause mortality over 10 years versus properly diagnosed men. Diagnosis changes the risk picture."],
-   read: "Lincoff et al. 2023, \"Cardiovascular Safety of Testosterone-Replacement Therapy\", NEJM. Full paper. Note the population, the dose form and the secondary findings.",
-   apply: "Write three sentences that explain TRAVERSE to a 50-year-old client who read a scary headline. Accurate, calm, and pointing to bloodwork first.",
-   recall: "Which three adverse events were higher with testosterone in TRAVERSE?" },
- { t: "Case day: TRT vs steroid use", kind: "case", learn: [
-   "Replacement aims to bring a deficient man back into the normal range. Anabolic steroid use aims well above it. Different goal, different risk profile, often the same molecule.",
-   "Bhasin et al. 1996 (NEJM, 43 men, 600 mg/week testosterone enanthate for 10 weeks): supraphysiological doses added muscle even without training, and more with training. That paper is why the anabolic effect is not disputed.",
-   "Pope et al. 2014 Endocrine Society scientific statement: cardiovascular damage, psychiatric effects and dependence in a meaningful share of long-term users (estimates around 30%).",
-   "After cycles, many men are left with anabolic steroid-induced hypogonadism, where their own axis does not recover properly. Some then present as \"low T\" and want TRT for life.",
-   "Case: 28-year-old lifter, normal testosterone, asks you about \"going on TRT\" to grow. What do you say?"],
-   read: "Pope HG et al. 2014, \"Adverse Health Consequences of Performance-Enhancing Drugs: An Endocrine Society Scientific Statement\", Endocrine Reviews. Read the summary and the cardiovascular and psychiatric sections.",
-   apply: "Script your reply to the 28-year-old. Firm, respectful, no lecture, no dosing talk. Explain why TRT is not a muscle program and what you would build instead. Then turn the core message into a carousel outline (hook, principle, example, why it works, question).",
-   recall: "What is the difference between replacement and supraphysiological use, in one sentence?" }
-]},
-{ title: "Female hormones and HRT", blurb: "The menstrual cycle, energy availability, perimenopause and menopause, the WHI story and why the HRT conversation changed in 2025 and 2026, plus testosterone for women.", days: [
- { t: "The menstrual cycle and training", learn: [
-   "Follicular phase: estradiol rises. Ovulation: LH surge. Luteal phase: progesterone dominates, body temperature rises slightly. A normal cycle runs roughly 21 to 35 days.",
-   "McNulty et al. 2020 (Sports Medicine meta-analysis): performance may be trivially reduced in the early follicular phase on average, but the effect is small and varies a lot between women. Their recommendation is individualised tracking, not phase-based programs for everyone.",
-   "The NSCA female athlete position statement (Parts I & II, Aug 2026) says the same core principles of S&C apply to women, notes higher fatigue resistance in prolonged contractions, and flags cycle tracking as useful for individualising training and recovery.",
-   "Takeaway for clients: track symptoms and adjust session by session. Rigid \"cycle syncing\" plans outrun the evidence."],
-   read: "McNulty KL et al. 2020, \"The Effects of Menstrual Cycle Phase on Exercise Performance in Eumenorrheic Women\", Sports Medicine.",
-   apply: "Write a short Female Specific Program onboarding note on how you use cycle tracking. Two short paragraphs, no overclaiming.",
-   recall: "What did McNulty 2020 recommend instead of standard phase-based training?" },
- { t: "Low energy availability and REDs", learn: [
-   "Energy availability is the energy left for normal body function after training. When it runs low for long enough, the body cuts expensive processes, reproduction first.",
-   "The IOC 2023 consensus on Relative Energy Deficiency in Sport (Mountjoy et al., BJSM) covers both sexes: menstrual disruption in women, lower testosterone in men, bone loss, illness, poor performance and mood effects.",
-   "Functional hypothalamic amenorrhoea is the common pattern: the brain dials down GnRH. Missed periods in a training woman are a warning sign, never a badge of fitness.",
-   "This is the clearest place where the dietician and sports doctor voices overlap. A coach who spots it early protects bone for life."],
-   read: "Mountjoy M et al. 2023, \"2023 International Olympic Committee's consensus statement on Relative Energy Deficiency in Sport (REDs)\", BJSM. Read the conceptual model and the clinical assessment sections.",
-   apply: "Write the exact words you would use with a client who mentions she hasn't had a period in three months. Caring, clear, ends with a medical referral.",
-   recall: "Which body system usually shuts down first under low energy availability, and why does that matter for bone?" },
- { t: "Perimenopause and menopause", learn: [
-   "Menopause is 12 months without a period, average age around 51. Perimenopause is the years before, with erratic hormones and irregular cycles. STRAW+10 is the staging system clinicians use.",
-   "Symptoms: hot flushes and night sweats, poor sleep, mood change, brain fog, joint aches, vaginal and urinary changes (genitourinary syndrome of menopause).",
-   "Estrogen loss speeds up bone and muscle loss. This is the strongest single argument for heavy resistance training in women over 40.",
-   "LIFTMOR (Watson et al. 2018, JBMR): high-intensity resistance and impact training was safe and improved bone density in postmenopausal women with low bone mass. That flips the old \"keep it light\" advice."],
-   read: "Harlow SD et al. 2012, \"Executive summary of the Stages of Reproductive Aging Workshop + 10\" (skim the staging chart), then Watson SL et al. 2018 LIFTMOR trial abstract.",
-   apply: "Draft a carousel outline: \"Lifting heavy after 40 is bone medicine\". Use LIFTMOR as the worked example. Hook, principle, example, why it works, question.",
-   recall: "What did LIFTMOR show, and why did it matter for how postmenopausal women are coached?" },
- { t: "The WHI story and the timing hypothesis", learn: [
-   "Women's Health Initiative (Rossouw et al. 2002, JAMA): the estrogen plus progestin arm stopped early over breast cancer and cardiovascular signals. HRT prescribing collapsed worldwide almost overnight.",
-   "The context that got lost: average participant age was about 63, many were a decade or more past menopause, and the risks were reported mostly as relative numbers. In absolute terms the extra breast cancer cases were in the order of a few per 1,000 women over several years.",
-   "Timing hypothesis: started before 60 and within 10 years of menopause, HT has a much better risk profile. ELITE (Hodis et al. 2016, NEJM) supported it with slower artery thickening in early but not late starters.",
-   "This is the best teaching case you will ever get for relative vs absolute risk, and for how one paper can change practice for 20 years."],
-   read: "Hodis HN et al. 2016, \"Vascular Effects of Early versus Late Postmenopausal Treatment with Estradiol\", NEJM. Then The Menopause Society 2022 Hormone Therapy Position Statement summary.",
-   apply: "Explain relative vs absolute risk using WHI in plain language to a 50-year-old client. Five sentences maximum.",
-   recall: "What is the timing window, and which trial best supports it?" },
- { t: "Modern HRT and the 2026 label change", learn: [
-   "Women with a uterus need a progestogen alongside estrogen to protect the endometrium. Women without a uterus can take estrogen alone.",
-   "Route matters: transdermal estradiol (patch or gel) carries lower clot risk than oral estrogen. Micronized progesterone is often preferred. Vaginal estrogen treats local symptoms with minimal systemic absorption.",
-   "FDA boxed warning changes (announced Nov 2025, first approvals 12 Feb 2026): cardiovascular, breast cancer and dementia references removed from the box on many products. Endometrial cancer warning stays on estrogen-alone.",
-   "This is contested. Former WHI leadership criticised the process in JAMA (Feb 2026), and the British Menopause Society flagged off-label dose and testosterone prescribing concerns (Aug 2026). Teach both sides.",
-   "Contraindications still apply: breast cancer history, prior clots, unexplained bleeding, active liver disease, among others."],
-   read: "Your operating memory entry on the FDA boxed warning change, then The Menopause Society 2022 position statement section on routes of administration.",
-   apply: "Write a clinic-page paragraph (first person, no CTA) titled \"What changed with HRT in 2026\". Present the label change and the dissent fairly.",
-   recall: "Why does a woman with a uterus need a progestogen alongside estrogen?" },
- { t: "Case day: testosterone in women", kind: "case", learn: [
-   "Women make testosterone too, from the ovaries and adrenals, at roughly a tenth to a twentieth of male levels.",
-   "Global Consensus Position Statement on testosterone for women (Davis et al. 2019, endorsed by multiple international societies): the only evidence-based indication is hypoactive sexual desire disorder in postmenopausal women, at doses that keep levels in the female physiological range.",
-   "Not supported by the consensus: testosterone for energy, mood, muscle, bone or cognition in women, or male-formulation products divided into smaller doses.",
-   "Australia has a female-specific testosterone cream, which is relevant to your audience. The British Menopause Society's 2026 concern was prescribing drifting beyond the evidence.",
-   "Case: 48-year-old perimenopausal client, poor sleep, low libido, saw a podcast saying testosterone \"fixes everything\". Build her pathway."],
-   read: "Davis SR et al. 2019, \"Global Consensus Position Statement on the Use of Testosterone Therapy for Women\", J Clin Endocrinol Metab (also in Climacteric).",
-   apply: "Write her pathway in four steps: what you change in training and sleep now, what she asks her GP, what bloodwork may be ordered, what the evidence says about testosterone. Then write one caption from it for the general population with the paid step named at the end.",
-   recall: "What is the one evidence-based indication for testosterone therapy in women?" }
-]},
-{ title: "Peptide foundations and the growth hormone axis", blurb: "What a peptide drug is, how to grade evidence, the GH and IGF-1 axis, secretagogues, and how regulation works in the US and Australia. Positive, accurate, no hype.", days: [
- { t: "What a peptide drug is", learn: [
-   "A peptide is a short chain of amino acids, roughly 2 to 50. Longer chains are proteins. Your body already runs on peptides: insulin, oxytocin, GLP-1, GH-releasing hormone.",
-   "Peptides are one of the fastest-growing drug classes. More than 80 are approved worldwide (Muttenthaler et al. 2021). Insulin, semaglutide and tirzepatide are all peptides.",
-   "The engineering challenge is half-life. Natural GLP-1 lasts minutes. Semaglutide has a fatty acid chain attached so it binds albumin and lasts a week. CJC-1295 uses a similar albumin-binding trick (DAC).",
-   "Most are injected because the gut breaks them down. Oral semaglutide exists, but needs an absorption enhancer and much higher doses, which shows how hard the oral route is."],
-   read: "Muttenthaler M et al. 2021, \"Trends in peptide drug discovery\", Nature Reviews Drug Discovery. Read the introduction and the half-life extension section.",
-   apply: "Write a clinic-page opening paragraph (first person, no CTA): \"Why peptides are one of the most exciting areas in medicine right now\". Positive, accurate, no promises.",
-   recall: "How does semaglutide last a week when natural GLP-1 lasts minutes?" },
- { t: "The evidence ladder", learn: [
-   "Cell studies, then animal studies, then Phase I (safety, small numbers), Phase II (does it work, what dose), Phase III (large, controlled, proves benefit), then approval, then post-market surveillance.",
-   "Most wellness peptides sit at the animal stage. That is not a criticism, every approved drug started there, but it decides what you can honestly claim.",
-   "Language test: \"shown in rats\", \"early human safety data\", \"Phase III proven\" are three different claims. Use the one that matches the evidence.",
-   "Watch for surrogate endpoints (a blood marker improved) being sold as hard outcomes (people healed faster, lived longer)."],
-   read: "Trisha Greenhalgh, How to Read a Paper, the chapters on trial types and on surrogate endpoints.",
-   apply: "Make an evidence card template you will reuse for every peptide: name, what it is, mechanism, best human evidence, regulatory status (US, Australia, WADA), what you can honestly say in content. Fill it in for semaglutide as the gold-standard example.",
-   recall: "What is the difference between a surrogate endpoint and a hard outcome? Give one example of each." },
- { t: "The GH and IGF-1 axis", learn: [
-   "Hypothalamus releases GHRH (go) and somatostatin (stop). The stomach releases ghrelin, which also drives GH release through the GHS receptor. GH comes out in pulses, biggest during deep sleep.",
-   "GH acts directly on fat (raises fat breakdown) and drives the liver to make IGF-1, which carries much of the growth effect.",
-   "In healthy adults the muscle story is weaker than the marketing. Liu et al. 2008 (Annals of Internal Medicine, meta-analysis): GH in healthy athletes raised lean mass, but did not improve strength or exercise capacity, and much of the lean mass gain is likely water.",
-   "Side effects of excess GH include fluid retention, joint pain, carpal tunnel symptoms and worsening insulin sensitivity."],
-   read: "Liu H et al. 2008, \"Systematic review: the effects of growth hormone on athletic performance\", Annals of Internal Medicine.",
-   apply: "Write a myth-busting slide: \"More growth hormone does not mean more strength\". Use Liu 2008 as the evidence and the sleep connection as the practical takeaway.",
-   recall: "What did Liu 2008 find for lean mass versus strength in healthy athletes given GH?" },
- { t: "Growth hormone secretagogues", learn: [
-   "Two families. GHRH analogues mimic the \"go\" signal: sermorelin, tesamorelin, CJC-1295. Ghrelin mimetics (GHRPs) act on the ghrelin receptor: ipamorelin, GHRP-2, GHRP-6, hexarelin. MK-677 (ibutamoren) is an oral non-peptide that works on the same receptor.",
-   "Tesamorelin is the standout: FDA approved with Phase III data (816 patients), but specifically for visceral fat in HIV-associated lipodystrophy. Falutz et al. 2007 (NEJM) is the key trial.",
-   "GHRP-2 is approved only in Japan, and only as a one-off diagnostic test. CJC-1295 and ipamorelin each raise GH and IGF-1 in humans, but the popular combination has no published human trial. Ipamorelin's only Phase 2b trial (post-surgery bowel recovery) missed its endpoint.",
-   "MK-677 raises IGF-1 and appetite and can worsen insulin sensitivity."],
-   read: "Sigalos JT & Pastuszak AW 2018, \"The Safety and Efficacy of Growth Hormone Secretagogues\", Sexual Medicine Reviews. Then Falutz J et al. 2007 tesamorelin NEJM abstract.",
-   apply: "Fill in evidence cards for tesamorelin, CJC-1295 and ipamorelin using yesterday's template and your operating memory log.",
-   recall: "What is tesamorelin actually approved for, and why does that matter for how it is marketed?" },
- { t: "Regulation: FDA, TGA and WADA", learn: [
-   "US: compounding pharmacies can only use bulk substances on approved lists. FDA's Category 2 means \"significant safety concerns, do not compound\". The PCAC advises FDA, but its votes are non-binding.",
-   "July 2026 PCAC: recommended six peptides (BPC-157, KPV, TB-500, MOTS-c, Semax, Epitalon) for the 503A list, overruling FDA staff. Rulemaking still needed, realistically late 2027 at the earliest. Next meeting before end of Feb 2027 on GHK-Cu, Melanotan II, LL-37, Dihexa, PEG-MGF.",
-   "Australia: BPC-157, TB-500, CJC-1295, ipamorelin, GHRP-2/6 and AOD-9604 are Schedule 4 (prescription only). Melanotan II moved to Schedule 9 (prohibited) in Feb 2026. TGA made illegal peptides a 2026 compliance priority and issued an April 2026 advisory. A scheduling committee consultation runs in November 2026, check its outcome.",
-   "Sport: WADA prohibits GH secretagogues (S2) and lists non-approved substances such as BPC-157 under S0. Any tested athlete client cannot use them.",
-   "Quality: \"research use only\" products have documented purity and contamination problems. A prescription from a doctor through a compounding pharmacy is a different supply chain."],
-   read: "Your operating memory peptide log end to end, then the TGA April 2026 safety advisory on peptides and the current WADA Prohibited List (S0 and S2).",
-   apply: "Write a one-page \"peptide status sheet\" for your own use: each peptide, US status, Australian schedule, WADA status, last checked date. Date it, and plan to re-check monthly.",
-   recall: "What does a PCAC recommendation change legally, today?" },
- { t: "Case day: the athlete who wants peptides", kind: "case", learn: [
-   "Case: 24-year-old semi-pro rugby player, recurring hamstring strains, a teammate recommends BPC-157 and TB-500.",
-   "Facts to assemble: BPC-157 has strong animal data, no published human efficacy RCT, one Phase II hamstring trial recruiting (results expected around 2027). Both are WADA-prohibited. Both are Schedule 4 in Australia.",
-   "What actually has human evidence for his problem: eccentric hamstring training (around 46% fewer hamstring injuries, effect tied to compliance), sprint exposure, and proper rehab progressions.",
-   "Positive framing that stays honest: this is a fascinating area with a real trial underway. For a tested athlete it is off the table for now, and the proven tools haven't been used properly yet."],
-   read: "The registered trial NCT07437547 on ClinicalTrials.gov. Read the design, endpoints and population. Then revisit the hamstring eccentric meta-analysis entry in your operating memory.",
-   apply: "Write your reply to him (DM style), then write a carousel outline \"What the research actually says about BPC-157 for hamstrings\". Positive about the research, clear on status. Check against the em-dash rule.",
-   recall: "Name two reasons this athlete cannot use BPC-157, and one proven alternative." }
-]},
-{ title: "The peptides people ask about", blurb: "GLP-1 drugs, healing and longevity peptides, and the melanocortin family. Each one graded by human evidence and current status.", days: [
- { t: "GLP-1 and semaglutide", learn: [
-   "GLP-1 is a gut hormone. It boosts insulin after meals, slows stomach emptying and reduces appetite through the brain.",
-   "STEP-1 (Wilding et al. 2021, NEJM, 1,961 adults): weekly semaglutide 2.4 mg produced about 15% average weight loss at 68 weeks, versus about 2.4% with placebo.",
-   "The coaching opportunity: in DEXA substudies, lean mass made up a substantial share of the weight lost, commonly reported around a third or more. Resistance training and high protein are the evidence-based way to protect muscle on these drugs.",
-   "Common side effects are gastrointestinal. Doctors also watch for gallbladder issues and pancreatitis. Stopping usually brings substantial weight regain (STEP-1 extension), so habits matter."],
-   read: "Wilding JPH et al. 2021, \"Once-Weekly Semaglutide in Adults with Overweight or Obesity\", NEJM.",
-   apply: "Outline an offer angle: \"Training for people on GLP-1 medication\". Which existing program fits (Strong & Lean, Built in 3, Premium Coaching)? Write the first caption for it.",
-   recall: "What was the average weight loss in STEP-1, and what is the main muscle-related concern?" },
- { t: "Tirzepatide, retatrutide and the next wave", learn: [
-   "Tirzepatide is a dual GIP and GLP-1 agonist. SURMOUNT-1 (Jastreboff et al. 2022, NEJM, 2,539 adults): about 21% average weight loss at the 15 mg dose over 72 weeks.",
-   "Retatrutide adds a glucagon receptor (triple agonist). Phase II (Jastreboff et al. 2023, NEJM): about 24% at 48 weeks on the top dose. Phase III TRIUMPH trials are reporting through 2026, so check the latest results before citing. It was named in the TGA April 2026 advisory because of illegal supply.",
-   "The pattern: each generation adds a receptor and more weight loss. The muscle-preservation question gets bigger, not smaller.",
-   "These are the best example of peptides delivering on their promise in humans. Use them to show your audience what proper evidence looks like."],
-   read: "Jastreboff AM et al. 2022, \"Tirzepatide Once Weekly for the Treatment of Obesity\", NEJM. Then search for the latest retatrutide Phase III results.",
-   apply: "Make a simple comparison graphic plan: semaglutide vs tirzepatide vs retatrutide. Receptors, trial, weight loss, status in Australia.",
-   recall: "How many receptors does each of the three drugs act on?" },
- { t: "BPC-157 and TB-500", learn: [
-   "BPC-157: a 15-amino-acid fragment from a stomach protein. Large body of animal work on tendon, ligament, gut and muscle healing. Human data: a tiny IV safety pilot (n=2), one Phase II hamstring trial recruiting. No published human efficacy RCT yet.",
-   "Removed from FDA Category 2 in April 2026 because nominations were withdrawn, not a safety finding. PCAC recommended it for the 503A list in July 2026 (8-6-1). Not legally compoundable yet in the US. Schedule 4 in Australia.",
-   "TB-500 is a synthetic fragment of thymosin beta-4. Full-length thymosin beta-4 has been through human trials as an eye drop for corneal conditions. The injectable fragment people use has not.",
-   "Honest positive line: \"Strong preclinical signal, human trials are starting, not proven in people yet, and prescription only.\""],
-   read: "Search PubMed for the newest BPC-157 review (2025 or 2026). Read the human evidence section and compare it to your log.",
-   apply: "Fill in evidence cards for BPC-157 and TB-500. Then write the one-sentence status line you will use in every comment reply about them.",
-   recall: "Why was BPC-157 removed from Category 2, and what does that removal not mean?" },
- { t: "Longevity and repair peptides", learn: [
-   "GHK-Cu: a copper peptide naturally present in blood. Reasonable cosmetic evidence for topical skin use. Injectable claims are mostly preclinical. On the Feb 2027 PCAC agenda.",
-   "MOTS-c: a mitochondria-derived peptide studied in animals for metabolism and exercise capacity. Very early human data.",
-   "Epitalon: a short peptide linked to telomere and pineal research, mostly from one research group. Treat as preclinical.",
-   "Semax: approved in Russia for stroke and cognitive indications, little Western trial data. KPV: anti-inflammatory fragment studied mostly in gut inflammation models.",
-   "Common thread: interesting biology, small or early human evidence. The right claim is \"being studied for\", never \"does\"."],
-   read: "Pick one (GHK-Cu is the best documented) and find the most recent review on PubMed. Read only the human studies section.",
-   apply: "Fill in evidence cards for all five. Rank them by strength of human evidence and write one line explaining your ranking.",
-   recall: "Which of these has the strongest human evidence, and for what use?" },
- { t: "Melanocortins and the lesson of the family", learn: [
-   "Melanotan II: tanning and libido effects through melanocortin receptors. Now Schedule 9 (prohibited) in Australia since Feb 2026. Linked to nausea, flushing, mole changes and other concerns.",
-   "Bremelanotide (PT-141): a close relative, FDA approved in 2019 (Vyleesi) for low sexual desire in premenopausal women.",
-   "Same receptor family, one approved, one prohibited. The lesson: never judge \"peptides\" as a category. Judge each molecule by its own evidence and status.",
-   "Also worth knowing: oxytocin and kisspeptin are being researched in human reproductive and psychological studies. Fascinating, early."],
-   read: "The TGA scheduling decision notice for Melanotan II (Schedule 9), then the FDA approval summary for bremelanotide.",
-   apply: "Write a carousel outline: \"Why \"are peptides safe?\" is the wrong question\". Use Melanotan II vs bremelanotide as the worked example. Positive about the field, precise about molecules.",
-   recall: "What is Melanotan II's schedule in Australia, and what approved drug sits in the same family?" },
- { t: "Case day: the evidence board", kind: "case", learn: [
-   "Put every evidence card from Weeks 4 and 5 on one page and sort them into three tiers: proven in humans for a specific use (semaglutide, tirzepatide, tesamorelin, bremelanotide), early human data or trials underway (BPC-157, retatrutide pending Phase III), preclinical or limited (the rest).",
-   "Check every regulatory status against the live sources. Anything older than a month gets re-verified.",
-   "Case: a 45-year-old client on semaglutide asks if he should add BPC-157 \"for his joints\" and \"something for muscle\". Use your board to answer."],
-   read: "Re-read the real-time verification standard in your operating memory and apply it to every card.",
-   apply: "Write his answer: protect muscle with training and protein (strongest evidence), joints with load management and progressive strength work, and any medication questions go to his prescribing doctor. Then write a clinic article intro (first person, no CTA) on how to think about the peptide space.",
-   recall: "Name the four molecules in your top tier and what each is approved for." }
-]},
-{ title: "Becoming the expert people trust", blurb: "Reading research like a clinician, bloodwork literacy, scope of practice, advertising law, and communicating risk so people act on it. Then the capstone.", days: [
- { t: "Read a study like a clinician", learn: [
-   "Hierarchy: systematic reviews and meta-analyses of RCTs, then RCTs, then cohort studies, then case reports and mechanisms. Position stands sit on top as synthesis.",
-   "Relative vs absolute risk: \"50% higher risk\" can mean 2 in 1,000 becoming 3 in 1,000. Always find the absolute numbers.",
-   "Number needed to treat (NNT) and number needed to harm (NNH) turn trial results into something a person can weigh.",
-   "Observational studies cannot prove cause. Healthy-user bias, reverse causation and confounding explain plenty of headline findings (your sauna and zone 2 log entries are good examples).",
-   "Check who funded it, who was studied, how long, and what the primary endpoint was."],
-   read: "Greenhalgh, How to Read a Paper, the chapters on statistics for the non-statistician and on papers that report trials. Then re-read the TRAVERSE abstract with fresh eyes.",
-   apply: "Rewrite one scary health headline you have seen recently into absolute numbers. Post-worthy if it is good.",
-   recall: "Convert this: risk goes from 4 per 1,000 to 6 per 1,000. What is the relative increase and what is the absolute increase?" },
- { t: "Bloodwork literacy", learn: [
-   "Male hormone panel a doctor commonly orders: total testosterone, SHBG, calculated free testosterone, LH, FSH, estradiol, prolactin, haematocrit, PSA (age dependent).",
-   "Female panel varies by question: FSH, LH, estradiol, progesterone (timed to the cycle), prolactin, TSH, sometimes testosterone and SHBG. In perimenopause, FSH fluctuates so much that diagnosis is mostly clinical.",
-   "General health markers that matter for your clients: full blood count, ferritin and iron studies, HbA1c and fasting glucose, lipids, liver and kidney function, TSH, vitamin D where indicated.",
-   "Context changes everything: hard training the day before, a cut, illness, alcohol or poor sleep can all shift results. Note conditions when bloods are taken."],
-   read: "Endotext or a current RACGP resource on interpreting male and female hormone tests.",
-   apply: "Build a one-page \"before your blood test\" checklist for clients: timing, fasting, no hard training 24 to 48 hours before, note supplements, ask for a copy of results.",
-   recall: "Why is perimenopause usually diagnosed from symptoms rather than an FSH test?" },
- { t: "Scope of practice and red flags", learn: [
-   "Your role: educate, coach behaviour, spot warning signs, refer. A doctor's role: diagnose, prescribe, monitor. Staying on your side of that line is what lets doctors trust you and refer back to you.",
-   "Refer straight away: chest pain or palpitations, unusual shortness of breath, leg swelling or pain (possible clot), severe headaches or visual changes (possible pituitary problem), breast lumps, unexplained bleeding, thoughts of self-harm, missed periods for three months or more.",
-   "Refer soon: suspected low testosterone, menopausal symptoms affecting life, persistent fatigue, anyone already using hormones or peptides without medical supervision.",
-   "Build relationships with two or three local GPs, an endocrinologist and a women's health doctor. A referral network is a business asset."],
-   read: "Your operating memory sections on the Sports Doctor voice and peptide business context. Then write down your own scope statement in one paragraph.",
-   apply: "Write your referral script: what you say, what you write in a note to the GP, and how you follow up. Save it as a template.",
-   recall: "List five red flags that mean an immediate medical referral." },
- { t: "Advertising rules and selling ethically", learn: [
-   "In Australia, prescription-only (Schedule 4) medicines cannot be advertised to the public. That covers most peptides, testosterone and HRT. The Therapeutic Goods Advertising Code also restricts health claims and testimonials for therapeutic goods.",
-   "Education is different from advertising. Explaining what the evidence says about a molecule is education. Promoting a specific product, price or supplier to consumers is advertising.",
-   "This matters directly for your peptide company. Get advice from a regulatory lawyer on how your content and that business connect before you post peptide content that links to it.",
-   "Your Strength Elite offers are training, nutrition and coaching. Those are what your CTAs point to on hormone and peptide content."],
-   read: "The TGA's guidance on advertising prescription-only medicines and the current Therapeutic Goods Advertising Code overview on tga.gov.au.",
-   apply: "Audit three of your past or planned posts on hormones or peptides against the TGA guidance. Mark anything that reads as promotion rather than education.",
-   recall: "What is the difference between education and advertising for an S4 medicine, in one sentence?" },
- { t: "Communicating risk so people act", learn: [
-   "Motivational interviewing (Miller & Rollnick): open questions, affirmations, reflections, summaries (OARS). People act on conclusions they reach themselves.",
-   "Natural frequencies beat percentages. \"3 in 1,000\" is understood. \"0.3%\" is not. Gigerenzer's work on risk literacy is the reference here.",
-   "Lead with what they want. A man asking about TRT wants energy, drive and muscle. Start there, then show that diagnosis and fundamentals are the fastest route to it.",
-   "Never mock the question. Somebody asking about peptides is curious and motivated. Respect it, then educate."],
-   read: "Miller & Rollnick, Motivational Interviewing (3rd ed.), the OARS chapter. Or Gigerenzer, Risk Savvy, the chapter on communicating health risk.",
-   apply: "Role-play the question \"Should I go on TRT or peptides?\" as a 10-minute mock consult with a friend. Use OARS. Record it and note every time you lectured instead of asked.",
-   recall: "What does OARS stand for?" },
- { t: "Capstone: teach it back", kind: "case", learn: [
-   "Take the 35 recall questions from the past six weeks and answer them all from memory. Score yourself. Anything wrong goes back on next week's review list.",
-   "Pick one topic you now know cold and teach it for 10 minutes on camera without notes. This is the test of whether you own it.",
-   "Write a 500+ word clinic article in first person, no CTA: \"What TRT actually is, and who it is for\". Use the guideline thresholds, the two-test rule, TRAVERSE, and the weight-loss-first point.",
-   "Plan your next month: one hormone or peptide post every week, each built from an evidence card, each re-checked for current status before posting."],
-   read: "Your full operating memory peptide and hormone log, start to finish, now that you understand every entry.",
-   apply: "Publish or schedule the teach-back video as a post or Story series. Check the copy for em-dashes and the symmetrical AI rhythm before it goes out.",
-   recall: "Could you explain the HPG axis, TRAVERSE, the HRT timing window and BPC-157's status to a stranger right now, without notes?" }
-]}
-];
+<template id="dia-hpg">
+<figure class="figure">
+<svg viewBox="0 0 640 420" role="img" aria-label="The HPG axis: hypothalamus releases GnRH, pituitary releases LH and FSH, testes make testosterone, which feeds back to switch the brain signals down. Outside testosterone adds to the feedback.">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="svg-ha"/></marker>
+    <marker id="af" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="svg-hf"/></marker>
+  </defs>
+  <rect x="40" y="20" width="250" height="64" rx="8" class="svg-box accent"/>
+  <text x="165" y="47" text-anchor="middle" class="svg-t">Hypothalamus</text>
+  <text x="165" y="68" text-anchor="middle" class="svg-s">the manager</text>
+  <rect x="40" y="160" width="250" height="64" rx="8" class="svg-box accent"/>
+  <text x="165" y="187" text-anchor="middle" class="svg-t">Pituitary</text>
+  <text x="165" y="208" text-anchor="middle" class="svg-s">the supervisor</text>
+  <rect x="40" y="300" width="250" height="64" rx="8" class="svg-box accent"/>
+  <text x="165" y="327" text-anchor="middle" class="svg-t">Testes (or ovaries)</text>
+  <text x="165" y="348" text-anchor="middle" class="svg-s">the factory: testosterone + sperm</text>
+  <line x1="165" y1="86" x2="165" y2="156" class="svg-a" marker-end="url(#ah)"/>
+  <text x="178" y="126" class="svg-s">GnRH, in pulses</text>
+  <line x1="165" y1="226" x2="165" y2="296" class="svg-a" marker-end="url(#ah)"/>
+  <text x="178" y="266" class="svg-s">LH + FSH</text>
+  <rect x="390" y="300" width="220" height="64" rx="8" class="svg-box"/>
+  <text x="500" y="327" text-anchor="middle" class="svg-t">Blood testosterone</text>
+  <text x="500" y="348" text-anchor="middle" class="svg-s">(and estradiol made from it)</text>
+  <line x1="292" y1="332" x2="386" y2="332" class="svg-a" marker-end="url(#ah)"/>
+  <path d="M500 298 L500 52 L296 52" class="svg-f" marker-end="url(#af)"/>
+  <path d="M500 192 L296 192" class="svg-f" marker-end="url(#af)"/>
+  <text x="512" y="120" class="svg-s">Negative feedback:</text>
+  <text x="512" y="137" class="svg-s">"enough", switch</text>
+  <text x="512" y="154" class="svg-s">GnRH and LH down</text>
+  <rect x="390" y="384" width="220" height="30" rx="6" class="svg-box amber"/>
+  <text x="500" y="404" text-anchor="middle" class="svg-s">Outside testosterone (TRT, steroids)</text>
+  <line x1="500" y1="382" x2="500" y2="368" class="svg-f" marker-end="url(#af)"/>
+</svg>
+<figcaption>Solid arrows are signals going down. Dashed arrows are feedback. Outside testosterone raises the blood level, so the feedback switches LH and FSH off and the testes go quiet.</figcaption>
+</figure>
+</template>
 
+<template id="dia-binding">
+<figure class="figure">
+  <div class="stack" aria-hidden="true">
+    <span style="width:44%;background:var(--s1)">SHBG ~44%</span>
+    <span style="width:54%;background:var(--s2)">Albumin ~54%</span>
+    <span style="width:4%;background:var(--s3)"></span>
+  </div>
+  <div class="legend">
+    <span><i style="background:var(--s1)"></i>Bound tightly to SHBG: the locked seatbelt. Mostly unusable by tissue.</span>
+    <span><i style="background:var(--s2)"></i>Bound loosely to albumin: no seatbelt. Can hop off into tissue.</span>
+    <span><i style="background:var(--s3)"></i>Free, about 2%: travels alone and enters cells.</span>
+  </div>
+  <figcaption>Typical split in a man (proportions vary person to person). Free plus albumin-bound is called bioavailable testosterone.</figcaption>
+</figure>
+</template>
+
+<template id="dia-gh">
+<figure class="figure">
+<svg viewBox="0 0 640 380" role="img" aria-label="The GH axis: GHRH stimulates and somatostatin inhibits the pituitary, ghrelin from the stomach boosts it, GH acts on fat and on the liver, the liver makes IGF-1, which feeds back.">
+  <defs>
+    <marker id="gh-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="svg-ha"/></marker>
+    <marker id="gh-f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="svg-hf"/></marker>
+  </defs>
+  <rect x="40" y="20" width="250" height="60" rx="8" class="svg-box accent"/>
+  <text x="165" y="46" text-anchor="middle" class="svg-t">Hypothalamus</text>
+  <text x="165" y="66" text-anchor="middle" class="svg-s">GHRH (go) · somatostatin (stop)</text>
+  <rect x="40" y="160" width="250" height="60" rx="8" class="svg-box accent"/>
+  <text x="165" y="196" text-anchor="middle" class="svg-t">Pituitary</text>
+  <rect x="390" y="160" width="220" height="60" rx="8" class="svg-box"/>
+  <text x="500" y="186" text-anchor="middle" class="svg-t">Stomach</text>
+  <text x="500" y="206" text-anchor="middle" class="svg-s">ghrelin (booster)</text>
+  <line x1="386" y1="190" x2="294" y2="190" class="svg-a" marker-end="url(#gh-a)"/>
+  <line x1="165" y1="82" x2="165" y2="156" class="svg-a" marker-end="url(#gh-a)"/>
+  <rect x="40" y="300" width="160" height="60" rx="8" class="svg-box"/>
+  <text x="120" y="326" text-anchor="middle" class="svg-t">Fat tissue</text>
+  <text x="120" y="346" text-anchor="middle" class="svg-s">fat broken down</text>
+  <rect x="250" y="300" width="160" height="60" rx="8" class="svg-box"/>
+  <text x="330" y="326" text-anchor="middle" class="svg-t">Liver</text>
+  <text x="330" y="346" text-anchor="middle" class="svg-s">makes IGF-1</text>
+  <line x1="140" y1="222" x2="120" y2="296" class="svg-a" marker-end="url(#gh-a)"/>
+  <line x1="190" y1="222" x2="310" y2="296" class="svg-a" marker-end="url(#gh-a)"/>
+  <text x="200" y="262" class="svg-s">GH</text>
+  <path d="M412 330 L600 330 L600 50 L294 50" class="svg-f" marker-end="url(#gh-f)"/>
+  <text x="430" y="280" class="svg-s">IGF-1: growth effects,</text>
+  <text x="430" y="296" class="svg-s">and feedback to switch</text>
+  <text x="430" y="312" class="svg-s">GH down</text>
+</svg>
+<figcaption>GH comes out in pulses as the go and stop signals shift, with ghrelin as a booster. IGF-1 from the liver does much of the growth work and feeds back to the brain.</figcaption>
+</figure>
+</template>
+
+<script src="lessons/week1.js"></script>
+<script src="lessons/week2.js"></script>
+<script src="lessons/week3.js"></script>
+<script src="lessons/week4.js"></script>
+<script src="lessons/week5.js"></script>
+<script src="lessons/week6.js"></script>
+<script>
+const WEEKS = window.WEEKS || [];
 const DAYNAMES = ["Mon","Tue","Wed","Thu","Fri","Sat"];
 const store = {
   get(k, d) { try { const v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); } catch (e) { return d; } },
@@ -481,7 +297,8 @@ function todayPos() {
   for (let w = 0; w < 6; w++) for (let d = 0; d < 7; d++) if (sameDay(dateFor(w, d), now)) return { w, d };
   return null;
 }
-function esc(s) { return s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
+function esc(s) { return String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
+const paras = arr => (arr || []).map(p => `<p>${esc(p)}</p>`).join("");
 
 function renderTabs() {
   const tabs = document.getElementById("tabs");
@@ -498,38 +315,51 @@ function renderProgress() {
   document.getElementById("bar-fill").style.width = (n / 36 * 100) + "%";
 }
 
+function lessonBody(day, key) {
+  const diagram = day.diagram ? document.getElementById("dia-" + day.diagram)?.innerHTML || "" : "";
+  const secs = day.sections.map((s, i) => `<section class="sec"><h4>${esc(s.h)}</h4>${paras(s.p)}</section>${i === 0 && diagram ? diagram : ""}`).join("");
+  return `<div class="lesson">
+    <p class="why">${esc(day.why)}</p>
+    <div class="explain"><span class="label">The lesson</span>${secs}</div>
+    <div class="example"><span class="label">Worked example</span><h4>${esc(day.example.h)}</h4>${paras(day.example.p)}</div>
+    <div class="keys"><span class="label">Lock these in</span><ul>${day.key.map(k => `<li>${esc(k)}</li>`).join("")}</ul></div>
+    <div class="tasks">
+      <div><span class="label">Read</span><p>${esc(day.read)}</p></div>
+      <div><span class="label">Apply</span><p>${esc(day.apply)}</p></div>
+    </div>
+    <div class="quiz"><span class="label">Check yourself (answer out loud first)</span>
+      ${day.quiz.map((q, i) => `<div class="q"><p class="qt">${i + 1}. ${esc(q.q)}</p><details id="ans-${key}-${i}"><summary>Show answer</summary><p>${esc(q.a)}</p></details></div>`).join("")}
+    </div>
+  </div>`;
+}
+
 function renderWeek(openDay) {
   const wk = WEEKS[weekIdx];
+  if (!wk) { document.getElementById("week").innerHTML = `<p class="loading">This week's lessons didn't load. Refresh the page to try again.</p>`; return; }
   const tp = todayPos();
   const fmt = (dt) => dt ? { m: dt.toLocaleDateString("en-AU", { month: "short" }), d: dt.getDate() } : { m: "", d: "" };
   const cards = wk.days.map((day, d) => {
     const key = weekIdx + "-" + d;
     const dt = fmt(dateFor(weekIdx, d));
     const isToday = tp && tp.w === weekIdx && tp.d === d;
-    const isOpen = openDay === d;
-    return `<details class="day${isToday ? " is-today" : ""}${done[key] ? " is-done" : ""}" ${isOpen ? "open" : ""}>
+    return `<details class="day${isToday ? " is-today" : ""}${done[key] ? " is-done" : ""}" id="day-${key}" ${openDay === d ? "open" : ""}>
       <summary>
         <div class="date">${DAYNAMES[d]}<b>${dt.d}</b>${dt.m}</div>
         <div class="sum-text">
-          <span class="chip${day.kind === "case" ? " case" : ""}">${day.kind === "case" ? "Case + content" : "Day " + (weekIdx * 6 + d + 1)}${isToday ? " · Today" : ""}</span>
+          <span class="chip${day.kind === "case" ? " case" : ""}">${day.kind === "case" ? "Case + content" : "Lesson " + (weekIdx * 6 + d + 1)}${isToday ? " · Today" : ""}</span>
           <h3>${esc(day.t)}</h3>
         </div>
         <input class="check" type="checkbox" id="chk-${key}" aria-label="Mark ${esc(day.t)} done" ${done[key] ? "checked" : ""}>
       </summary>
-      <div class="body">
-        <div class="block"><h4>Learn</h4><ul>${day.learn.map(l => `<li>${esc(l)}</li>`).join("")}</ul></div>
-        <div class="block read"><h4>Read</h4><p>${esc(day.read)}</p></div>
-        <div class="block apply"><h4>Apply</h4><p>${esc(day.apply)}</p></div>
-        <div class="block recall"><h4>Recall tomorrow</h4><p>${esc(day.recall)}</p></div>
-      </div>
+      ${lessonBody(day, key)}
     </details>`;
   }).join("");
   const sun = fmt(dateFor(weekIdx, 6));
   document.getElementById("week").innerHTML = `
     <section class="week-head"><p class="eyebrow">Week ${weekIdx + 1} of 6</p><h2>${esc(wk.title)}</h2><p>${esc(wk.blurb)}</p></section>
-    <div class="days" style="margin-top:16px">${cards}
-      <div class="sunday"><b>Sun ${sun.d} ${sun.m} · Rest and review, 15 minutes</b>
-      <span>Answer all six recall questions from this week out loud, without notes. Re-read any day you missed. Then rest.</span></div>
+    <div class="days">${cards}
+      <div class="sunday"><b>Sun ${sun.d} ${sun.m} · Rest and review, 20 minutes</b>
+      <span>Answer every "Check yourself" question from this week out loud, without opening the answers. Re-read the lesson for any you missed. Then rest.</span></div>
     </div>`;
   document.querySelectorAll(".check").forEach(c => {
     c.addEventListener("click", e => e.stopPropagation());
@@ -547,7 +377,7 @@ function render(openDay) { renderTabs(); renderProgress(); renderWeek(openDay); 
 function goToday() {
   const tp = todayPos();
   if (tp) { weekIdx = tp.w; render(tp.d < 6 ? tp.d : undefined); }
-  else { render(0); }
+  else render(0);
 }
 
 startEl.addEventListener("change", () => { if (startEl.value) { start = startEl.value; store.set("hp-start", start); goToday(); } });

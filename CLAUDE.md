@@ -34,6 +34,7 @@ Firm, educational, no-bullshit. This is the user's own brand voice — apply it 
   - Schoenfeld et al. — hypertrophy driven by total volume + proximity to failure, not one fixed "magic" rep range
   - Seiler's polarized training / HR-zone model — aerobic capacity (running/cycling) built via ~80% zone 2 (~60–70% max HR) + ~20% threshold/VO2max work
 - "Endurance" in posts = **aerobic capacity** (HR zones, volume, distance) for running/cycling — not muscular-endurance rep schemes in the gym.
+- **Any "no time / minimal effort" content (exercise snacks, time-poor hacks, Built in 3 angles) must say structured training still matters, every time, don't let this get lost.** These are a fallback for a day that got away from you, not a substitute for making time to train, and real strength/size still comes from structured sessions. State this explicitly in the post itself (not just the caption), it's an easy message to accidentally undercut when the hook is "you don't need a gym."
 
 ## Research routine
 Weekly digest on exercise science relevant to programming/content — strength, hypertrophy, aerobic/endurance training, plus sleep, sports nutrition/supplementation, and sports psychology. Track current literature and researchers such as Schoenfeld, Helms, Zourdos, Seiler, González-Badillo, Dr. Andy Galpin, Vladimir M. Zatsiorsky, and Dr. Andrew Huberman, along with credible current literature in sleep science, sports nutrition/supplementation, and sport psychology.

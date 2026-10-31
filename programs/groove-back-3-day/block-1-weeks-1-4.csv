@@ -1,0 +1,61 @@
+Week,Day,Session,Order,Exercise,Sets,Reps,Intensity,Rest,Notes
+1,Mon,Day A: Full Body (Leg Press focus),A1,Leg Press,2,6-8,RIR 3-4,3 min,"Re-entry week. Leave plenty in the tank, goal is zero soreness hangover. Feet mid platform, full depth you can control. Main quad strength lift."
+1,Mon,Day A: Full Body (Leg Press focus),B1,Barbell Bench Press,2,5-6,RIR 3-4,3 min,Main press. Swap to DB bench if no spotter.
+1,Mon,Day A: Full Body (Leg Press focus),C1,Seated Cable Row,2,8-10,RIR 3,90 s,Pause 1 s at the chest.
+1,Mon,Day A: Full Body (Leg Press focus),D1,Seated Leg Curl,2,10-12,RIR 3,60 s,Superset with D2.
+1,Mon,Day A: Full Body (Leg Press focus),D2,Machine Lateral Raise,2,12-15,RIR 3,60 s,Superset with D1.
+1,Wed,Day B: Full Body (RDL focus),A1,Barbell RDL,2,6-8,RIR 3-4,3 min,"Re-entry week. Leave plenty in the tank, goal is zero soreness hangover. Hinge until hamstrings stop you, bar stays on legs. Main posterior chain lift."
+1,Wed,Day B: Full Body (RDL focus),B1,Lat Pulldown,2,8-10,RIR 3-4,2 min,Full stretch at the top.
+1,Wed,Day B: Full Body (RDL focus),C1,Machine Shoulder Press,2,8-10,RIR 3,90 s,
+1,Wed,Day B: Full Body (RDL focus),D1,Leg Extension,2,12-15,RIR 3,60 s,Superset with D2.
+1,Wed,Day B: Full Body (RDL focus),D2,Cable Triceps Pushdown + DB Curl,2,10-12 each,RIR 3,60 s,"Superset with D1, alternate arms work."
+1,Fri,Day C: Full Body (Hack Squat focus),A1,Hack Squat (or Leg Press),2,8-10,RIR 3-4,2-3 min,"Re-entry week. Leave plenty in the tank, goal is zero soreness hangover. Controlled 2 s lowering."
+1,Fri,Day C: Full Body (Hack Squat focus),B1,Incline DB Bench Press,2,8-10,RIR 3-4,2 min,
+1,Fri,Day C: Full Body (Hack Squat focus),C1,Chest-Supported Row Machine,2,8-10,RIR 3,90 s,
+1,Fri,Day C: Full Body (Hack Squat focus),D1,Hip Thrust Machine (or Seated Leg Curl),2,10-12,RIR 3,60 s,Superset with D2.
+1,Fri,Day C: Full Body (Hack Squat focus),D2,Calf Raise + Cable Crunch,2,12-15 each,RIR 3,60 s,Superset with D1.
+2,Mon,Day A: Full Body (Leg Press focus),A1,Leg Press,3,6-8,RIR 2-3,3 min,"Baseline. Log every load. Feet mid platform, full depth you can control. Main quad strength lift."
+2,Mon,Day A: Full Body (Leg Press focus),B1,Barbell Bench Press,3,5-6,RIR 2-3,3 min,Main press. Swap to DB bench if no spotter.
+2,Mon,Day A: Full Body (Leg Press focus),C1,Seated Cable Row,2,8-10,RIR 2,90 s,Pause 1 s at the chest.
+2,Mon,Day A: Full Body (Leg Press focus),D1,Seated Leg Curl,2,10-12,RIR 2,60 s,Superset with D2.
+2,Mon,Day A: Full Body (Leg Press focus),D2,Machine Lateral Raise,2,12-15,RIR 2,60 s,Superset with D1.
+2,Wed,Day B: Full Body (RDL focus),A1,Barbell RDL,3,6-8,RIR 2-3,3 min,"Baseline. Log every load. Hinge until hamstrings stop you, bar stays on legs. Main posterior chain lift."
+2,Wed,Day B: Full Body (RDL focus),B1,Lat Pulldown,3,8-10,RIR 2-3,2 min,Full stretch at the top.
+2,Wed,Day B: Full Body (RDL focus),C1,Machine Shoulder Press,2,8-10,RIR 2,90 s,
+2,Wed,Day B: Full Body (RDL focus),D1,Leg Extension,2,12-15,RIR 2,60 s,Superset with D2.
+2,Wed,Day B: Full Body (RDL focus),D2,Cable Triceps Pushdown + DB Curl,2,10-12 each,RIR 2,60 s,"Superset with D1, alternate arms work."
+2,Fri,Day C: Full Body (Hack Squat focus),A1,Hack Squat (or Leg Press),3,8-10,RIR 2-3,2-3 min,Baseline. Log every load. Controlled 2 s lowering.
+2,Fri,Day C: Full Body (Hack Squat focus),B1,Incline DB Bench Press,3,8-10,RIR 2-3,2 min,
+2,Fri,Day C: Full Body (Hack Squat focus),C1,Chest-Supported Row Machine,2,8-10,RIR 2,90 s,
+2,Fri,Day C: Full Body (Hack Squat focus),D1,Hip Thrust Machine (or Seated Leg Curl),2,10-12,RIR 2,60 s,Superset with D2.
+2,Fri,Day C: Full Body (Hack Squat focus),D2,Calf Raise + Cable Crunch,2,12-15 each,RIR 2,60 s,Superset with D1.
+3,Mon,Day A: Full Body (Leg Press focus),A1,Leg Press,3,6-8,RIR 2-3,3 min,"Add a set to accessories. Main lifts: add load if you hit top of rep range last week. Feet mid platform, full depth you can control. Main quad strength lift."
+3,Mon,Day A: Full Body (Leg Press focus),B1,Barbell Bench Press,3,5-6,RIR 2-3,3 min,Main press. Swap to DB bench if no spotter.
+3,Mon,Day A: Full Body (Leg Press focus),C1,Seated Cable Row,3,8-10,RIR 1-2,90 s,Pause 1 s at the chest.
+3,Mon,Day A: Full Body (Leg Press focus),D1,Seated Leg Curl,3,10-12,RIR 1-2,60 s,Superset with D2.
+3,Mon,Day A: Full Body (Leg Press focus),D2,Machine Lateral Raise,3,12-15,RIR 1-2,60 s,Superset with D1.
+3,Wed,Day B: Full Body (RDL focus),A1,Barbell RDL,3,6-8,RIR 2-3,3 min,"Add a set to accessories. Main lifts: add load if you hit top of rep range last week. Hinge until hamstrings stop you, bar stays on legs. Main posterior chain lift."
+3,Wed,Day B: Full Body (RDL focus),B1,Lat Pulldown,3,8-10,RIR 2-3,2 min,Full stretch at the top.
+3,Wed,Day B: Full Body (RDL focus),C1,Machine Shoulder Press,3,8-10,RIR 1-2,90 s,
+3,Wed,Day B: Full Body (RDL focus),D1,Leg Extension,3,12-15,RIR 1-2,60 s,Superset with D2.
+3,Wed,Day B: Full Body (RDL focus),D2,Cable Triceps Pushdown + DB Curl,3,10-12 each,RIR 1-2,60 s,"Superset with D1, alternate arms work."
+3,Fri,Day C: Full Body (Hack Squat focus),A1,Hack Squat (or Leg Press),3,8-10,RIR 2-3,2-3 min,Add a set to accessories. Main lifts: add load if you hit top of rep range last week. Controlled 2 s lowering.
+3,Fri,Day C: Full Body (Hack Squat focus),B1,Incline DB Bench Press,3,8-10,RIR 2-3,2 min,
+3,Fri,Day C: Full Body (Hack Squat focus),C1,Chest-Supported Row Machine,3,8-10,RIR 1-2,90 s,
+3,Fri,Day C: Full Body (Hack Squat focus),D1,Hip Thrust Machine (or Seated Leg Curl),3,10-12,RIR 1-2,60 s,Superset with D2.
+3,Fri,Day C: Full Body (Hack Squat focus),D2,Calf Raise + Cable Crunch,3,12-15 each,RIR 1-2,60 s,Superset with D1.
+4,Mon,Day A: Full Body (Leg Press focus),A1,Leg Press,3,6-8,RIR 2,3 min,"Push week. Beat week 3 by a rep or a small load jump. Deload or start a new block after. Feet mid platform, full depth you can control. Main quad strength lift."
+4,Mon,Day A: Full Body (Leg Press focus),B1,Barbell Bench Press,3,5-6,RIR 2,3 min,Main press. Swap to DB bench if no spotter.
+4,Mon,Day A: Full Body (Leg Press focus),C1,Seated Cable Row,3,8-10,RIR 1-2,90 s,Pause 1 s at the chest.
+4,Mon,Day A: Full Body (Leg Press focus),D1,Seated Leg Curl,3,10-12,RIR 1-2,60 s,Superset with D2.
+4,Mon,Day A: Full Body (Leg Press focus),D2,Machine Lateral Raise,3,12-15,RIR 1-2,60 s,Superset with D1.
+4,Wed,Day B: Full Body (RDL focus),A1,Barbell RDL,3,6-8,RIR 2,3 min,"Push week. Beat week 3 by a rep or a small load jump. Deload or start a new block after. Hinge until hamstrings stop you, bar stays on legs. Main posterior chain lift."
+4,Wed,Day B: Full Body (RDL focus),B1,Lat Pulldown,3,8-10,RIR 2,2 min,Full stretch at the top.
+4,Wed,Day B: Full Body (RDL focus),C1,Machine Shoulder Press,3,8-10,RIR 1-2,90 s,
+4,Wed,Day B: Full Body (RDL focus),D1,Leg Extension,3,12-15,RIR 1-2,60 s,Superset with D2.
+4,Wed,Day B: Full Body (RDL focus),D2,Cable Triceps Pushdown + DB Curl,3,10-12 each,RIR 1-2,60 s,"Superset with D1, alternate arms work."
+4,Fri,Day C: Full Body (Hack Squat focus),A1,Hack Squat (or Leg Press),3,8-10,RIR 2,2-3 min,Push week. Beat week 3 by a rep or a small load jump. Deload or start a new block after. Controlled 2 s lowering.
+4,Fri,Day C: Full Body (Hack Squat focus),B1,Incline DB Bench Press,3,8-10,RIR 2,2 min,
+4,Fri,Day C: Full Body (Hack Squat focus),C1,Chest-Supported Row Machine,3,8-10,RIR 1-2,90 s,
+4,Fri,Day C: Full Body (Hack Squat focus),D1,Hip Thrust Machine (or Seated Leg Curl),3,10-12,RIR 1-2,60 s,Superset with D2.
+4,Fri,Day C: Full Body (Hack Squat focus),D2,Calf Raise + Cable Crunch,3,12-15 each,RIR 1-2,60 s,Superset with D1.

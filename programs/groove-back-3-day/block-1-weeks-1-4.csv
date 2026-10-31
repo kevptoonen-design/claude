@@ -4,6 +4,7 @@ Week,Day,Session,Order,Exercise,Sets,Reps,Intensity,Rest,Notes
 1,Mon,Day A: Full Body (Leg Press focus),C1,Seated Cable Row,2,8-10,RIR 3,90 s,Pause 1 s at the chest.
 1,Mon,Day A: Full Body (Leg Press focus),D1,Seated Leg Curl,2,10-12,RIR 3,60 s,Superset with D2.
 1,Mon,Day A: Full Body (Leg Press focus),D2,Machine Lateral Raise,2,12-15,RIR 3,60 s,Superset with D1.
+1,Tue,Cardio: Assault Bike Zone 2,A1,Assault Bike Zone 2,1,25 min,"RPE 3-4, ~60-70% max HR",-,"Talk test: you can speak in full sentences. Steady, never a grind. Builds aerobic base and helps recovery from Monday."
 1,Wed,Day B: Full Body (RDL focus),A1,Barbell RDL,2,6-8,RIR 3-4,3 min,"Re-entry week. Leave plenty in the tank, goal is zero soreness hangover. Hinge until hamstrings stop you, bar stays on legs. Main posterior chain lift."
 1,Wed,Day B: Full Body (RDL focus),B1,Lat Pulldown,2,8-10,RIR 3-4,2 min,Full stretch at the top.
 1,Wed,Day B: Full Body (RDL focus),C1,Machine Shoulder Press,2,8-10,RIR 3,90 s,
@@ -14,11 +15,15 @@ Week,Day,Session,Order,Exercise,Sets,Reps,Intensity,Rest,Notes
 1,Fri,Day C: Full Body (Hack Squat focus),C1,Chest-Supported Row Machine,2,8-10,RIR 3,90 s,
 1,Fri,Day C: Full Body (Hack Squat focus),D1,Hip Thrust Machine (or Seated Leg Curl),2,10-12,RIR 3,60 s,Superset with D2.
 1,Fri,Day C: Full Body (Hack Squat focus),D2,Calf Raise + Cable Crunch,2,12-15 each,RIR 3,60 s,Superset with D1.
+1,Sat,Cardio: Assault Bike Intervals,A1,Warm-up,1,8 min,"Easy, build to moderate",-,Finish with 2 x 10 s pick-ups.
+1,Sat,Cardio: Assault Bike Intervals,B1,Assault Bike Intervals,6,20 s hard / 100 s easy,RPE 8-9 on the hard reps,See reps,"Hard but repeatable. Last rep should match the first. If power drops off badly, stop there."
+1,Sat,Cardio: Assault Bike Intervals,C1,Cool-down,1,5 min,Easy,-,
 2,Mon,Day A: Full Body (Leg Press focus),A1,Leg Press,3,6-8,RIR 2-3,3 min,"Baseline. Log every load. Feet mid platform, full depth you can control. Main quad strength lift."
 2,Mon,Day A: Full Body (Leg Press focus),B1,Barbell Bench Press,3,5-6,RIR 2-3,3 min,Main press. Swap to DB bench if no spotter.
 2,Mon,Day A: Full Body (Leg Press focus),C1,Seated Cable Row,2,8-10,RIR 2,90 s,Pause 1 s at the chest.
 2,Mon,Day A: Full Body (Leg Press focus),D1,Seated Leg Curl,2,10-12,RIR 2,60 s,Superset with D2.
 2,Mon,Day A: Full Body (Leg Press focus),D2,Machine Lateral Raise,2,12-15,RIR 2,60 s,Superset with D1.
+2,Tue,Cardio: Assault Bike Zone 2,A1,Assault Bike Zone 2,1,30 min,"RPE 3-4, ~60-70% max HR",-,"Talk test: you can speak in full sentences. Steady, never a grind. Builds aerobic base and helps recovery from Monday."
 2,Wed,Day B: Full Body (RDL focus),A1,Barbell RDL,3,6-8,RIR 2-3,3 min,"Baseline. Log every load. Hinge until hamstrings stop you, bar stays on legs. Main posterior chain lift."
 2,Wed,Day B: Full Body (RDL focus),B1,Lat Pulldown,3,8-10,RIR 2-3,2 min,Full stretch at the top.
 2,Wed,Day B: Full Body (RDL focus),C1,Machine Shoulder Press,2,8-10,RIR 2,90 s,
@@ -29,11 +34,15 @@ Week,Day,Session,Order,Exercise,Sets,Reps,Intensity,Rest,Notes
 2,Fri,Day C: Full Body (Hack Squat focus),C1,Chest-Supported Row Machine,2,8-10,RIR 2,90 s,
 2,Fri,Day C: Full Body (Hack Squat focus),D1,Hip Thrust Machine (or Seated Leg Curl),2,10-12,RIR 2,60 s,Superset with D2.
 2,Fri,Day C: Full Body (Hack Squat focus),D2,Calf Raise + Cable Crunch,2,12-15 each,RIR 2,60 s,Superset with D1.
+2,Sat,Cardio: Assault Bike Intervals,A1,Warm-up,1,8 min,"Easy, build to moderate",-,Finish with 2 x 10 s pick-ups.
+2,Sat,Cardio: Assault Bike Intervals,B1,Assault Bike Intervals,8,20 s hard / 100 s easy,RPE 8-9 on the hard reps,See reps,"Hard but repeatable. Last rep should match the first. If power drops off badly, stop there."
+2,Sat,Cardio: Assault Bike Intervals,C1,Cool-down,1,5 min,Easy,-,
 3,Mon,Day A: Full Body (Leg Press focus),A1,Leg Press,3,6-8,RIR 2-3,3 min,"Add a set to accessories. Main lifts: add load if you hit top of rep range last week. Feet mid platform, full depth you can control. Main quad strength lift."
 3,Mon,Day A: Full Body (Leg Press focus),B1,Barbell Bench Press,3,5-6,RIR 2-3,3 min,Main press. Swap to DB bench if no spotter.
 3,Mon,Day A: Full Body (Leg Press focus),C1,Seated Cable Row,3,8-10,RIR 1-2,90 s,Pause 1 s at the chest.
 3,Mon,Day A: Full Body (Leg Press focus),D1,Seated Leg Curl,3,10-12,RIR 1-2,60 s,Superset with D2.
 3,Mon,Day A: Full Body (Leg Press focus),D2,Machine Lateral Raise,3,12-15,RIR 1-2,60 s,Superset with D1.
+3,Tue,Cardio: Assault Bike Zone 2,A1,Assault Bike Zone 2,1,35 min,"RPE 3-4, ~60-70% max HR",-,"Talk test: you can speak in full sentences. Steady, never a grind. Builds aerobic base and helps recovery from Monday."
 3,Wed,Day B: Full Body (RDL focus),A1,Barbell RDL,3,6-8,RIR 2-3,3 min,"Add a set to accessories. Main lifts: add load if you hit top of rep range last week. Hinge until hamstrings stop you, bar stays on legs. Main posterior chain lift."
 3,Wed,Day B: Full Body (RDL focus),B1,Lat Pulldown,3,8-10,RIR 2-3,2 min,Full stretch at the top.
 3,Wed,Day B: Full Body (RDL focus),C1,Machine Shoulder Press,3,8-10,RIR 1-2,90 s,
@@ -44,11 +53,15 @@ Week,Day,Session,Order,Exercise,Sets,Reps,Intensity,Rest,Notes
 3,Fri,Day C: Full Body (Hack Squat focus),C1,Chest-Supported Row Machine,3,8-10,RIR 1-2,90 s,
 3,Fri,Day C: Full Body (Hack Squat focus),D1,Hip Thrust Machine (or Seated Leg Curl),3,10-12,RIR 1-2,60 s,Superset with D2.
 3,Fri,Day C: Full Body (Hack Squat focus),D2,Calf Raise + Cable Crunch,3,12-15 each,RIR 1-2,60 s,Superset with D1.
+3,Sat,Cardio: Assault Bike Intervals,A1,Warm-up,1,8 min,"Easy, build to moderate",-,Finish with 2 x 10 s pick-ups.
+3,Sat,Cardio: Assault Bike Intervals,B1,Assault Bike Intervals,5,60 s hard / 2 min easy,RPE 8-9 on the hard reps,See reps,"Hard but repeatable. Last rep should match the first. If power drops off badly, stop there."
+3,Sat,Cardio: Assault Bike Intervals,C1,Cool-down,1,5 min,Easy,-,
 4,Mon,Day A: Full Body (Leg Press focus),A1,Leg Press,3,6-8,RIR 2,3 min,"Push week. Beat week 3 by a rep or a small load jump. Deload or start a new block after. Feet mid platform, full depth you can control. Main quad strength lift."
 4,Mon,Day A: Full Body (Leg Press focus),B1,Barbell Bench Press,3,5-6,RIR 2,3 min,Main press. Swap to DB bench if no spotter.
 4,Mon,Day A: Full Body (Leg Press focus),C1,Seated Cable Row,3,8-10,RIR 1-2,90 s,Pause 1 s at the chest.
 4,Mon,Day A: Full Body (Leg Press focus),D1,Seated Leg Curl,3,10-12,RIR 1-2,60 s,Superset with D2.
 4,Mon,Day A: Full Body (Leg Press focus),D2,Machine Lateral Raise,3,12-15,RIR 1-2,60 s,Superset with D1.
+4,Tue,Cardio: Assault Bike Zone 2,A1,Assault Bike Zone 2,1,40 min,"RPE 3-4, ~60-70% max HR",-,"Talk test: you can speak in full sentences. Steady, never a grind. Builds aerobic base and helps recovery from Monday."
 4,Wed,Day B: Full Body (RDL focus),A1,Barbell RDL,3,6-8,RIR 2,3 min,"Push week. Beat week 3 by a rep or a small load jump. Deload or start a new block after. Hinge until hamstrings stop you, bar stays on legs. Main posterior chain lift."
 4,Wed,Day B: Full Body (RDL focus),B1,Lat Pulldown,3,8-10,RIR 2,2 min,Full stretch at the top.
 4,Wed,Day B: Full Body (RDL focus),C1,Machine Shoulder Press,3,8-10,RIR 1-2,90 s,
@@ -59,3 +72,6 @@ Week,Day,Session,Order,Exercise,Sets,Reps,Intensity,Rest,Notes
 4,Fri,Day C: Full Body (Hack Squat focus),C1,Chest-Supported Row Machine,3,8-10,RIR 1-2,90 s,
 4,Fri,Day C: Full Body (Hack Squat focus),D1,Hip Thrust Machine (or Seated Leg Curl),3,10-12,RIR 1-2,60 s,Superset with D2.
 4,Fri,Day C: Full Body (Hack Squat focus),D2,Calf Raise + Cable Crunch,3,12-15 each,RIR 1-2,60 s,Superset with D1.
+4,Sat,Cardio: Assault Bike Intervals,A1,Warm-up,1,8 min,"Easy, build to moderate",-,Finish with 2 x 10 s pick-ups.
+4,Sat,Cardio: Assault Bike Intervals,B1,Assault Bike Intervals,6,60 s hard / 2 min easy,RPE 8-9 on the hard reps,See reps,"Hard but repeatable. Last rep should match the first. If power drops off badly, stop there."
+4,Sat,Cardio: Assault Bike Intervals,C1,Cool-down,1,5 min,Easy,-,

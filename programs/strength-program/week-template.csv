@@ -1,0 +1,24 @@
+Week,Day,Session,Order,Exercise,Sets,Reps,Intensity,Rest,Outcome
+1,Mon,Lower A (Squat Heavy),1,Back Squat,3,3,85% 1RM (RIR 2),3-5 min,Strength (primary)
+1,Mon,Lower A (Squat Heavy),2,Romanian Deadlift,3,5,65-70% of Deadlift 1RM (RIR 2),2-3 min,Hinge strength / hamstrings
+1,Mon,Lower A (Squat Heavy),3,Bulgarian Split Squat,3,6/leg,RIR 2,2 min,Unilateral quad strength
+1,Mon,Lower A (Squat Heavy),4,Nordic Hamstring Curl,3,4-6,Bodyweight eccentric (3-5s lower),2 min,Hamstring injury prevention
+1,Mon,Lower A (Squat Heavy),5,Ab Wheel Rollout,3,8-10,RIR 2,90s,Trunk stiffness
+1,Tue,Upper A (Bench Heavy),1,Bench Press,3,3,85% 1RM (RIR 2),3-5 min,Strength (primary)
+1,Tue,Upper A (Bench Heavy),2,Weighted Pull-up,3,4,~85% (RIR 2),3 min,Vertical pull strength
+1,Tue,Upper A (Bench Heavy),3,Overhead Press,3,5,75% 1RM (RIR 3),2-3 min,Press volume / technique
+1,Tue,Upper A (Bench Heavy),4,Chest-Supported Row,3,8,RIR 2,2 min,Upper back
+1,Tue,Upper A (Bench Heavy),5,Face Pull,2,12-15,RIR 2,60-90s,Shoulder health
+1,Wed,Rest or Cardio,1,Zone 2 Cardio (bike/rower/incline walk),1,30-45 min,Talk test pace (~60-70% max HR),-,Aerobic base / recovery
+1,Thu,Lower B (Deadlift Heavy),1,Conventional Deadlift,3,2,87.5% 1RM (RIR 2),3-5 min,Strength (primary)
+1,Thu,Lower B (Deadlift Heavy),2,Paused Back Squat (2s),3,4,72.5% of Squat 1RM (RIR 3),3 min,Squat position / out-of-hole strength
+1,Thu,Lower B (Deadlift Heavy),3,Barbell Hip Thrust,3,6,RIR 2,2 min,Hip extension strength
+1,Thu,Lower B (Deadlift Heavy),4,Copenhagen Plank,3,20-30s/side,Bodyweight,60s,Adductor injury prevention
+1,Thu,Lower B (Deadlift Heavy),5,Standing Calf Raise,3,8-10,RIR 2,90s,Calf / Achilles resilience
+1,Fri,Upper B (Press Heavy),1,Overhead Press,3,3,85% 1RM (RIR 2),3-5 min,Strength (primary)
+1,Fri,Upper B (Press Heavy),2,Close-Grip Bench Press,3,5,75% of Bench 1RM (RIR 2-3),3 min,Bench lockout / triceps
+1,Fri,Upper B (Press Heavy),3,Pendlay Row,3,5,RIR 2,2-3 min,Horizontal pull strength
+1,Fri,Upper B (Press Heavy),4,Weighted Chin-up,3,6,RIR 2,2 min,Vertical pull volume
+1,Fri,Upper B (Press Heavy),5,Weighted Dip,2,6-8,RIR 2,2 min,Press accessory
+1,Sat,Rest,-,-,-,-,-,-,Recovery
+1,Sun,Rest,-,-,-,-,-,-,Recovery
